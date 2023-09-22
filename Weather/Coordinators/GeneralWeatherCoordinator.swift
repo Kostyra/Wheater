@@ -23,7 +23,18 @@ final class GeneralWeatherCoordinator {
 }
 
 
-    //MARK: - IStartCoordinator
+//MARK: - ICoordinator
+extension GeneralWeatherCoordinator: ICoordinator {
+    func start() -> UIViewController {
+        let viewModel = GeneralViewModel(coordinator: self)
+        let generalVC = GeneralViewController(viewModel: viewModel)
+        let generalNC = UINavigationController(rootViewController: generalVC)
+        self.navigationController = generalNC
+        return self.navigationController
+    }
+}
+
+    //MARK: - IGeneralWeatherCoordinator
 extension GeneralWeatherCoordinator: IGeneralWeatherCoordinator {
     func switchToNextFlow() {
         self.parentCoordunator?.switchToNextFlow(from: self)
@@ -31,13 +42,4 @@ extension GeneralWeatherCoordinator: IGeneralWeatherCoordinator {
 }
 
 
-    //MARK: - ICoordinator
-extension GeneralWeatherCoordinator: ICoordinator {
-    func start() -> UIViewController {
-        let viewModel = GeneralViewModel(coordinator: self)
-        let startVC = GeneralViewController(viewModel: viewModel)
-        let startNC = UINavigationController(rootViewController: startVC)
-        self.navigationController = startNC
-        return self.navigationController
-    }
-}
+

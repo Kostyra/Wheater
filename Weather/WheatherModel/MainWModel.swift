@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+final class MainWModel:Codable {
+    var temp:Float?
+}

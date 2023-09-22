@@ -7,7 +7,7 @@ final class GeneralSectionEveryDateHeader:UICollectionReusableView {
     
     //MARK: - Properties
     
-    static var idGeneralHeader3 =  "GeneralSectionEvreDateHeader"
+    static var idGeneralHeader3 =  "GeneralSectionEveryDateHeader"
     
     
     private lazy var labelEveryDay:UILabel = {

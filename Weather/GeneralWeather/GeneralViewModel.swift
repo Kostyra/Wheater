@@ -15,12 +15,11 @@ final class GeneralViewModel {
     enum State {
         case allow
         case notAllow
-        
     }
     
     
     //MARK: - Properties
-    
+    var position:StartViewModel.StatePosition?
     var stateChanged: ((State) ->())?
     
     private weak var coordinator: IGeneralWeatherCoordinator?

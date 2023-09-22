@@ -4,7 +4,7 @@ import UIKit
 protocol IMainCoordinator:AnyObject {
     func switchToNextFlow(from currentCoordinator: ICoordinator)
 }
-
+//MainCoordinatorProtocol
 
 
 final class MainCoordinator {
@@ -31,6 +31,14 @@ final class MainCoordinator {
             parentCoordunator: self
         )
         return startCoordinator
+    }
+    
+    private func makeGeneralCoordinator() -> ICoordinator {
+        let GeneralWeatherCoordinator = GeneralWeatherCoordinator(
+            navigationController: UINavigationController(),
+            parentCoordunator: self
+        )
+        return GeneralWeatherCoordinator
     }
     
     private func addChildCoordinator(_ coordinator:ICoordinator) {
@@ -84,13 +92,6 @@ extension MainCoordinator: ICoordinator {
 
 func start() -> UIViewController {
     var coordinator: ICoordinator
-    // Тут проверка:
-//        if пользователь авторизирован {
-//            coordinator = self.makeToTabBarCoordinator()
-//        } else {
-//            coordinator = self.makeLoginCoordinator()
-//        }
-    // Для примера, пользователь не авторизирован:
     coordinator = self.makeStartCoordinator()
     self.addChildCoordinator(coordinator)
     self.setFlow(to: coordinator.start())
@@ -102,9 +103,18 @@ func start() -> UIViewController {
 
 extension MainCoordinator: IMainCoordinator {
     func switchToNextFlow(from currentCoordinator: ICoordinator) {
-        
+            switch currentCoordinator {
+            case let oldCoordinator as StartCoordinator:
+                let newCoordinator = self.makeGeneralCoordinator()
+                self.switchCoordinators(from: oldCoordinator, to: newCoordinator)
+// если делать кнопку обратно
+            case let oldCoordinator as GeneralWeatherCoordinator:
+                let newCoordinator = self.makeStartCoordinator()
+                self.switchCoordinators(from: oldCoordinator, to: newCoordinator)
+                
+            default:
+                print("Ошибка! func switchToNextFlow in MainCoordinator")
+        }
     }
-    
-    
-   
 }
+    

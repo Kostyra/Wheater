@@ -1,9 +1,3 @@
-//
-//  GeneralFreeCollectionViewCell.swift
-//  Weather
-//
-//  Created by Юлия Филиппова on 12.08.2023.
-//
 
 import UIKit
 
@@ -40,7 +34,7 @@ final class GeneralSectionEveryDate: UICollectionViewCell {
             wheaterImage.topAnchor.constraint(equalTo: contentView.topAnchor),
             wheaterImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             wheaterImage.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            wheaterImage.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+            wheaterImage.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
         ])
     }
     

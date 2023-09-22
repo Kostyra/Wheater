@@ -4,6 +4,7 @@ import Foundation
 
 protocol IStartViewModel {
     var stateChanged: ((StartViewModel.State) -> ())? {get set}
+    var stateChangedPosition: ((StartViewModel.StatePosition) ->())? {get set}
     func didTabAllowGeo()
     func didTabDoNotAllowGeo()
 }
@@ -13,21 +14,32 @@ final class StartViewModel {
     
     //MARK: - Enum
     
-    enum State {
+     enum State {
+        case initial
+    }
+    
+    enum StatePosition {
         case allow
         case notAllow
-        
     }
     
     
     //MARK: - Properties
     
     var stateChanged: ((State) ->())?
+    var stateChangedPosition: ((StatePosition) ->())?
+    
     
     private weak var coordinator: IStartCoordinator?
-    private var state: State = .allow {
+    private var state: State = .initial {
         didSet {
             self.stateChanged?(self.state)
+        }
+    }
+    
+    private var position:StatePosition = .allow {
+        didSet {
+            self.stateChangedPosition?(self.position)
         }
     }
     
@@ -39,7 +51,7 @@ final class StartViewModel {
     }
     
     deinit {
-        print("StartViewmodel \(#function)")
+        print("StartViewModel \(#function)")
     }
 }
 
@@ -49,13 +61,17 @@ final class StartViewModel {
 extension StartViewModel:IStartViewModel {
     func didTabAllowGeo() {
         self.coordinator?.switchToNextFlow()
+        self.position = .allow
+        print(position)
+        
     }
     
     func didTabDoNotAllowGeo() {
         self.coordinator?.switchToNextFlow()
+        self.position = .notAllow
     }
     
- 
+
     
     
 }
