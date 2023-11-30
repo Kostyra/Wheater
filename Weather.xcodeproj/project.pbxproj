@@ -13,6 +13,14 @@
 		CB1753D32ABB397700063FB7 /* ListWModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1753D22ABB397600063FB7 /* ListWModel.swift */; };
 		CB1753D52ABB3A8600063FB7 /* MainWModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1753D42ABB3A8600063FB7 /* MainWModel.swift */; };
 		CB1753D82ABC37B600063FB7 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1753D72ABC37B600063FB7 /* LocationManager.swift */; };
+		CB1753DC2AE6DD6400063FB7 /* AddButtonLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1753DB2AE6DD6400063FB7 /* AddButtonLocationViewController.swift */; };
+		CB1753E12AEA9E3600063FB7 /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1753E02AEA9E3600063FB7 /* CityModel.swift */; };
+		CB1753E52AEFA29600063FB7 /* CityCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1753E42AEFA29500063FB7 /* CityCollectionView.swift */; };
+		CB1754452AFA192C00063FB7 /* CollectionCellAddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1754442AFA192C00063FB7 /* CollectionCellAddButton.swift */; };
+		CB1754472AFBCADA00063FB7 /* old1111.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1754462AFBCADA00063FB7 /* old1111.swift */; };
+		CB1754492B00F08300063FB7 /* WheatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1754482B00F08300063FB7 /* WheatherModel.swift */; };
+		CB17544B2B04EFE700063FB7 /* oldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB17544A2B04EFE700063FB7 /* oldController.swift */; };
+		CB17544D2B0E31E200063FB7 /* old1234.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB17544C2B0E31E200063FB7 /* old1234.swift */; };
 		CB1C4FF42A813FE50044210A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1C4FF32A813FE50044210A /* AppDelegate.swift */; };
 		CB1C4FF62A813FE50044210A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1C4FF52A813FE50044210A /* SceneDelegate.swift */; };
 		CB1C50002A813FE80044210A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB1C4FFF2A813FE80044210A /* Assets.xcassets */; };
@@ -48,6 +56,14 @@
 		CB1753D22ABB397600063FB7 /* ListWModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListWModel.swift; sourceTree = "<group>"; };
 		CB1753D42ABB3A8600063FB7 /* MainWModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWModel.swift; sourceTree = "<group>"; };
 		CB1753D72ABC37B600063FB7 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		CB1753DB2AE6DD6400063FB7 /* AddButtonLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButtonLocationViewController.swift; sourceTree = "<group>"; };
+		CB1753E02AEA9E3600063FB7 /* CityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
+		CB1753E42AEFA29500063FB7 /* CityCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCollectionView.swift; sourceTree = "<group>"; };
+		CB1754442AFA192C00063FB7 /* CollectionCellAddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCellAddButton.swift; sourceTree = "<group>"; };
+		CB1754462AFBCADA00063FB7 /* old1111.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = old1111.swift; sourceTree = "<group>"; };
+		CB1754482B00F08300063FB7 /* WheatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheatherModel.swift; sourceTree = "<group>"; };
+		CB17544A2B04EFE700063FB7 /* oldController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oldController.swift; sourceTree = "<group>"; };
+		CB17544C2B0E31E200063FB7 /* old1234.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = old1234.swift; sourceTree = "<group>"; };
 		CB1C4FF02A813FE50044210A /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB1C4FF32A813FE50044210A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB1C4FF52A813FE50044210A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +127,8 @@
 				CB1753D02ABB37E900063FB7 /* WModel.swift */,
 				CB1753D22ABB397600063FB7 /* ListWModel.swift */,
 				CB1753D42ABB3A8600063FB7 /* MainWModel.swift */,
+				CB1753E02AEA9E3600063FB7 /* CityModel.swift */,
+				CB1754482B00F08300063FB7 /* WheatherModel.swift */,
 			);
 			path = WheatherModel;
 			sourceTree = "<group>";
@@ -121,6 +139,33 @@
 				CB1753D72ABC37B600063FB7 /* LocationManager.swift */,
 			);
 			path = Location;
+			sourceTree = "<group>";
+		};
+		CB1753D92AE6DD0700063FB7 /* AddButtonLocation */ = {
+			isa = PBXGroup;
+			children = (
+				CB1754432AFA190300063FB7 /* CollectionCellAddButton */,
+				CB1753DB2AE6DD6400063FB7 /* AddButtonLocationViewController.swift */,
+			);
+			path = AddButtonLocation;
+			sourceTree = "<group>";
+		};
+		CB1753E32AEFA13700063FB7 /* CityCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				CB1753E42AEFA29500063FB7 /* CityCollectionView.swift */,
+			);
+			path = CityCollectionView;
+			sourceTree = "<group>";
+		};
+		CB1754432AFA190300063FB7 /* CollectionCellAddButton */ = {
+			isa = PBXGroup;
+			children = (
+				CB1754442AFA192C00063FB7 /* CollectionCellAddButton.swift */,
+				CB1754462AFBCADA00063FB7 /* old1111.swift */,
+				CB17544C2B0E31E200063FB7 /* old1234.swift */,
+			);
+			path = CollectionCellAddButton;
 			sourceTree = "<group>";
 		};
 		CB1C4FE72A813FE50044210A = {
@@ -142,6 +187,7 @@
 		CB1C4FF22A813FE50044210A /* Weather */ = {
 			isa = PBXGroup;
 			children = (
+				CB1753D92AE6DD0700063FB7 /* AddButtonLocation */,
 				CB1753D62ABC376100063FB7 /* Location */,
 				CB1753CF2ABB37BC00063FB7 /* WheatherModel */,
 				CB1753CC2ABB366000063FB7 /* NetWorkManager */,
@@ -162,6 +208,7 @@
 		CB1C50102A8142F00044210A /* GeneralWeather */ = {
 			isa = PBXGroup;
 			children = (
+				CB1753E32AEFA13700063FB7 /* CityCollectionView */,
 				CB1C50272A87EF1E0044210A /* CollectionCell */,
 				CB1C501D2A8144000044210A /* GeneralViewController.swift */,
 				CB1C501E2A8144000044210A /* GeneralViewModel.swift */,
@@ -205,6 +252,7 @@
 				CB825EC22A8E5AE400F1CC20 /* NowCell */,
 				CB825EC12A8DFE0700F1CC20 /* DertailCell */,
 				CB825EC02A8DFDF200F1CC20 /* EveryDayCell */,
+				CB17544A2B04EFE700063FB7 /* oldController.swift */,
 			);
 			path = CollectionCell;
 			sourceTree = "<group>";
@@ -336,13 +384,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB487D1E2A968ACF00441585 /* old2.swift in Sources */,
+				CB1753DC2AE6DD6400063FB7 /* AddButtonLocationViewController.swift in Sources */,
 				CB825EC42A8E5B2F00F1CC20 /* GeneralSectionNowCell.swift in Sources */,
 				CB487D1C2A95F93D00441585 /* old1.swift in Sources */,
+				CB1753E52AEFA29600063FB7 /* CityCollectionView.swift in Sources */,
+				CB17544D2B0E31E200063FB7 /* old1234.swift in Sources */,
+				CB17544B2B04EFE700063FB7 /* oldController.swift in Sources */,
+				CB1754452AFA192C00063FB7 /* CollectionCellAddButton.swift in Sources */,
 				CB487D2F2A9CE1C200441585 /* Hour24.swift in Sources */,
+				CB1754492B00F08300063FB7 /* WheatherModel.swift in Sources */,
 				CB1C501C2A81439B0044210A /* StartViewModel.swift in Sources */,
 				CB1753D12ABB37E900063FB7 /* WModel.swift in Sources */,
 				CB1753D52ABB3A8600063FB7 /* MainWModel.swift in Sources */,
 				CB1C501A2A81434A0044210A /* GeneralWeatherCoordinator.swift in Sources */,
+				CB1754472AFBCADA00063FB7 /* old1111.swift in Sources */,
 				CB1753CE2ABB368800063FB7 /* NetWorkManager.swift in Sources */,
 				CB1C50192A81434A0044210A /* StartCoordinator.swift in Sources */,
 				CB784B9B2A90FDED00EA3DEC /* GeneralSectionDetailHeader.swift in Sources */,
@@ -356,6 +411,7 @@
 				CB487D202A97A78700441585 /* old3.swift in Sources */,
 				CB1C501F2A8144000044210A /* GeneralViewController.swift in Sources */,
 				CB1753D32ABB397700063FB7 /* ListWModel.swift in Sources */,
+				CB1753E12AEA9E3600063FB7 /* CityModel.swift in Sources */,
 				CB1C50252A82ABE00044210A /* CustomButton.swift in Sources */,
 				CB1753D82ABC37B600063FB7 /* LocationManager.swift in Sources */,
 				CB825EBF2A8DFDDE00F1CC20 /* GeneralSectionDetailCell.swift in Sources */,

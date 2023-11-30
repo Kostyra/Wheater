@@ -1,8 +1,11 @@
 
 import UIKit
 
-final class GeneralViewController: UIViewController {
+protocol  AddButtonLocationDelegate:AnyObject {
+    func didSelectCities(_ cities: [[String]])
+}
 
+final class GeneralViewController: UIViewController {
 
     //MARK: - Enum
     enum Section: Int, CaseIterable {
@@ -16,11 +19,9 @@ final class GeneralViewController: UIViewController {
     //MARK: - Properties
 
     private let viewModel:IGeneralViewModel
-    private var dataSource:UICollectionViewDiffableDataSource<Section, Int>?
+    private var dataSource:UICollectionViewDiffableDataSource<Section, [String]>?
     private var collectionView: UICollectionView! = nil
-    private lazy var one: ClosedRange<Int> = 1...wheatherPhoto1.count
-    private lazy var two: ClosedRange<Int> = (one.upperBound + 1)...(one.upperBound + wheatherPhoto2.count)
-    private lazy var three: ClosedRange<Int> = (two.upperBound + 1)...(two.upperBound + wheatherPhoto3.count)
+    private var addSelectedCity: [[String]] = []
     
 
     //MARK: - Life Cycle
@@ -35,7 +36,10 @@ final class GeneralViewController: UIViewController {
         view.backgroundColor = .orange
         setupCollectionView()
         configureDataSource()
+        buttonItem()
         reloadData()
+        
+
     }
 
     required init?(coder: NSCoder) {
@@ -45,8 +49,23 @@ final class GeneralViewController: UIViewController {
 
     //MARK: - Method
     
+    private func buttonItem()  {
+        let imagePlus = UIImage(systemName: "plus")
+        let button = UIBarButtonItem(image: imagePlus, style: .done, target: self, action: #selector(buttonAddWheather))
+        button.tintColor = .blue
+        navigationItem.rightBarButtonItem = button
+    }
     
-    func setupCollectionView() {
+    @objc func buttonAddWheather() {
+        let addButtonLocationVC = AddButtonLocationViewController()
+        let addButtonLocationNC = UINavigationController(rootViewController: addButtonLocationVC)
+        addButtonLocationNC.modalPresentationStyle = .fullScreen
+        addButtonLocationNC.modalTransitionStyle = .crossDissolve
+        present(addButtonLocationNC, animated: true)
+        
+    }
+    
+    private func setupCollectionView() {
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createLayout())
         collectionView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
         collectionView.backgroundColor = .white
@@ -72,7 +91,7 @@ final class GeneralViewController: UIViewController {
         }
     }
     
-    func oneSection() -> NSCollectionLayoutSection {
+    private func oneSection() -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(200))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         item.contentInsets = NSDirectionalEdgeInsets.init(top: 0, leading: 0, bottom: 8, trailing: 0)
@@ -90,7 +109,7 @@ final class GeneralViewController: UIViewController {
         return section
     }
     
-    func twoSection() -> NSCollectionLayoutSection {
+    private func twoSection() -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
                                               heightDimension: .fractionalHeight(1))
         let layoutItem = NSCollectionLayoutItem(layoutSize: itemSize)
@@ -111,7 +130,7 @@ final class GeneralViewController: UIViewController {
         return layoutSection
     }
 
-    func threeSection() -> NSCollectionLayoutSection {
+    private func threeSection() -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(86))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         item.contentInsets = NSDirectionalEdgeInsets.init(top: 0, leading: 0, bottom: 8, trailing: 0)
@@ -129,7 +148,7 @@ final class GeneralViewController: UIViewController {
         return section
     }
     
-    func createSectionHeader() -> NSCollectionLayoutBoundarySupplementaryItem {
+    private func createSectionHeader() -> NSCollectionLayoutBoundarySupplementaryItem {
         let layoutSectionHEaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
                                                              heightDimension: .estimated(1))
         let layoutSectionHeader = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: layoutSectionHEaderSize,
@@ -139,24 +158,28 @@ final class GeneralViewController: UIViewController {
     }
 
     private func configureDataSource() {
-        dataSource =  UICollectionViewDiffableDataSource<Section, Int>(collectionView: collectionView, cellProvider: { (collectionView,indexPath,itemIdentifier) -> UICollectionViewCell? in
+        dataSource =  UICollectionViewDiffableDataSource<Section, [String]>(collectionView: collectionView, cellProvider: { (collectionView,indexPath,itemIdentifier) -> UICollectionViewCell? in
             switch Section(rawValue: indexPath.section).self {
             case .one:
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GeneralSectionNowCell.idGeneral1, for: indexPath) as? GeneralSectionNowCell
-                let arreyCollection = wheatherPhoto1[indexPath.row]
-                cell?.configurationCellCollection(image: arreyCollection)
+                let addButtonLocationVC = AddButtonLocationViewController()
+                addButtonLocationVC.delegate = self
+//                let city = addButtonLocationVC.selectedCities[indexPath.row]
+                
+                let city = self.addSelectedCity[indexPath.row]
+                cell?.configurationCellCollection(with: city)
                 return cell
-            case .two:
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GeneralSectionDetailCell.idGeneral2, for: indexPath) as? GeneralSectionDetailCell
-                let arreyCollection = wheatherPhoto2[indexPath.row]
-                cell?.configurationCellCollection(image: arreyCollection)
-                return cell
-
-            case .three:
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GeneralSectionEveryDate.idGeneral3, for: indexPath) as? GeneralSectionEveryDate
-                let arreyCollection = wheatherPhoto3[indexPath.row]
-                cell?.configurationCellCollection(image: arreyCollection)
-                return cell
+//            case .two:
+//                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GeneralSectionDetailCell.idGeneral2, for: indexPath) as? GeneralSectionDetailCell
+//                let arreyCollection = wheatherPhoto2[indexPath.row]
+//                cell?.configurationCellCollection(image: arreyCollection)
+//                return cell
+//
+//            case .three:
+//                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GeneralSectionEveryDate.idGeneral3, for: indexPath) as? GeneralSectionEveryDate
+//                let arreyCollection = wheatherPhoto3[indexPath.row]
+//                cell?.configurationCellCollection(image: arreyCollection)
+//                return cell
 
             default: break
             }
@@ -194,14 +217,18 @@ final class GeneralViewController: UIViewController {
     }
 
     func reloadData() {
-        var snapshot = NSDiffableDataSourceSnapshot<Section, Int>()
+        var snapshot = NSDiffableDataSourceSnapshot<Section, [String]>()
         let sections: [Section] = [.one, .two, .three,]
+        let addButtonLocationVC = AddButtonLocationViewController()
+        addButtonLocationVC.delegate = self
+        let b = addButtonLocationVC.selectedCities
         snapshot.appendSections([sections[0]])
-        snapshot.appendItems(Array(one))
+        snapshot.appendItems(Array(b))
+        dataSource?.apply(snapshot)
         snapshot.appendSections([sections[1]])
-        snapshot.appendItems(Array(two))
+        snapshot.appendItems(Array(b))
         snapshot.appendSections([sections[2]])
-        snapshot.appendItems(Array(three))
+        snapshot.appendItems(Array(b))
 
         dataSource?.apply(snapshot)
     }
@@ -232,6 +259,23 @@ extension GeneralViewController: UICollectionViewDelegate {
 
     }
 }
+
+extension GeneralViewController: AddButtonLocationDelegate {
+    func didSelectCities(_ cities: [[String]]) {
+//        var snapshot = NSDiffableDataSourceSnapshot<Section, [String]>()
+//        let sections: [Section] = [.one, .two, .three,]
+//        let a = AddButtonLocationViewController()
+//        let b = a.selectedCities
+//        snapshot.appendSections([sections[0]])
+//        snapshot.appendItems(Array(b))
+//        collectionView.reloadData()
+        addSelectedCity = cities
+        let a = AddButtonLocationViewController()
+        a.delegate = self
+    }
+}
+
+
 
 
 

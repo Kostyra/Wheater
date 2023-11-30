@@ -129,12 +129,13 @@ final class StartViewController:UIViewController {
      @objc private func buttonAllowAction() {
          let locationManager  = LocationManager()
          locationManager.requestPermission()
+         viewModel.didTabAllowGeo()
          if let a = UserDefaults.standard.string(forKey: "city") {
              print(a)
          } else {
              print(10)
          }
-//         locationManager.start()
+
     }
     
      @objc private func buttonNotAllowAction() {

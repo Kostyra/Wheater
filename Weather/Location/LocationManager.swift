@@ -15,10 +15,9 @@ final class LocationManager:NSObject, CLLocationManagerDelegate {
     
     override init() {
         super.init()
-//        configurate()
         requestPermission()
-     
-//        start()
+        locationManager.delegate = self
+
         
     }
     
@@ -35,7 +34,6 @@ final class LocationManager:NSObject, CLLocationManagerDelegate {
                 print("Please give your location")
             case .authorizedAlways, .authorizedWhenInUse:
                 print("authorizedAlways")
-                locationManager.delegate = self
                 locationManager.startUpdatingLocation()
             @unknown default:
                 fatalError("Error")
@@ -46,10 +44,10 @@ final class LocationManager:NSObject, CLLocationManagerDelegate {
         
     }
     
+    
+    
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        print(locationManager.location as Any)
         if status == .authorizedAlways  || status == .authorizedWhenInUse{
-            print(locationManager.location as Any)
             if let location = locationManager.location {
                 let geocoder = CLGeocoder()
                 geocoder.reverseGeocodeLocation(location) { (placemarks, error) in
@@ -72,7 +70,7 @@ final class LocationManager:NSObject, CLLocationManagerDelegate {
             }
         }
     }
-    
+
   
 }
     

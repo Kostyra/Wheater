@@ -16,6 +16,8 @@ final class GeneralSectionEveryDate: UICollectionViewCell {
     //MARK: - Lify Cycle
     override init(frame: CGRect) {
         super.init(frame: .zero)
+        self.layer.cornerRadius = 12
+        self.layer.masksToBounds = true
         setupCollectionCell()
         contentView.backgroundColor = .green
     }

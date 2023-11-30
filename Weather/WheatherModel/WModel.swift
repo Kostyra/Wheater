@@ -7,5 +7,6 @@ final class WModel:Codable {
     var message: Float?
     var cnt: Float
     var list: [ListWModel]?
+    var city: CityModel?
      
 }

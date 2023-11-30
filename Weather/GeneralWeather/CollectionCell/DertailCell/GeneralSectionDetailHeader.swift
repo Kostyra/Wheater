@@ -25,6 +25,8 @@ final class GeneralSectionDetailHeader:UICollectionReusableView {
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
+        self.layer.cornerRadius = 12
+        self.layer.masksToBounds = true
         setupHeaderCell()
     }
     

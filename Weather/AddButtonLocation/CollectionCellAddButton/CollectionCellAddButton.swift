@@ -1,23 +1,17 @@
-//
-//  GeneralSectionNowCell.swift
-//  Weather
-//
-//  Created by Юлия Филиппова on 17.08.2023.
-//
-
 import UIKit
 
-final class GeneralSectionNowCell: UICollectionViewCell {
+final class CollectionCellAddButton:UICollectionViewCell {
+        
+   //MARK: - Properties
+    static let idAddButton = "CollectionCellAddButton"
     
-    //MARK: - Properties
-    static let idGeneral1 = "GeneralSectionNowCell"
-    
+
     private var locationManager = LocationManager()
     
-    
+
     
     private lazy var cityLabel:UILabel = {
-        let label = UILabel()
+       let label = UILabel()
         label.textColor = .black
         label.font = UIFont.systemFont(ofSize: 30)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -26,7 +20,7 @@ final class GeneralSectionNowCell: UICollectionViewCell {
     }()
     
     private lazy var cityTemp:UILabel = {
-        let label = UILabel()
+       let label = UILabel()
         label.textColor = .black
         label.font = UIFont.systemFont(ofSize: 30)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -35,7 +29,7 @@ final class GeneralSectionNowCell: UICollectionViewCell {
     }()
     
     private lazy var cityTempMin:UILabel = {
-        let label = UILabel()
+       let label = UILabel()
         label.textColor = .black
         label.font = UIFont.systemFont(ofSize: 13)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -44,22 +38,22 @@ final class GeneralSectionNowCell: UICollectionViewCell {
     }()
     
     private lazy var cityTempMax:UILabel = {
-        let label = UILabel()
-        label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 13)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        return label
-    }()
+    let label = UILabel()
+     label.textColor = .black
+     label.font = UIFont.systemFont(ofSize: 13)
+     label.translatesAutoresizingMaskIntoConstraints = false
+     
+     return label
+ }()
     
     private lazy var cityDescription:UILabel = {
-        let label = UILabel()
-        label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 13)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        return label
-    }()
+    let label = UILabel()
+     label.textColor = .black
+     label.font = UIFont.systemFont(ofSize: 13)
+     label.translatesAutoresizingMaskIntoConstraints = false
+     
+     return label
+ }()
     
     
     //MARK: - Lify Cycle
@@ -93,7 +87,7 @@ final class GeneralSectionNowCell: UICollectionViewCell {
             cityDescription.topAnchor.constraint(equalTo: cityLabel.bottomAnchor, constant: 5),
             cityDescription.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 12),
             cityDescription.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            
+
             
             cityTemp.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 3),
             cityTemp.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -12),
@@ -116,9 +110,11 @@ final class GeneralSectionNowCell: UICollectionViewCell {
         self.cityTempMin.text = ", Min: " + selectedCity[2]
         self.cityTempMax.text = "Max: " + selectedCity[3]
         self.cityDescription.text = selectedCity[4]
-        
-        //        self.cityTemp.text = String((Float(selectedCity[1]) ?? 0) - 100.00)
+                              
+//        self.cityTemp.text = String((Float(selectedCity[1]) ?? 0) - 100.00)
         
     }
-}
 
+        
+    
+}
