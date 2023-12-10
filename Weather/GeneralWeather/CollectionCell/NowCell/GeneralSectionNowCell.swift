@@ -19,7 +19,7 @@ final class GeneralSectionNowCell: UICollectionViewCell {
     private lazy var cityLabel:UILabel = {
         let label = UILabel()
         label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 30)
+        label.font = UIFont.systemFont(ofSize: 40)
         label.translatesAutoresizingMaskIntoConstraints = false
         
         return label
@@ -28,7 +28,7 @@ final class GeneralSectionNowCell: UICollectionViewCell {
     private lazy var cityTemp:UILabel = {
         let label = UILabel()
         label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 30)
+        label.font = UIFont.systemFont(ofSize: 60)
         label.translatesAutoresizingMaskIntoConstraints = false
         
         return label
@@ -37,7 +37,7 @@ final class GeneralSectionNowCell: UICollectionViewCell {
     private lazy var cityTempMin:UILabel = {
         let label = UILabel()
         label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 13)
+        label.font = UIFont.systemFont(ofSize: 20)
         label.translatesAutoresizingMaskIntoConstraints = false
         
         return label
@@ -46,19 +46,30 @@ final class GeneralSectionNowCell: UICollectionViewCell {
     private lazy var cityTempMax:UILabel = {
         let label = UILabel()
         label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 13)
+        label.font = UIFont.systemFont(ofSize: 20)
         label.translatesAutoresizingMaskIntoConstraints = false
         
         return label
     }()
     
-    private lazy var cityDescription:UILabel = {
+    private lazy var cityDescription: UILabel = {
         let label = UILabel()
         label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 13)
+        label.font = UIFont.systemFont(ofSize: 25)
         label.translatesAutoresizingMaskIntoConstraints = false
         
         return label
+    }()
+    
+    private lazy var stackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [cityTempMin,cityTempMax])
+        stackView.alignment = .center
+        stackView.axis = .horizontal
+        stackView.distribution = .fill
+        stackView.spacing = 10
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        
+       return stackView
     }()
     
     
@@ -81,41 +92,45 @@ final class GeneralSectionNowCell: UICollectionViewCell {
     private func setupCollectionCell() {
         contentView.addSubview(cityLabel)
         contentView.addSubview(cityTemp)
-        contentView.addSubview(cityTempMin)
-        contentView.addSubview(cityTempMax)
+//        contentView.addSubview(cityTempMin)
+//        contentView.addSubview(cityTempMax)
         contentView.addSubview(cityDescription)
+        contentView.addSubview(stackView)
         
         NSLayoutConstraint.activate([
             cityLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 3),
-            cityLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 12),
-            cityLabel.heightAnchor.constraint(equalToConstant: 30),
+            cityLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            cityLabel.heightAnchor.constraint(equalToConstant: 40),
             
-            cityDescription.topAnchor.constraint(equalTo: cityLabel.bottomAnchor, constant: 5),
-            cityDescription.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 12),
-            cityDescription.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            cityTemp.topAnchor.constraint(equalTo: cityLabel.bottomAnchor, constant: 5),
+            cityTemp.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            cityTemp.heightAnchor.constraint(equalToConstant: 60),
             
+            cityDescription.topAnchor.constraint(equalTo: cityTemp.bottomAnchor, constant: 5),
+            cityDescription.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            cityDescription.heightAnchor.constraint(equalToConstant: 25),
             
-            cityTemp.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 3),
-            cityTemp.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -12),
-            cityTemp.heightAnchor.constraint(equalToConstant: 30),
+//            cityTempMin.topAnchor.constraint(equalTo: cityDescription.bottomAnchor, constant: 5),
+//            cityTempMin.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+//            cityTempMin.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+//
+//            cityTempMax.topAnchor.constraint(equalTo: cityDescription.bottomAnchor, constant: 5),
+//            cityTempMax.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+//            cityTempMax.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             
-            cityTempMin.topAnchor.constraint(equalTo: cityTemp.bottomAnchor, constant: 5),
-            cityTempMin.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -12),
-            cityTempMin.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            
-            cityTempMax.topAnchor.constraint(equalTo: cityTemp.bottomAnchor, constant: 5),
-            cityTempMax.trailingAnchor.constraint(equalTo: cityTempMin.leadingAnchor, constant: 0),
-            cityTempMax.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            stackView.topAnchor.constraint(equalTo: cityDescription.bottomAnchor, constant: 5),
+            stackView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             
         ])
     }
     
-    func configurationCellCollection(with selectedCity: [String]) {
-        self.cityLabel.text = selectedCity[0]
-        self.cityTemp.text = selectedCity[1]
-        self.cityTempMin.text = ", Min: " + selectedCity[2]
-        self.cityTempMax.text = "Max: " + selectedCity[3]
-        self.cityDescription.text = selectedCity[4]
+    func configurationCellCollection(with city: City) {
+        self.cityLabel.text = city.name
+        self.cityTemp.text = String(Float(city.temp ?? 0))
+        self.cityTempMin.text = "Min: \(String(Float(city.tempMin ?? 0)))"
+        self.cityTempMax.text = ", Max: \(String(Float(city.tempMax ?? 0)))"
+        self.cityDescription.text = city.description
         
         //        self.cityTemp.text = String((Float(selectedCity[1]) ?? 0) - 100.00)
         

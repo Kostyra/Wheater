@@ -3,7 +3,7 @@
 import Foundation
 
 
-final class WheatherModel:Codable {
+struct WheatherModel:Codable {
     var main: String?
     var description: String?
     var icon: String?

@@ -2,7 +2,7 @@
 import UIKit
 
 protocol  AddButtonLocationDelegate:AnyObject {
-    func didSelectCities(_ cities: [[String]])
+    func didSelectCities(_ city: City)
 }
 
 final class GeneralViewController: UIViewController {
@@ -12,6 +12,23 @@ final class GeneralViewController: UIViewController {
         case one
         case two
         case three
+        
+        var title: String {
+            switch self {
+            case .one:
+                return "Зfujkjdjr"
+            case .two:
+                return "asdsadsa"
+            case .three:
+                return "asdasdasd"
+            }
+        }
+    }
+    
+    enum Cell: Hashable {
+        case top(city: City)
+        case middle
+        case bottom
     }
 
 
@@ -19,9 +36,10 @@ final class GeneralViewController: UIViewController {
     //MARK: - Properties
 
     private let viewModel:IGeneralViewModel
-    private var dataSource:UICollectionViewDiffableDataSource<Section, [String]>?
+    private lazy var dataSource = configureDataSource()
+    typealias DataSource = UICollectionViewDiffableDataSource<Section, Cell>
+    typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Cell>
     private var collectionView: UICollectionView! = nil
-    private var addSelectedCity: [[String]] = []
     
 
     //MARK: - Life Cycle
@@ -35,11 +53,7 @@ final class GeneralViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .orange
         setupCollectionView()
-        configureDataSource()
         buttonItem()
-        reloadData()
-        
-
     }
 
     required init?(coder: NSCoder) {
@@ -48,6 +62,8 @@ final class GeneralViewController: UIViewController {
 
 
     //MARK: - Method
+    
+    
     
     private func buttonItem()  {
         let imagePlus = UIImage(systemName: "plus")
@@ -58,6 +74,7 @@ final class GeneralViewController: UIViewController {
     
     @objc func buttonAddWheather() {
         let addButtonLocationVC = AddButtonLocationViewController()
+        addButtonLocationVC.delegate = self
         let addButtonLocationNC = UINavigationController(rootViewController: addButtonLocationVC)
         addButtonLocationNC.modalPresentationStyle = .fullScreen
         addButtonLocationNC.modalTransitionStyle = .crossDissolve
@@ -75,6 +92,7 @@ final class GeneralViewController: UIViewController {
         collectionView.register(GeneralSectionEveryDate.self, forCellWithReuseIdentifier: GeneralSectionEveryDate.idGeneral3)
         collectionView.register(GeneralSectionDetailHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: GeneralSectionDetailHeader.idGeneralHeader2)
         collectionView.register(GeneralSectionEveryDateHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: GeneralSectionEveryDateHeader.idGeneralHeader3)
+//        collectionView.register(TitleHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "TitleHeader")
         view.addSubview(collectionView)
 
     }
@@ -103,8 +121,7 @@ final class GeneralViewController: UIViewController {
         let section = NSCollectionLayoutSection(group: group)
         section.contentInsets = NSDirectionalEdgeInsets.init(top: 12, leading: 20, bottom: 0, trailing: 20)
 
-//        let header = createSectionHeader()
-//        section.boundarySupplementaryItems = [header]
+
 
         return section
     }
@@ -157,49 +174,79 @@ final class GeneralViewController: UIViewController {
         return layoutSectionHeader
     }
 
-    private func configureDataSource() {
-        dataSource =  UICollectionViewDiffableDataSource<Section, [String]>(collectionView: collectionView, cellProvider: { (collectionView,indexPath,itemIdentifier) -> UICollectionViewCell? in
-            switch Section(rawValue: indexPath.section).self {
-            case .one:
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GeneralSectionNowCell.idGeneral1, for: indexPath) as? GeneralSectionNowCell
-                let addButtonLocationVC = AddButtonLocationViewController()
-                addButtonLocationVC.delegate = self
-//                let city = addButtonLocationVC.selectedCities[indexPath.row]
+    private func configureDataSource() -> DataSource {
+        return DataSource(collectionView: collectionView) { [weak self] collectionView, indexPath, cell in
+            guard let self = self else {
+                return UICollectionViewCell()
+            }
+            switch cell {
                 
-                let city = self.addSelectedCity[indexPath.row]
+            case .top(city: let city):
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GeneralSectionNowCell.idGeneral1, for: indexPath) as?
+                GeneralSectionNowCell
                 cell?.configurationCellCollection(with: city)
                 return cell
-//            case .two:
-//                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GeneralSectionDetailCell.idGeneral2, for: indexPath) as? GeneralSectionDetailCell
-//                let arreyCollection = wheatherPhoto2[indexPath.row]
-//                cell?.configurationCellCollection(image: arreyCollection)
-//                return cell
-//
-//            case .three:
-//                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GeneralSectionEveryDate.idGeneral3, for: indexPath) as? GeneralSectionEveryDate
-//                let arreyCollection = wheatherPhoto3[indexPath.row]
-//                cell?.configurationCellCollection(image: arreyCollection)
-//                return cell
-
-            default: break
+            case .middle:
+                return UICollectionViewCell()
+            case .bottom:
+                return UICollectionViewCell()
             }
-            fatalError("Cannot create the cell")
-        })
-                
-        dataSource?.supplementaryViewProvider = {
-            collectionView, kind, indexPath in
-            switch Section(rawValue: indexPath.section).self {
-            case .two:
-                guard let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: GeneralSectionDetailHeader.idGeneralHeader2, for: indexPath) as? GeneralSectionDetailHeader else { return nil }
-                return sectionHeader
-            case .three:
-                guard let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: GeneralSectionEveryDateHeader.idGeneralHeader3, for: indexPath) as? GeneralSectionEveryDateHeader else { return nil }
-                return sectionHeader
-            default: break
-            }
-            fatalError("Cannot create the cell")
-        }
+        } 
     }
+    
+    func makeSnapshot(city:City) -> Snapshot {
+        var snapshot = Snapshot()
+        snapshot.appendSections([.one])
+        snapshot.appendItems([.top(city: city)], toSection: .one)
+        return snapshot
+    }
+    
+//    func makeHeaderProvider() -> (UICollectionView,String,IndexPath) -> UICollectionReusableView? {
+//        { [weak self] collectionView, kind, indexPath in
+//            guard let self, kind == UICollectionView.elementKindSectionHeader else {  return UICollectionReusableView() }
+//            let section = self.dataSource.snapshot().sectionIdentifiers[indexPath.section]
+//            let header: GeneralSectionDetailHeader = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: GeneralSectionDetailHeader.idGeneralHeader2, for: indexPath) as! GeneralSectionDetailHeader
+////            header.title = section.title
+//            return header
+//
+//        }
+//    }
+    
+//    func makeHeaderProvider() -> (UICollectionView, String, IndexPath) -> UICollectionReusableView? {
+//        { [weak self] collectionView, kind, indexPath in
+//            guard let self = self, kind == UICollectionView.elementKindSectionHeader else { return UICollectionReusableView()}
+//            switch Section(rawValue: indexPath.section).self {
+//            case .two:
+//                guard let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: GeneralSectionDetailHeader.idGeneralHeader2, for: indexPath) as? GeneralSectionDetailHeader else { return UICollectionReusableView() }
+//                return sectionHeader
+//            case .three:
+//                guard let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: GeneralSectionEveryDateHeader.idGeneralHeader3, for: indexPath) as? GeneralSectionEveryDateHeader else { return UICollectionReusableView()  }
+//                return sectionHeader
+//            default: break
+//            }
+//            fatalError("Cannot create the cell")
+//        }
+//    }
+    
+    func makeHeaderProvider() -> DataSource.SupplementaryViewProvider {
+        return  { collectionView, kind, indexPath in
+            switch Section(rawValue: indexPath.section).self {
+               case .two:
+                   guard let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: GeneralSectionDetailHeader.idGeneralHeader2, for: indexPath) as? GeneralSectionDetailHeader else { return nil }
+                   return sectionHeader
+               case .three:
+                   guard let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: GeneralSectionEveryDateHeader.idGeneralHeader3, for: indexPath) as? GeneralSectionEveryDateHeader else { return nil }
+                   return sectionHeader
+               default: break
+               }
+               fatalError("Cannot create the cell")
+           }
+        }
+    
+    
+
+    
+ 
     
     private func createLayout() -> UICollectionViewLayout {
         let layout = UICollectionViewCompositionalLayout { (sectionIndex, layoutEnvironment) -> NSCollectionLayoutSection? in
@@ -216,22 +263,7 @@ final class GeneralViewController: UIViewController {
         return layout
     }
 
-    func reloadData() {
-        var snapshot = NSDiffableDataSourceSnapshot<Section, [String]>()
-        let sections: [Section] = [.one, .two, .three,]
-        let addButtonLocationVC = AddButtonLocationViewController()
-        addButtonLocationVC.delegate = self
-        let b = addButtonLocationVC.selectedCities
-        snapshot.appendSections([sections[0]])
-        snapshot.appendItems(Array(b))
-        dataSource?.apply(snapshot)
-        snapshot.appendSections([sections[1]])
-        snapshot.appendItems(Array(b))
-        snapshot.appendSections([sections[2]])
-        snapshot.appendItems(Array(b))
 
-        dataSource?.apply(snapshot)
-    }
 
     private func configureHierarchy() {
 
@@ -261,17 +293,10 @@ extension GeneralViewController: UICollectionViewDelegate {
 }
 
 extension GeneralViewController: AddButtonLocationDelegate {
-    func didSelectCities(_ cities: [[String]]) {
-//        var snapshot = NSDiffableDataSourceSnapshot<Section, [String]>()
-//        let sections: [Section] = [.one, .two, .three,]
-//        let a = AddButtonLocationViewController()
-//        let b = a.selectedCities
-//        snapshot.appendSections([sections[0]])
-//        snapshot.appendItems(Array(b))
-//        collectionView.reloadData()
-        addSelectedCity = cities
-        let a = AddButtonLocationViewController()
-        a.delegate = self
+    func didSelectCities(_ city: City) {
+        let snapshot = makeSnapshot(city: city)
+        dataSource.supplementaryViewProvider = makeHeaderProvider()
+        dataSource.apply(snapshot)
     }
 }
 
@@ -279,37 +304,37 @@ extension GeneralViewController: AddButtonLocationDelegate {
 
 
 
-var wheatherPhoto1: [UIImage] = [
-    UIImage(named: "0")!
-]
-
-var wheatherPhoto2: [UIImage] = [
-    UIImage(named: "1")!,
-    UIImage(named: "1")!,
-    UIImage(named: "1")!,
-    UIImage(named: "1")!,
-    UIImage(named: "1")!,
-    UIImage(named: "1")!,
-    UIImage(named: "1")!,
-    UIImage(named: "1")!,
-
-]
-
-var wheatherPhoto3: [UIImage] = [
-    UIImage(named: "1")!,
-    UIImage(named: "2")!,
-    UIImage(named: "0")!,
-    UIImage(named: "1")!,
-    UIImage(named: "2")!,
-    UIImage(named: "0")!,
-    UIImage(named: "2")!,
-    UIImage(named: "2")!,
-    UIImage(named: "2")!,
-    UIImage(named: "2")!,
-    UIImage(named: "2")!,
-    UIImage(named: "2")!,
-]
-
+//var wheatherPhoto1: [UIImage] = [
+//    UIImage(named: "0")!
+//]
+//
+//var wheatherPhoto2: [UIImage] = [
+//    UIImage(named: "1")!,
+//    UIImage(named: "1")!,
+//    UIImage(named: "1")!,
+//    UIImage(named: "1")!,
+//    UIImage(named: "1")!,
+//    UIImage(named: "1")!,
+//    UIImage(named: "1")!,
+//    UIImage(named: "1")!,
+//
+//]
+//
+//var wheatherPhoto3: [UIImage] = [
+//    UIImage(named: "1")!,
+//    UIImage(named: "2")!,
+//    UIImage(named: "0")!,
+//    UIImage(named: "1")!,
+//    UIImage(named: "2")!,
+//    UIImage(named: "0")!,
+//    UIImage(named: "2")!,
+//    UIImage(named: "2")!,
+//    UIImage(named: "2")!,
+//    UIImage(named: "2")!,
+//    UIImage(named: "2")!,
+//    UIImage(named: "2")!,
+//]
+//
 
 
 

@@ -8,8 +8,8 @@
 import Foundation
 
 
-final class CityModel:Codable {
-    var id: Float?
+struct CityModel:Codable {
+    var id: Int?
     var name: String?
     var country: String?
     

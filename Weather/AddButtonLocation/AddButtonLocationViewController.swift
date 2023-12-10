@@ -3,37 +3,30 @@ import UIKit
 final class AddButtonLocationViewController:UIViewController, UISearchResultsUpdating {
 
     
-    enum Section {
-        case main
-    }
     //MARK:  - Properties
-   
-    
-    var selectedCities: [[String]] = [] {
-        didSet {
-            saveSelectedCities()
-        }
-    }
-    
-    
+
     weak var delegate: AddButtonLocationDelegate?
     
     private var timer = Timer()
     private var searchController: UISearchController?
     private var wModel:WModel?
+    private var city: City?
+    private var cities: [City] = []
     private let tableView = UITableView()
     
-    private var dataSource:UICollectionViewDiffableDataSource<Int, [String]>! = nil
+    
+    private lazy var dataSource = makeDataSource()
     private var collectionView:UICollectionView! = nil
 
+    typealias DataSource = UICollectionViewDiffableDataSource<Int, City>
+    typealias Snapshot = NSDiffableDataSourceSnapshot<Int, City>
     
     
     //MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        UserDefaults.standard.removeObject(forKey: "idCity")
-        loadSelectedCities()
+        UserDefaults.standard.removeObject(forKey: "idCity")
         tableView.frame = view.bounds
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "TableCell")
         tableView.dataSource = self
@@ -42,7 +35,6 @@ final class AddButtonLocationViewController:UIViewController, UISearchResultsUpd
         view.addSubview(tableView)
         
         configureHierarchy()
-        configureDataSource()
         collectionView.delegate = self
         collectionView.reloadData()
         
@@ -54,15 +46,34 @@ final class AddButtonLocationViewController:UIViewController, UISearchResultsUpd
  
 //MARK: - Method
     
-    private func loadSelectedCities() {
-        if let savedCities = UserDefaults.standard.object(forKey: "idCity") as? [[String]] {
-            selectedCities = savedCities
+    private func makeDataSource() -> DataSource {
+        return DataSource(collectionView: collectionView) { [weak self] collectionView, indexPath, itemIdentifier in
+            guard let self = self else {
+                return UICollectionViewCell()
+            }
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionCellAddButton.idAddButton, for: indexPath) as! CollectionCellAddButton
+            let city = self.cities[indexPath.row]
+            cell.configurationCellCollection(with: city)
+            return cell
         }
     }
     
-    private func saveSelectedCities() {
-        UserDefaults.standard.set(selectedCities, forKey: "idCity")
+    private func makeSnapshot() -> Snapshot {
+        var snapshot = Snapshot()
+        snapshot.appendSections([0])
+        snapshot.appendItems(cities, toSection: 0)
+        return snapshot
     }
+    
+//    private func loadSelectedCities() {
+//        if let savedCities = UserDefaults.standard.object(forKey: "idCity") as? [[String]] {
+//            selectedCities = savedCities
+//        }
+//    }
+//
+//    private func saveSelectedCities() {
+//        UserDefaults.standard.set(selectedCities, forKey: "idCity")
+//    }
     
     private func createLayout() -> UICollectionViewLayout {
         let itemSize = NSCollectionLayoutSize(
@@ -92,25 +103,7 @@ final class AddButtonLocationViewController:UIViewController, UISearchResultsUpd
         view.addSubview(collectionView)
     }
     
-
-    
-    private func configureDataSource() {
-        dataSource = UICollectionViewDiffableDataSource<Int, [String]>(collectionView: collectionView) {
-            (collectionView, indexPath, city) -> UICollectionViewCell? in
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionCellAddButton.idAddButton, for: indexPath) as! CollectionCellAddButton
-            let city = self.selectedCities[indexPath.row]
-            cell.configurationCellCollection(with: city)
-            return cell
-        }
-
-        
-        var snapshot = NSDiffableDataSourceSnapshot<Int, [String]>()
-        snapshot.appendSections([0])
-        snapshot.appendItems(selectedCities)
-        dataSource?.apply(snapshot)
-    }
-
-    
+   
     private func largeTitle() {
         navigationItem.title = "Wheather"
         navigationController?.navigationBar.prefersLargeTitles = true
@@ -122,29 +115,47 @@ final class AddButtonLocationViewController:UIViewController, UISearchResultsUpd
     }
     
      func updateSearchResults(for searchController: UISearchController) {
-         guard let city = searchController.searchBar.text else { return }
+         guard let searchText = searchController.searchBar.text else { return }
          
 //         timer.invalidate()
-         if !city.isEmpty {
+         if !searchText.isEmpty {
 //             timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false, block: { [weak self] _ in
-                 NetWorkManager.shared.getWeather(city: city) { model in
-                     if model != nil {
-                         self.wModel = model
-                         
-                        DispatchQueue.main.async {
-                            self.tableView.reloadData()
-                            self.collectionView.isHidden = true
-                            self.tableView.isHidden = false
-                        }
+             NetWorkManager.shared.getWeather(city: searchText) { [weak self] result in
+                 guard let self = self else { return }
+                 switch result {
+                 case .success(let city):
+                     self.city = city
+//                     self.addUniqueCity(city)
+                     print(city)
+                     
+                     DispatchQueue.main.async {
+                         self.tableView.reloadData()
+                         self.collectionView.isHidden = true
+                         self.tableView.isHidden = false
                      }
+                 case .failure(let error):
+                     print(error.localizedDescription)
                  }
-//             })
+
+             }
          } else {
-             wModel = nil
+             city = nil
+             self.collectionView.isHidden = false
+            self.tableView.isHidden = true
              tableView.reloadData()
          }
     }
+    
+    private func addUniqueCity(_ id: City) {
+        if !cities.contains(where: { $0.id == city?.id }) {
+            cities.append(city!)
+        } else {
+            print("City already exists")
+        }
+    }
+
 }
+
 
 
 //MARK: - extension
@@ -153,43 +164,24 @@ extension AddButtonLocationViewController:UITableViewDelegate, UITableViewDataSo
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return wModel != nil ? 1 : 0
+
+        return city != nil ? 1 : 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableCell", for: indexPath)
-        cell.textLabel?.text = wModel?.city?.name
+        cell.textLabel?.text = city?.name
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
-        guard let selectedCity = wModel?.city?.name else { return }
-        guard let selectTemp = (wModel?.list?.first?.main?.temp?.description) else { return }
-        guard let selectTempMin = wModel?.list?.first?.main?.temp_min?.description else { return }
-        guard let selectTempMax = wModel?.list?.first?.main?.temp_max?.description else { return }
-        guard let selectDescription = wModel?.list?.first?.weather?.first?.description?.description else { return }
-        
-        let newCity = [selectedCity, selectTemp , selectTempMin, selectTempMax, selectDescription]
-        if !selectedCities.contains(where: { $0[0]  == selectedCity}) {
-            selectedCities.append(newCity)
-        } else {
-            print("the city already exists")
-        }
-        //selectedCities.append([selectedCity, selectTemp , selectTempMin, selectTempMax, selectDescription])
-        var snapshot = NSDiffableDataSourceSnapshot<Int, [String]>()
-            snapshot.appendSections([0])
-//        selectedCities.enumerated().forEach { index, city in
-//             snapshot.appendItems([city], toSection: 0) }
-        snapshot.appendItems(selectedCities)
+        self.addUniqueCity(city!)
+        let snapshot = makeSnapshot()
         dataSource.apply(snapshot)
- 
-        wModel = nil
-//        tableView.reloadData()
-        tableView.isHidden = true
+        city = nil
         searchController?.searchBar.text = nil
         searchController?.isActive = false
-//        collectionView.reloadData()
+        tableView.isHidden = true
         collectionView.isHidden = false
 
     }
@@ -200,12 +192,9 @@ extension AddButtonLocationViewController:UITableViewDelegate, UITableViewDataSo
 extension AddButtonLocationViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectionLocation = selectedCities[indexPath.row]
-//        if let selectedCities = dataSource.itemIdentifier(for: indexPath) {
-//            print(selectedCities)
-//        }
-        delegate?.didSelectCities([selectionLocation])
-        print("\(selectionLocation) + 1")
+        let selectionLocation = cities[indexPath.row]
+        delegate?.didSelectCities(selectionLocation)
+        print("\(selectionLocation) + delegate")
         dismiss(animated: true, completion: nil)
     }
 }

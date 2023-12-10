@@ -104,12 +104,12 @@ final class CollectionCellAddButton:UICollectionViewCell {
         ])
     }
     
-    func configurationCellCollection(with selectedCity: [String]) {
-        self.cityLabel.text = selectedCity[0]
-        self.cityTemp.text = selectedCity[1]
-        self.cityTempMin.text = ", Min: " + selectedCity[2]
-        self.cityTempMax.text = "Max: " + selectedCity[3]
-        self.cityDescription.text = selectedCity[4]
+    func configurationCellCollection(with city: City) {
+        self.cityLabel.text = city.name
+        self.cityTemp.text = String(Float(city.temp ?? 0))
+        self.cityTempMin.text = ", Min: \(String(Float(city.tempMin ?? 0)))"
+        self.cityTempMax.text = "Max: \(String(Float(city.tempMax ?? 0)))"
+        self.cityDescription.text = city.description
                               
 //        self.cityTemp.text = String((Float(selectedCity[1]) ?? 0) - 100.00)
         

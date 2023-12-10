@@ -2,6 +2,12 @@
 
 import Foundation
 
+enum NetworkError: Error {
+    case noInternet
+    case noData
+    case somethingWentWrong
+}
+
 
 final class NetWorkManager {
     
@@ -14,7 +20,7 @@ final class NetWorkManager {
 
     //MARK: - Method
     
-    func getWeather (city: String , result: @escaping((WModel?) -> ())) {
+    func getWeather (city: String, completion: @escaping(Result<City, NetworkError>) -> Void) {
         var urlComponent = URLComponents()
         urlComponent.scheme = "https"
         urlComponent.host = "api.openweathermap.org"
@@ -29,30 +35,40 @@ final class NetWorkManager {
         task.dataTask(with: request) { (data, response, error) in
                if let error = error {
                    print(error.localizedDescription)
-                   result(nil)
+                   completion(.failure(.noInternet))
                    return
                }
             
             let code = (response as? HTTPURLResponse)?.statusCode
             if code != 200 {
                 print("Status \(String(describing: data))")
-                result(nil)
+                completion(.failure(.noInternet))
                 return
             }
                
                guard let data = data else {
                    print("data is nil")
-                   result(nil)
+                   completion(.failure(.noData))
                    return
                }
                
                do {
                    let decoder = JSONDecoder()
                    let decoderWModel = try decoder.decode(WModel.self, from: data)
-                   result(decoderWModel)
+                   let city = City(
+                                    id: decoderWModel.city?.id,
+                                   name: decoderWModel.city?.name ?? "Not",
+                                   icon: decoderWModel.list?.first?.weather?.first?.icon,
+                                   description: decoderWModel.list?.first?.weather?.first?.description,
+                                    wheather: decoderWModel.list?.first?.weather?.first?.main,
+                                   temp: decoderWModel.list?.first?.main?.temp,
+                                   tempMax: decoderWModel.list?.first?.main?.temp_max,
+                                   tempMin: decoderWModel.list?.first?.main?.temp_min)
+
+                   completion(.success(city))
                } catch {
                    print(error.localizedDescription)
-                   result(nil)
+                   completion(.failure(.somethingWentWrong))
                }
            }.resume()
         
