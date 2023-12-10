@@ -21,6 +21,8 @@
 		CB1754492B00F08300063FB7 /* WheatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1754482B00F08300063FB7 /* WheatherModel.swift */; };
 		CB17544B2B04EFE700063FB7 /* oldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB17544A2B04EFE700063FB7 /* oldController.swift */; };
 		CB17544D2B0E31E200063FB7 /* old1234.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB17544C2B0E31E200063FB7 /* old1234.swift */; };
+		CB17544F2B19EBEA00063FB7 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB17544E2B19EBE900063FB7 /* City.swift */; };
+		CB1754512B1A06EE00063FB7 /* TitleHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1754502B1A06EE00063FB7 /* TitleHeader.swift */; };
 		CB1C4FF42A813FE50044210A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1C4FF32A813FE50044210A /* AppDelegate.swift */; };
 		CB1C4FF62A813FE50044210A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1C4FF52A813FE50044210A /* SceneDelegate.swift */; };
 		CB1C50002A813FE80044210A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB1C4FFF2A813FE80044210A /* Assets.xcassets */; };
@@ -64,6 +66,8 @@
 		CB1754482B00F08300063FB7 /* WheatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheatherModel.swift; sourceTree = "<group>"; };
 		CB17544A2B04EFE700063FB7 /* oldController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oldController.swift; sourceTree = "<group>"; };
 		CB17544C2B0E31E200063FB7 /* old1234.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = old1234.swift; sourceTree = "<group>"; };
+		CB17544E2B19EBE900063FB7 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		CB1754502B1A06EE00063FB7 /* TitleHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleHeader.swift; sourceTree = "<group>"; };
 		CB1C4FF02A813FE50044210A /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB1C4FF32A813FE50044210A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB1C4FF52A813FE50044210A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +133,7 @@
 				CB1753D42ABB3A8600063FB7 /* MainWModel.swift */,
 				CB1753E02AEA9E3600063FB7 /* CityModel.swift */,
 				CB1754482B00F08300063FB7 /* WheatherModel.swift */,
+				CB17544E2B19EBE900063FB7 /* City.swift */,
 			);
 			path = WheatherModel;
 			sourceTree = "<group>";
@@ -309,6 +314,7 @@
 			isa = PBXGroup;
 			children = (
 				CB825EC32A8E5B2F00F1CC20 /* GeneralSectionNowCell.swift */,
+				CB1754502B1A06EE00063FB7 /* TitleHeader.swift */,
 			);
 			path = NowCell;
 			sourceTree = "<group>";
@@ -394,6 +400,7 @@
 				CB487D2F2A9CE1C200441585 /* Hour24.swift in Sources */,
 				CB1754492B00F08300063FB7 /* WheatherModel.swift in Sources */,
 				CB1C501C2A81439B0044210A /* StartViewModel.swift in Sources */,
+				CB17544F2B19EBEA00063FB7 /* City.swift in Sources */,
 				CB1753D12ABB37E900063FB7 /* WModel.swift in Sources */,
 				CB1753D52ABB3A8600063FB7 /* MainWModel.swift in Sources */,
 				CB1C501A2A81434A0044210A /* GeneralWeatherCoordinator.swift in Sources */,
@@ -413,6 +420,7 @@
 				CB1753D32ABB397700063FB7 /* ListWModel.swift in Sources */,
 				CB1753E12AEA9E3600063FB7 /* CityModel.swift in Sources */,
 				CB1C50252A82ABE00044210A /* CustomButton.swift in Sources */,
+				CB1754512B1A06EE00063FB7 /* TitleHeader.swift in Sources */,
 				CB1753D82ABC37B600063FB7 /* LocationManager.swift in Sources */,
 				CB825EBF2A8DFDDE00F1CC20 /* GeneralSectionDetailCell.swift in Sources */,
 				CB487D1A2A94EFB800441585 /* old.swift in Sources */,
