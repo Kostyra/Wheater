@@ -11,7 +11,7 @@ final class GeneralWeatherCoordinator {
     //MARK: - Properties
     
     private weak var parentCoordunator: IMainCoordinator?
-    private var navigationController:UIViewController
+    private var navigationController:UINavigationController
     private var childCoordinator: [ICoordinator] = []
     
     
@@ -20,6 +20,11 @@ final class GeneralWeatherCoordinator {
         self.navigationController = navigationController
         self.parentCoordunator = parentCoordunator
     }
+    
+    private func openSearchLocationCoordinator() {
+        let locationCoordinator = AddButtonLocationCoordinator(parentCoordunator: self)
+    }
+    
 }
 
 
@@ -37,7 +42,9 @@ extension GeneralWeatherCoordinator: ICoordinator {
     //MARK: - IGeneralWeatherCoordinator
 extension GeneralWeatherCoordinator: IGeneralWeatherCoordinator {
     func switchToNextFlow() {
-        self.parentCoordunator?.switchToNextFlow(from: self)
+        let locationCoordinator = AddButtonLocationCoordinator(parentCoordunator: self)
+        let vc = locationCoordinator.start()
+        navigationController.pushViewController(vc, animated: true)
     }
 }
 

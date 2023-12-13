@@ -13,22 +13,13 @@ final class GeneralViewController: UIViewController {
         case two
         case three
         
-        var title: String {
-            switch self {
-            case .one:
-                return "Зfujkjdjr"
-            case .two:
-                return "asdsadsa"
-            case .three:
-                return "asdasdasd"
-            }
-        }
+
     }
     
     enum Cell: Hashable {
         case top(city: City)
-        case middle
-        case bottom
+        case middle(image: String)
+        case bottom(city: City)
     }
 
 
@@ -73,12 +64,7 @@ final class GeneralViewController: UIViewController {
     }
     
     @objc func buttonAddWheather() {
-        let addButtonLocationVC = AddButtonLocationViewController()
-        addButtonLocationVC.delegate = self
-        let addButtonLocationNC = UINavigationController(rootViewController: addButtonLocationVC)
-        addButtonLocationNC.modalPresentationStyle = .fullScreen
-        addButtonLocationNC.modalTransitionStyle = .crossDissolve
-        present(addButtonLocationNC, animated: true)
+        viewModel.nextFlow()
         
     }
     
@@ -182,14 +168,22 @@ final class GeneralViewController: UIViewController {
             switch cell {
                 
             case .top(city: let city):
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GeneralSectionNowCell.idGeneral1, for: indexPath) as?
-                GeneralSectionNowCell
+                guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GeneralSectionNowCell.idGeneral1, for: indexPath) as? GeneralSectionNowCell  else {
+                    return UICollectionViewCell()
+                    
+                }
+                cell.configurationCellCollection(with: city)
+                return cell
+            case .middle( let image) :
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GeneralSectionDetailCell.idGeneral2, for: indexPath) as?
+                GeneralSectionDetailCell
+                cell?.configurationCellCollection(with: image)
+                return cell
+            case .bottom(city: let city):
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GeneralSectionEveryDate.idGeneral3, for: indexPath) as?
+                GeneralSectionEveryDate
                 cell?.configurationCellCollection(with: city)
                 return cell
-            case .middle:
-                return UICollectionViewCell()
-            case .bottom:
-                return UICollectionViewCell()
             }
         } 
     }
@@ -198,35 +192,17 @@ final class GeneralViewController: UIViewController {
         var snapshot = Snapshot()
         snapshot.appendSections([.one])
         snapshot.appendItems([.top(city: city)], toSection: .one)
+        snapshot.appendSections([.two])
+        if let icons = city.icon  {
+            icons.forEach { icon in
+                snapshot.appendItems([.middle(image: icon)], toSection: .two)
+            }
+        }
+        snapshot.appendSections([.three])
+        snapshot.appendItems([.bottom(city: city)], toSection: .three)
         return snapshot
     }
-    
-//    func makeHeaderProvider() -> (UICollectionView,String,IndexPath) -> UICollectionReusableView? {
-//        { [weak self] collectionView, kind, indexPath in
-//            guard let self, kind == UICollectionView.elementKindSectionHeader else {  return UICollectionReusableView() }
-//            let section = self.dataSource.snapshot().sectionIdentifiers[indexPath.section]
-//            let header: GeneralSectionDetailHeader = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: GeneralSectionDetailHeader.idGeneralHeader2, for: indexPath) as! GeneralSectionDetailHeader
-////            header.title = section.title
-//            return header
-//
-//        }
-//    }
-    
-//    func makeHeaderProvider() -> (UICollectionView, String, IndexPath) -> UICollectionReusableView? {
-//        { [weak self] collectionView, kind, indexPath in
-//            guard let self = self, kind == UICollectionView.elementKindSectionHeader else { return UICollectionReusableView()}
-//            switch Section(rawValue: indexPath.section).self {
-//            case .two:
-//                guard let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: GeneralSectionDetailHeader.idGeneralHeader2, for: indexPath) as? GeneralSectionDetailHeader else { return UICollectionReusableView() }
-//                return sectionHeader
-//            case .three:
-//                guard let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: GeneralSectionEveryDateHeader.idGeneralHeader3, for: indexPath) as? GeneralSectionEveryDateHeader else { return UICollectionReusableView()  }
-//                return sectionHeader
-//            default: break
-//            }
-//            fatalError("Cannot create the cell")
-//        }
-//    }
+
     
     func makeHeaderProvider() -> DataSource.SupplementaryViewProvider {
         return  { collectionView, kind, indexPath in
@@ -299,42 +275,6 @@ extension GeneralViewController: AddButtonLocationDelegate {
         dataSource.apply(snapshot)
     }
 }
-
-
-
-
-
-//var wheatherPhoto1: [UIImage] = [
-//    UIImage(named: "0")!
-//]
-//
-//var wheatherPhoto2: [UIImage] = [
-//    UIImage(named: "1")!,
-//    UIImage(named: "1")!,
-//    UIImage(named: "1")!,
-//    UIImage(named: "1")!,
-//    UIImage(named: "1")!,
-//    UIImage(named: "1")!,
-//    UIImage(named: "1")!,
-//    UIImage(named: "1")!,
-//
-//]
-//
-//var wheatherPhoto3: [UIImage] = [
-//    UIImage(named: "1")!,
-//    UIImage(named: "2")!,
-//    UIImage(named: "0")!,
-//    UIImage(named: "1")!,
-//    UIImage(named: "2")!,
-//    UIImage(named: "0")!,
-//    UIImage(named: "2")!,
-//    UIImage(named: "2")!,
-//    UIImage(named: "2")!,
-//    UIImage(named: "2")!,
-//    UIImage(named: "2")!,
-//    UIImage(named: "2")!,
-//]
-//
 
 
 

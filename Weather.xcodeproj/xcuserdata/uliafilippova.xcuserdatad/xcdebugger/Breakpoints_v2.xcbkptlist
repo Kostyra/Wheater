@@ -345,8 +345,8 @@
             filePath = "Weather/GeneralWeather/GeneralViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "296"
-            endingLineNumber = "296"
+            startingLineNumber = "272"
+            endingLineNumber = "272"
             landmarkName = "didSelectCities(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -393,8 +393,8 @@
             filePath = "Weather/GeneralWeather/GeneralViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "297"
-            endingLineNumber = "297"
+            startingLineNumber = "273"
+            endingLineNumber = "273"
             landmarkName = "didSelectCities(_:)"
             landmarkType = "7">
             <Locations>
@@ -864,8 +864,8 @@
             filePath = "Weather/GeneralWeather/GeneralViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "buttonAddWheather()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1087,8 +1087,8 @@
             filePath = "Weather/GeneralWeather/GeneralViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "buttonAddWheather()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1096,49 +1096,65 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FCC0CD28-53DF-454F-A24A-7EC2EE3202DC"
+            uuid = "59F6807A-3A41-4299-9ECB-FEF1FE2753B7"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Weather/GeneralWeather/GeneralViewController.swift"
+            filePath = "Weather/SearchLocationFlow/AddButtonLocationModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "buttonAddWheather()"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "searchCity(city:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "FCC0CD28-53DF-454F-A24A-7EC2EE3202DC - b3da732fe083a7f8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Weather.GeneralViewController.buttonAddWheather() -&gt; ()"
-                  moduleName = "Weather"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/GeneralWeather/GeneralViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "80"
-                  endingLineNumber = "80"
-                  offsetFromSymbolStart = "72">
-               </Location>
-               <Location
-                  uuid = "FCC0CD28-53DF-454F-A24A-7EC2EE3202DC - b3da732fe083a79b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Weather.GeneralViewController.buttonAddWheather() -&gt; ()"
-                  moduleName = "Weather"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/GeneralWeather/GeneralViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "81"
-                  endingLineNumber = "81"
-                  offsetFromSymbolStart = "72">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C3179490-9D32-457C-8527-9E8308C31589"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Weather/Coordinators/GeneralWeatherCoordinator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "switchToNextFlow()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CC20FB1A-FD06-4995-A14D-F453A00235E4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Weather/Coordinators/GeneralWeatherCoordinator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "switchToNextFlow()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B7A981E5-53D1-4FD3-8B83-EA66CCEB19A3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Weather/SearchLocationFlow/AddButtonLocationViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

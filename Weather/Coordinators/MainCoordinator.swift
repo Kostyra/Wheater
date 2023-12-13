@@ -41,6 +41,14 @@ final class MainCoordinator {
         return GeneralWeatherCoordinator
     }
     
+//    private func makeAddButtonLocationCoordinator() -> ICoordinator {
+//        let AddButtonLocationCoordinator = AddButtonLocationCoordinator(
+//            navigationController: UINavigationController(),
+//            parentCoordunator: self
+//        )
+//        return AddButtonLocationCoordinator
+//    }
+    
     private func addChildCoordinator(_ coordinator:ICoordinator) {
         guard !self.childCoordinator.contains(where: { $0 === coordinator})
         else { return }

@@ -4,6 +4,7 @@ import Foundation
 
 protocol IGeneralViewModel {
     var stateChanged: ((GeneralViewModel.State) -> ())? {get set}
+    func nextFlow()
 
 }
 
@@ -45,9 +46,10 @@ final class GeneralViewModel {
     //MARK: - IStartViewModel
 
 extension GeneralViewModel:IGeneralViewModel {
+    func nextFlow() {
+        coordinator?.switchToNextFlow()
+    }
+    
 
-    
- 
-    
     
 }

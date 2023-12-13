@@ -40,7 +40,7 @@ final class GeneralSectionEveryDate: UICollectionViewCell {
         ])
     }
     
-    func configurationCellCollection(image:UIImage) {
-        self.wheaterImage.image = image
+    func configurationCellCollection(with city:City) {
+        self.wheaterImage.image = UIImage(named: city.icon?.first ?? "50d")
     }
 }

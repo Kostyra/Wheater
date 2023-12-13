@@ -5,6 +5,8 @@ final class GeneralSectionDetailCell: UICollectionViewCell {
    //MARK: - Properties
     static let idGeneral2 = "GeneralSectionDetailCell"
     
+    
+    
     private lazy var wheaterImage:UIImageView = {
        let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
@@ -39,8 +41,8 @@ final class GeneralSectionDetailCell: UICollectionViewCell {
         ])
     }
     
-    func configurationCellCollection(image:UIImage) {
-        self.wheaterImage.image = image
+    func configurationCellCollection(with image: String) {
+        self.wheaterImage.image = UIImage(named: image)
     }
 }
 

@@ -58,13 +58,14 @@ final class NetWorkManager {
                    let city = City(
                                     id: decoderWModel.city?.id,
                                    name: decoderWModel.city?.name ?? "Not",
-                                   icon: decoderWModel.list?.first?.weather?.first?.icon,
+                                    icon: decoderWModel.list?.compactMap { $0.weather?.first?.icon},
                                    description: decoderWModel.list?.first?.weather?.first?.description,
                                     wheather: decoderWModel.list?.first?.weather?.first?.main,
                                    temp: decoderWModel.list?.first?.main?.temp,
                                    tempMax: decoderWModel.list?.first?.main?.temp_max,
-                                   tempMin: decoderWModel.list?.first?.main?.temp_min)
-
+                                   tempMin: decoderWModel.list?.first?.main?.temp_min
+                   )
+                   print(city)
                    completion(.success(city))
                } catch {
                    print(error.localizedDescription)
