@@ -34,21 +34,22 @@ final class GeneralWeatherCoordinator {
 
 extension GeneralWeatherCoordinator: ICoordinator {
     func start() -> UIViewController {
-        //        let viewModel = GeneralViewModel(coordinator: self, cityName: cityName)
-        //        let generalVC = GeneralViewController(viewModel: viewModel)
-        //        let generalNC = UINavigationController(rootViewController: generalVC)
-        //        self.navigationController = generalNC
-        //        return self.navigationController
-        //    }        let viewModel = GeneralViewModel(coordinator: self, cityName: cityName)
-        let viewModel = GeneralViewModel(coordinator: self, cityName: cityName)
-        let generalVC = GeneralViewController(viewModel: viewModel)
-        let pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
-        pageViewController.setViewControllers([generalVC], direction: .forward, animated: true, completion: nil)
-        
-        self.navigationController = UINavigationController(rootViewController: pageViewController)
-        
-        return self.navigationController
-    }
+                let viewModel = GeneralViewModel(coordinator: self, cityName: cityName)
+                let generalVC = GeneralViewController(viewModel: viewModel)
+                let generalNC = UINavigationController(rootViewController: generalVC)
+                self.navigationController = generalNC
+                return self.navigationController
+            } 
+//    let viewModel = GeneralViewModel(coordinator: self, cityName: cityName)
+//        let viewModel = GeneralViewModel(coordinator: self, cityName: cityName)
+//        let generalVC = GeneralViewController(viewModel: viewModel)
+//        let pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
+//        pageViewController.setViewControllers([generalVC], direction: .forward, animated: true, completion: nil)
+//        
+//        self.navigationController = UINavigationController(rootViewController: pageViewController)
+//        
+//        return self.navigationController
+//    }
 }
 
 

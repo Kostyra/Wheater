@@ -174,17 +174,13 @@
 		CB1C4FF22A813FE50044210A /* Weather */ = {
 			isa = PBXGroup;
 			children = (
+				CB9E69012B85FCFA00BC8AC2 /* Screen */,
 				CB5D2DDE2B7DF52400F0181C /* CoreData */,
-				CB1318112B597190002EC84C /* PageViewController */,
-				CB1753D92AE6DD0700063FB7 /* SearchLocationFlow */,
 				CB1753D62ABC376100063FB7 /* LocationManager */,
 				CB1753CF2ABB37BC00063FB7 /* WheatherModel */,
 				CB1753CC2ABB366000063FB7 /* NetWorkManager */,
-				CB487D2C2A9CE18500441585 /* Hour24 */,
 				CB1C50232A82ABB50044210A /* Custom Elements */,
 				CB1C50122A8143180044210A /* Coordinators */,
-				CB1C50112A8143060044210A /* StartController */,
-				CB1C50102A8142F00044210A /* GeneralWeather */,
 				CB1C4FF32A813FE50044210A /* AppDelegate.swift */,
 				CB1C4FF52A813FE50044210A /* SceneDelegate.swift */,
 				CB1C4FFF2A813FE80044210A /* Assets.xcassets */,
@@ -288,6 +284,18 @@
 				CB5D2DED2B8345F000F0181C /* WheatherEmpty.swift */,
 			);
 			path = NowCell;
+			sourceTree = "<group>";
+		};
+		CB9E69012B85FCFA00BC8AC2 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CB1318112B597190002EC84C /* PageViewController */,
+				CB1C50102A8142F00044210A /* GeneralWeather */,
+				CB1C50112A8143060044210A /* StartController */,
+				CB487D2C2A9CE18500441585 /* Hour24 */,
+				CB1753D92AE6DD0700063FB7 /* SearchLocationFlow */,
+			);
+			path = Screen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

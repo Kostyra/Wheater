@@ -48,24 +48,24 @@ extension StartCoordinator: IStartCoordinator {
     //MARK: - ICoordinator
 extension StartCoordinator: ICoordinator {
     func start() -> UIViewController {
-//        let coreDataHandler = CoreDataHandler()
-//        if let cityEntities = coreDataHandler.fetchCityEntitiesForCityName(), !cityEntities.isEmpty {
-//            let viewModel = GeneralViewModel(coordinator: self, cityName: cityEntities.first?.name ?? "")
-//            let generalVC = GeneralViewController(viewModel: viewModel)
-//            let generalNC = UINavigationController(rootViewController: generalVC)
-//            self.navigationController = generalNC
-//            return self.navigationController
         let coreDataHandler = CoreDataHandler()
         if let cityEntities = coreDataHandler.fetchCityEntitiesForCityName(), !cityEntities.isEmpty {
             let viewModel = GeneralViewModel(coordinator: self, cityName: cityEntities.first?.name ?? "")
             let generalVC = GeneralViewController(viewModel: viewModel)
-              
-            let pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
-            pageViewController.setViewControllers([generalVC], direction: .forward, animated: true, completion: nil)
-            
-            navigationController.navigationController?.setViewControllers([pageViewController], animated: true)
-              
-            return pageViewController
+            let generalNC = UINavigationController(rootViewController: generalVC)
+            self.navigationController = generalNC
+            return self.navigationController
+//        let coreDataHandler = CoreDataHandler()
+//        if let cityEntities = coreDataHandler.fetchCityEntitiesForCityName(), !cityEntities.isEmpty {
+//            let viewModel = GeneralViewModel(coordinator: self, cityName: cityEntities.first?.name ?? "")
+//            let generalVC = GeneralViewController(viewModel: viewModel)
+//              
+//            let pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
+//            pageViewController.setViewControllers([generalVC], direction: .forward, animated: true, completion: nil)
+//            
+//            navigationController.navigationController?.setViewControllers([pageViewController], animated: true)
+//              
+//            return pageViewController
         
         } else {
             let locationManager = LocationManager()
