@@ -45,13 +45,8 @@ final class GeneralViewModel {
         print("StartViewmodel \(#function)")
     }
     
-    //MARK: - Method
-    
-    
 }
-
-
-    //MARK: - IStartViewModel
+    //MARK: - extension
 
 extension GeneralViewModel:IGeneralViewModel {
     func nextFlow(delegate: AddButtonLocationDelegate) {
@@ -80,5 +75,4 @@ extension GeneralViewModel:IGeneralViewModel {
         state = .allow(city: city)
         
     }
-    
 }

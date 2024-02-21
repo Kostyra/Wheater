@@ -40,22 +40,6 @@ final class MainCoordinator {
         return generalWeatherCoordinator
     }
     
-//    private func makeGeneralCoordinator() -> ICoordinator {
-//        let pageViewController = GeneralWeatherCoordinator(
-//            navigationController: UINavigationController(),
-//            parentCoordunator: self
-//        )
-//        return pageViewController
-//    }
-    
-//    private func makeAddButtonLocationCoordinator() -> ICoordinator {
-//        let AddButtonLocationCoordinator = AddButtonLocationCoordinator(
-//            navigationController: UINavigationController(),
-//            parentCoordunator: self
-//        )
-//        return AddButtonLocationCoordinator
-//    }
-    
     private func addChildCoordinator(_ coordinator:ICoordinator) {
         guard !self.childCoordinator.contains(where: { $0 === coordinator})
         else { return }
@@ -66,7 +50,6 @@ final class MainCoordinator {
         self.childCoordinator.removeAll { $0 === coordinator}
     }
     
-    // Методы установки/переключения Flow
     func setFlow(to newViewController: UIViewController) {
         self.rootViewController.addChild(newViewController)
         newViewController.view.frame = self.rootViewController.view.bounds

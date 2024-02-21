@@ -30,6 +30,7 @@ final class StartCoordinator: IGeneralWeatherCoordinator {
     
     
     //MARK: - Life Cycle
+    
     init(navigationController: UINavigationController, parentCoordunator: IMainCoordinator?) {
         self.navigationController = navigationController
         self.parentCoordunator = parentCoordunator
@@ -38,6 +39,7 @@ final class StartCoordinator: IGeneralWeatherCoordinator {
 
 
     //MARK: - IStartCoordinator
+
 extension StartCoordinator: IStartCoordinator {
     func switchToNextFlow(cityName: String?) {
         self.parentCoordunator?.switchToNextFlow(from: self, cityName: cityName)
@@ -46,6 +48,7 @@ extension StartCoordinator: IStartCoordinator {
 
 
     //MARK: - ICoordinator
+
 extension StartCoordinator: ICoordinator {
     func start() -> UIViewController {
         let coreDataHandler = CoreDataHandler()
@@ -54,19 +57,7 @@ extension StartCoordinator: ICoordinator {
             let generalVC = GeneralViewController(viewModel: viewModel)
             let generalNC = UINavigationController(rootViewController: generalVC)
             self.navigationController = generalNC
-            return self.navigationController
-//        let coreDataHandler = CoreDataHandler()
-//        if let cityEntities = coreDataHandler.fetchCityEntitiesForCityName(), !cityEntities.isEmpty {
-//            let viewModel = GeneralViewModel(coordinator: self, cityName: cityEntities.first?.name ?? "")
-//            let generalVC = GeneralViewController(viewModel: viewModel)
-//              
-//            let pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
-//            pageViewController.setViewControllers([generalVC], direction: .forward, animated: true, completion: nil)
-//            
-//            navigationController.navigationController?.setViewControllers([pageViewController], animated: true)
-//              
-//            return pageViewController
-        
+            return self.navigationController        
         } else {
             let locationManager = LocationManager()
             let viewModel = StartViewModel(coordinator: self, locationManager: locationManager)

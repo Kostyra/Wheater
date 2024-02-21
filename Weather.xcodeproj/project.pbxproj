@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CB1318132B5971BC002EC84C /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1318122B5971BC002EC84C /* PageViewController.swift */; };
 		CB1753CE2ABB368800063FB7 /* NetWorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1753CD2ABB368800063FB7 /* NetWorkManager.swift */; };
 		CB1753D12ABB37E900063FB7 /* WModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1753D02ABB37E900063FB7 /* WModel.swift */; };
 		CB1753D82ABC37B600063FB7 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1753D72ABC37B600063FB7 /* LocationManager.swift */; };
@@ -41,11 +40,9 @@
 		CB825EBF2A8DFDDE00F1CC20 /* GeneralSectionDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB825EBE2A8DFDDE00F1CC20 /* GeneralSectionDetailCell.swift */; };
 		CB825EC42A8E5B2F00F1CC20 /* GeneralSectionNowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB825EC32A8E5B2F00F1CC20 /* GeneralSectionNowCell.swift */; };
 		CB9E68FC2B84BB2E00BC8AC2 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9E68FB2B84BB2E00BC8AC2 /* Palette.swift */; };
-		CB9E69002B85F5F100BC8AC2 /* PageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9E68FF2B85F5F100BC8AC2 /* PageViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CB1318122B5971BC002EC84C /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		CB1753CD2ABB368800063FB7 /* NetWorkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkManager.swift; sourceTree = "<group>"; };
 		CB1753D02ABB37E900063FB7 /* WModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WModel.swift; sourceTree = "<group>"; };
 		CB1753D72ABC37B600063FB7 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -81,7 +78,6 @@
 		CB825EBE2A8DFDDE00F1CC20 /* GeneralSectionDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSectionDetailCell.swift; sourceTree = "<group>"; };
 		CB825EC32A8E5B2F00F1CC20 /* GeneralSectionNowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSectionNowCell.swift; sourceTree = "<group>"; };
 		CB9E68FB2B84BB2E00BC8AC2 /* Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
-		CB9E68FF2B85F5F100BC8AC2 /* PageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,15 +91,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CB1318112B597190002EC84C /* PageViewController */ = {
-			isa = PBXGroup;
-			children = (
-				CB1318122B5971BC002EC84C /* PageViewController.swift */,
-				CB9E68FF2B85F5F100BC8AC2 /* PageViewModel.swift */,
-			);
-			path = PageViewController;
-			sourceTree = "<group>";
-		};
 		CB1753CC2ABB366000063FB7 /* NetWorkManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -289,7 +276,6 @@
 		CB9E69012B85FCFA00BC8AC2 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				CB1318112B597190002EC84C /* PageViewController */,
 				CB1C50102A8142F00044210A /* GeneralWeather */,
 				CB1C50112A8143060044210A /* StartController */,
 				CB487D2C2A9CE18500441585 /* Hour24 */,
@@ -382,7 +368,6 @@
 				CB1753CE2ABB368800063FB7 /* NetWorkManager.swift in Sources */,
 				CB1C50192A81434A0044210A /* StartCoordinator.swift in Sources */,
 				CB784B9B2A90FDED00EA3DEC /* GeneralSectionDetailHeader.swift in Sources */,
-				CB1318132B5971BC002EC84C /* PageViewController.swift in Sources */,
 				CB1C50172A81434A0044210A /* MainCoordinator.swift in Sources */,
 				CB5D2DEC2B7E10A400F0181C /* CityEntity.xcdatamodeld in Sources */,
 				CB9E68FC2B84BB2E00BC8AC2 /* Palette.swift in Sources */,
@@ -390,7 +375,6 @@
 				CB17546F2B29D13000063FB7 /* AddButtonLocationCoordinator.swift in Sources */,
 				CB1C50292A87EF660044210A /* GeneralSectionEveryDate.swift in Sources */,
 				CB1C4FF42A813FE50044210A /* AppDelegate.swift in Sources */,
-				CB9E69002B85F5F100BC8AC2 /* PageViewModel.swift in Sources */,
 				CB1C501F2A8144000044210A /* GeneralViewController.swift in Sources */,
 				CB1C50252A82ABE00044210A /* CustomButton.swift in Sources */,
 				CB5D2DEE2B8345F000F0181C /* WheatherEmpty.swift in Sources */,

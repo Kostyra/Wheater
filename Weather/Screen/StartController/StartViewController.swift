@@ -7,7 +7,6 @@ final class StartViewController:UIViewController {
     //MARK: - Properties
     private var viewModel: IStartViewModel
     private var viewModelGeneralState: GeneralViewModel.State?
-//    private var locationManager: LocationManager = LocationManager()
     
     private lazy var imageStartScreenHumen: UIImageView  = {
         let image = UIImageView()
@@ -99,7 +98,6 @@ final class StartViewController:UIViewController {
             buttonAllow.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
             
             buttonNotAllow.topAnchor.constraint(equalTo: buttonAllow.bottomAnchor, constant: 50),
-            //            buttonNotAllow.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 40),
             buttonNotAllow.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
         ])
     }
@@ -109,7 +107,6 @@ final class StartViewController:UIViewController {
     init(viewModel: IStartViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
-        
     }
     
     override func viewDidLoad() {
@@ -126,7 +123,6 @@ final class StartViewController:UIViewController {
     
     @objc private func buttonAllowAction() {
         viewModel.didTabAllowGeo()
-
     }
     
     @objc private func buttonNotAllowAction() {

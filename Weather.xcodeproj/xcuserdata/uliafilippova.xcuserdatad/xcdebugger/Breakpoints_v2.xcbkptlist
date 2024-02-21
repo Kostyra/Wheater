@@ -1116,8 +1116,8 @@
             filePath = "Weather/Coordinators/AddButtonLocationCoordinator.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "AddButtonLocationCoordinator"
             landmarkType = "21">
          </BreakpointContent>
@@ -1132,10 +1132,10 @@
             filePath = "Weather/Coordinators/GeneralWeatherCoordinator.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "GeneralWeatherCoordinator"
-            landmarkType = "21">
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "start()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

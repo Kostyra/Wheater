@@ -12,8 +12,6 @@ final class GeneralViewController: UIViewController {
         case one
         case two
         case three
-        
-
     }
     
     enum Cell: Hashable {
@@ -21,7 +19,6 @@ final class GeneralViewController: UIViewController {
         case middle(time: String, image: String, temp: Float)
         case bottom(date: String, descriptions: String ,image: String, tempMin: Float, tempMax: Float)
     }
-
 
 
     //MARK: - Properties
@@ -54,21 +51,15 @@ final class GeneralViewController: UIViewController {
         binding()
         viewModel.getWeather()
     }
-    
 
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
-    
-
     //MARK: - Method
     
     
     func setupWheatherEmptyView() {
-//        wheatherEmptyView.removeFromSuperview()
         view.addSubview(wheatherEmptyView)
         NSLayoutConstraint.activate([
             wheatherEmptyView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
@@ -89,11 +80,9 @@ final class GeneralViewController: UIViewController {
                 wheatherEmptyView.isHidden = true
             case .notAllow:
                 wheatherEmptyView.isHidden = false
-                
             case .loading:
                 ()
             }
-            
         }
     }
     
@@ -120,11 +109,9 @@ final class GeneralViewController: UIViewController {
         collectionView.register(GeneralSectionDetailHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: GeneralSectionDetailHeader.idGeneralHeader2)
         collectionView.register(GeneralSectionEveryDateHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: GeneralSectionEveryDateHeader.idGeneralHeader3)
         view.addSubview(collectionView)
-
     }
 
     private func layoutSection(for section: Section, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
-
         switch section {
         case .one:
             return oneSection()
@@ -139,16 +126,11 @@ final class GeneralViewController: UIViewController {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(200))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         item.contentInsets = NSDirectionalEdgeInsets.init(top: 0, leading: 0, bottom: 8, trailing: 0)
-
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                                heightDimension: .estimated(1))
         let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
-
         let section = NSCollectionLayoutSection(group: group)
         section.contentInsets = NSDirectionalEdgeInsets.init(top: 12, leading: 20, bottom: 0, trailing: 20)
-
-
-
         return section
     }
     
@@ -157,8 +139,6 @@ final class GeneralViewController: UIViewController {
                                               heightDimension: .fractionalHeight(1))
         let layoutItem = NSCollectionLayoutItem(layoutSize: itemSize)
         layoutItem.contentInsets = NSDirectionalEdgeInsets.init(top: 0, leading: 8, bottom: 0, trailing: 8)
-
-
         let layoutGroupSize = NSCollectionLayoutSize(widthDimension: .estimated(104),
                                                      heightDimension: .estimated(88))
         let layoutGroup = NSCollectionLayoutGroup.horizontal(layoutSize: layoutGroupSize, subitems: [layoutItem])
@@ -166,10 +146,8 @@ final class GeneralViewController: UIViewController {
         let layoutSection = NSCollectionLayoutSection(group: layoutGroup)
         layoutSection.orthogonalScrollingBehavior = .continuous
         layoutSection.contentInsets = NSDirectionalEdgeInsets.init(top: 12, leading: 12, bottom: 0, trailing: 20)
-
         let header = createSectionHeader()
         layoutSection.boundarySupplementaryItems = [header]
-
         return layoutSection
     }
 
@@ -177,14 +155,11 @@ final class GeneralViewController: UIViewController {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(86))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         item.contentInsets = NSDirectionalEdgeInsets.init(top: 0, leading: 0, bottom: 8, trailing: 0)
-
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                                heightDimension: .estimated(1))
         let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
-
         let section = NSCollectionLayoutSection(group: group)
         section.contentInsets = NSDirectionalEdgeInsets.init(top: 12, leading: 20, bottom: 0, trailing: 20)
-
         let header = createSectionHeader()
         section.boundarySupplementaryItems = [header]
 
@@ -206,11 +181,9 @@ final class GeneralViewController: UIViewController {
                 return UICollectionViewCell()
             }
             switch cell {
-                
             case .top(city: let city):
                 guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GeneralSectionNowCell.idGeneral1, for: indexPath) as? GeneralSectionNowCell  else {
                     return UICollectionViewCell()
-                    
                 }
                 cell.configurationCellCollection(with: city)
                 return cell
@@ -303,7 +276,6 @@ extension GeneralViewController: UICollectionViewDelegate {
 }
 
 extension GeneralViewController: AddButtonLocationDelegate {
-    
     func didSelectCities(_ city: City) {
         viewModel.didTapCity(city)
     }

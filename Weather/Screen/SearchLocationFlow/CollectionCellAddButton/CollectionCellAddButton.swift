@@ -5,17 +5,12 @@ final class CollectionCellAddButton:UICollectionViewCell {
    //MARK: - Properties
     static let idAddButton = "CollectionCellAddButton"
     
-
     private var locationManager = LocationManager()
-    
-
-    
     private lazy var cityLabel:UILabel = {
        let label = UILabel()
         label.textColor = Palette.labelDinamecColor
         label.font = UIFont.systemFont(ofSize: 30)
         label.translatesAutoresizingMaskIntoConstraints = false
-        
         return label
     }()
     
@@ -24,7 +19,6 @@ final class CollectionCellAddButton:UICollectionViewCell {
         label.textColor = Palette.labelDinamecColor
         label.font = UIFont.systemFont(ofSize: 30)
         label.translatesAutoresizingMaskIntoConstraints = false
-        
         return label
     }()
     
@@ -33,7 +27,6 @@ final class CollectionCellAddButton:UICollectionViewCell {
         label.textColor = Palette.labelDinamecColor
         label.font = UIFont.systemFont(ofSize: 13)
         label.translatesAutoresizingMaskIntoConstraints = false
-        
         return label
     }()
     
@@ -42,7 +35,6 @@ final class CollectionCellAddButton:UICollectionViewCell {
      label.textColor = Palette.labelDinamecColor
      label.font = UIFont.systemFont(ofSize: 13)
      label.translatesAutoresizingMaskIntoConstraints = false
-     
      return label
  }()
     
@@ -51,7 +43,6 @@ final class CollectionCellAddButton:UICollectionViewCell {
      label.textColor = Palette.labelDinamecColor
      label.font = UIFont.systemFont(ofSize: 13)
      label.translatesAutoresizingMaskIntoConstraints = false
-     
      return label
  }()
     
@@ -102,7 +93,6 @@ final class CollectionCellAddButton:UICollectionViewCell {
             cityTempMax.topAnchor.constraint(equalTo: cityTemp.bottomAnchor, constant: 5),
             cityTempMax.trailingAnchor.constraint(equalTo: cityTempMin.leadingAnchor, constant: 0),
             cityTempMax.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            
         ])
     }
     
@@ -112,11 +102,5 @@ final class CollectionCellAddButton:UICollectionViewCell {
         self.cityTempMin.text = ", Min: \(String(Float(city.tempMin ?? 0)))"
         self.cityTempMax.text = "Max: \(String(Float(city.tempMax ?? 0)))"
         self.cityDescription.text = city.descriptionName
-                              
-//        self.cityTemp.text = String((Float(selectedCity[1]) ?? 0) - 100.00)
-        
-    }
-
-        
-    
+    } 
 }
