@@ -3,6 +3,7 @@ import UIKit
 
 protocol IAddButtonLocationCoordinator:AnyObject {
     func switchToNextFlow()
+//    func loadSavedCities() -> [City]
 }
 
 final class AddButtonLocationCoordinator {
@@ -12,12 +13,13 @@ final class AddButtonLocationCoordinator {
     
     private weak var parentCoordunator: IGeneralWeatherCoordinator?
     private var childCoordinator: [ICoordinator] = []
-    
+    private let parentController: AddButtonLocationDelegate
     
     
     //MARK: - Life Cycle
-    init( parentCoordunator: IGeneralWeatherCoordinator?) {
+    init( parentCoordunator: IGeneralWeatherCoordinator?, parentController: AddButtonLocationDelegate ) {
         self.parentCoordunator = parentCoordunator
+        self.parentController = parentController
     }
 }
 
@@ -27,6 +29,7 @@ extension AddButtonLocationCoordinator: ICoordinator {
     func start() -> UIViewController {
         let viewModel = AddButtonLocationModel(coordinator: self)
         let addButtonLocationVC = AddButtonLocationViewController(viewModel: viewModel)
+        addButtonLocationVC.delegate = parentController
         addButtonLocationVC.modalPresentationStyle = .fullScreen
         addButtonLocationVC.modalTransitionStyle = .crossDissolve
         return addButtonLocationVC
@@ -36,8 +39,9 @@ extension AddButtonLocationCoordinator: ICoordinator {
     //MARK: - IGeneralWeatherCoordinator
 extension AddButtonLocationCoordinator: IAddButtonLocationCoordinator {
     func switchToNextFlow() {
-//        self.parentCoordunator?.switchToNextFlow(from: self)
     }
+    
+
 }
 
 

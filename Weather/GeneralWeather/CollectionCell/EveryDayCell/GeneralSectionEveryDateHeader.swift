@@ -13,18 +13,9 @@ final class GeneralSectionEveryDateHeader:UICollectionReusableView {
     private lazy var labelEveryDay:UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Eжегодный прогноз"
+        label.text = "Eжегодный прогноз на 5 дней"
+        label.textColor = Palette.labelDinamecColor
         return label
-    }()
-    
-    private lazy var buttonFor25Day:CustomButton = {
-        let button = CustomButton(title: "25 дней",
-                                  titleColor: .black,
-                                  translatesAutoresizingMaskIntoConstraints: false,
-                                  cornerRadius: 0,
-                                  backgroundColor: .systemBackground,
-                                  action: buttonActionFor25Day)
-        return button
     }()
     
     
@@ -44,18 +35,11 @@ final class GeneralSectionEveryDateHeader:UICollectionReusableView {
     
     private func setupHeaderCell() {
         addSubview(labelEveryDay)
-        addSubview(buttonFor25Day)
         
         NSLayoutConstraint.activate([
             labelEveryDay.topAnchor.constraint(equalTo: topAnchor),
             labelEveryDay.bottomAnchor.constraint(equalTo: bottomAnchor),
-            labelEveryDay.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-            labelEveryDay.trailingAnchor.constraint(equalTo: trailingAnchor),
-            
-            buttonFor25Day.topAnchor.constraint(equalTo: topAnchor),
-            buttonFor25Day.bottomAnchor.constraint(equalTo: bottomAnchor),
-//            buttonFor25Day.leadingAnchor.constraint(equalTo: leadingAnchor),
-            buttonFor25Day.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+            labelEveryDay.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
             
         ])
     }

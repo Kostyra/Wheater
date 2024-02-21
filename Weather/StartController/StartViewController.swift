@@ -2,15 +2,15 @@ import UIKit
 
 
 final class StartViewController:UIViewController {
-     
+    
     
     //MARK: - Properties
-    private var viewModel:IStartViewModel
-    private var viewModelGeneralState:GeneralViewModel.State?
-
+    private var viewModel: IStartViewModel
+    private var viewModelGeneralState: GeneralViewModel.State?
+//    private var locationManager: LocationManager = LocationManager()
     
     private lazy var imageStartScreenHumen: UIImageView  = {
-       let image = UIImageView()
+        let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.image = UIImage(named: "changeHumen")
         image.contentMode = .scaleAspectFit
@@ -18,7 +18,7 @@ final class StartViewController:UIViewController {
     }()
     
     private lazy var labelStartInfoAllow: UILabel = {
-       let label = UILabel()
+        let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = """
                 Разрешить приложению  Weather
@@ -33,7 +33,7 @@ final class StartViewController:UIViewController {
     }()
     
     private lazy var labelStartInfoDetail: UILabel = {
-       let label = UILabel()
+        let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = """
                 Чтобы получить более точные прогнозы
@@ -69,11 +69,9 @@ final class StartViewController:UIViewController {
                                   action: buttonNotAllowAction)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         button.alpha = 0.8
-
-        
         return button
     }()
-        
+    
     private func setupView() {
         view.addSubview(imageStartScreenHumen)
         view.addSubview(labelStartInfoAllow)
@@ -101,7 +99,7 @@ final class StartViewController:UIViewController {
             buttonAllow.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
             
             buttonNotAllow.topAnchor.constraint(equalTo: buttonAllow.bottomAnchor, constant: 50),
-//            buttonNotAllow.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 40),
+            //            buttonNotAllow.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 40),
             buttonNotAllow.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
         ])
     }
@@ -111,37 +109,31 @@ final class StartViewController:UIViewController {
     init(viewModel: IStartViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         view.backgroundColor = .lightGray
-        
     }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     //MARK: - private Method
     
-     @objc private func buttonAllowAction() {
-         let locationManager  = LocationManager()
-         locationManager.requestPermission()
-         viewModel.didTabAllowGeo()
-         if let a = UserDefaults.standard.string(forKey: "city") {
-             print(a)
-         } else {
-             print(10)
-         }
+    @objc private func buttonAllowAction() {
+        viewModel.didTabAllowGeo()
 
     }
     
-     @objc private func buttonNotAllowAction() {
-         viewModel.didTabDoNotAllowGeo()
-         
+    @objc private func buttonNotAllowAction() {
+        viewModel.didTabDoNotAllowGeo()
     }
+    
+    
 }
 
 

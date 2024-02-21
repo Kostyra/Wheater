@@ -18,23 +18,29 @@ final class GeneralViewController: UIViewController {
     
     enum Cell: Hashable {
         case top(city: City)
-        case middle(image: String)
-        case bottom(city: City)
+        case middle(time: String, image: String, temp: Float)
+        case bottom(date: String, descriptions: String ,image: String, tempMin: Float, tempMax: Float)
     }
 
 
 
     //MARK: - Properties
 
-    private let viewModel:IGeneralViewModel
+    private var viewModel:IGeneralViewModel
     private lazy var dataSource = configureDataSource()
     typealias DataSource = UICollectionViewDiffableDataSource<Section, Cell>
     typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Cell>
     private var collectionView: UICollectionView! = nil
-    
+    private lazy var wheatherEmptyView: WheatherEmpty = {
+        let view = WheatherEmpty()
+        view.isHidden = true
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
 
     //MARK: - Life Cycle
-
+    
+    
     init(viewModel: IGeneralViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -42,19 +48,54 @@ final class GeneralViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .orange
         setupCollectionView()
         buttonItem()
+        setupWheatherEmptyView()
+        binding()
+        viewModel.getWeather()
     }
+    
 
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
+    
+    
 
     //MARK: - Method
     
     
+    func setupWheatherEmptyView() {
+//        wheatherEmptyView.removeFromSuperview()
+        view.addSubview(wheatherEmptyView)
+        NSLayoutConstraint.activate([
+            wheatherEmptyView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
+            wheatherEmptyView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            wheatherEmptyView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            wheatherEmptyView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100),
+        ])
+    }
+    
+    private func binding() {
+        viewModel.stateChanged = { [weak self] state in
+            guard let self else { return }
+            switch state {
+            case .allow(let city):
+                let snapshot = self.makeSnapshot(city: city)
+                self.dataSource.supplementaryViewProvider = self.makeHeaderProvider()
+                self.dataSource.apply(snapshot)
+                wheatherEmptyView.isHidden = true
+            case .notAllow:
+                wheatherEmptyView.isHidden = false
+                
+            case .loading:
+                ()
+            }
+            
+        }
+    }
     
     private func buttonItem()  {
         let imagePlus = UIImage(systemName: "plus")
@@ -64,21 +105,20 @@ final class GeneralViewController: UIViewController {
     }
     
     @objc func buttonAddWheather() {
-        viewModel.nextFlow()
+        viewModel.nextFlow(delegate: self)
         
     }
     
     private func setupCollectionView() {
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createLayout())
         collectionView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = Palette.viewDinamecColor
         collectionView.delegate = self
         collectionView.register(GeneralSectionNowCell.self, forCellWithReuseIdentifier: GeneralSectionNowCell.idGeneral1)
         collectionView.register(GeneralSectionDetailCell.self, forCellWithReuseIdentifier: GeneralSectionDetailCell.idGeneral2)
         collectionView.register(GeneralSectionEveryDate.self, forCellWithReuseIdentifier: GeneralSectionEveryDate.idGeneral3)
         collectionView.register(GeneralSectionDetailHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: GeneralSectionDetailHeader.idGeneralHeader2)
         collectionView.register(GeneralSectionEveryDateHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: GeneralSectionEveryDateHeader.idGeneralHeader3)
-//        collectionView.register(TitleHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "TitleHeader")
         view.addSubview(collectionView)
 
     }
@@ -125,7 +165,7 @@ final class GeneralViewController: UIViewController {
 
         let layoutSection = NSCollectionLayoutSection(group: layoutGroup)
         layoutSection.orthogonalScrollingBehavior = .continuous
-        layoutSection.contentInsets = NSDirectionalEdgeInsets.init(top: 12, leading: 12, bottom: 0, trailing: 12)
+        layoutSection.contentInsets = NSDirectionalEdgeInsets.init(top: 12, leading: 12, bottom: 0, trailing: 20)
 
         let header = createSectionHeader()
         layoutSection.boundarySupplementaryItems = [header]
@@ -162,7 +202,7 @@ final class GeneralViewController: UIViewController {
 
     private func configureDataSource() -> DataSource {
         return DataSource(collectionView: collectionView) { [weak self] collectionView, indexPath, cell in
-            guard let self = self else {
+            guard self != nil else {
                 return UICollectionViewCell()
             }
             switch cell {
@@ -174,15 +214,15 @@ final class GeneralViewController: UIViewController {
                 }
                 cell.configurationCellCollection(with: city)
                 return cell
-            case .middle( let image) :
+            case .middle( let image, let time, let temp) :
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GeneralSectionDetailCell.idGeneral2, for: indexPath) as?
                 GeneralSectionDetailCell
-                cell?.configurationCellCollection(with: image)
+                cell?.configurationCellCollection(with: image, with: time, with: temp)
                 return cell
-            case .bottom(city: let city):
+            case .bottom(  let date, let descriptions, let image,let tempMin, let tempMax) :
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GeneralSectionEveryDate.idGeneral3, for: indexPath) as?
                 GeneralSectionEveryDate
-                cell?.configurationCellCollection(with: city)
+                cell?.configurationCellCollection(with: date, with: descriptions, with: image, with: tempMin, with: tempMax)
                 return cell
             }
         } 
@@ -192,18 +232,26 @@ final class GeneralViewController: UIViewController {
         var snapshot = Snapshot()
         snapshot.appendSections([.one])
         snapshot.appendItems([.top(city: city)], toSection: .one)
+        
         snapshot.appendSections([.two])
-        if let icons = city.icon  {
-            icons.forEach { icon in
-                snapshot.appendItems([.middle(image: icon)], toSection: .two)
+        if let dt_txts = city.dt_txt, let icons = city.icon, let tempList = city.tempList {
+             for (index, dt_txt) in dt_txts.enumerated() {
+                 if index < icons.count && index < tempList.count  {
+                     snapshot.appendItems([.middle(time: dt_txt, image: icons[index], temp: tempList[index])], toSection: .two)
+                 }
+             }
+         }
+        snapshot.appendSections([.three])
+        if  let dates = city.dt_txtDate, let icons = city.icon, let tempMin = city.tempMinlist, let tempMax = city.tempMaxList , let descriptions = city.descriptionList {
+            for (index, dt_txtDate) in dates.enumerated() {
+                if index < icons.count && index < tempMin.count && index < tempMax.count && index < descriptions.count {
+                    snapshot.appendItems([.bottom(date: dt_txtDate,  descriptions: descriptions[index], image: icons[index], tempMin:tempMin[index], tempMax: tempMax[index])], toSection: .three)
+                }
             }
         }
-        snapshot.appendSections([.three])
-        snapshot.appendItems([.bottom(city: city)], toSection: .three)
         return snapshot
     }
 
-    
     func makeHeaderProvider() -> DataSource.SupplementaryViewProvider {
         return  { collectionView, kind, indexPath in
             switch Section(rawValue: indexPath.section).self {
@@ -218,11 +266,6 @@ final class GeneralViewController: UIViewController {
                fatalError("Cannot create the cell")
            }
         }
-    
-    
-
-    
- 
     
     private func createLayout() -> UICollectionViewLayout {
         let layout = UICollectionViewCompositionalLayout { (sectionIndex, layoutEnvironment) -> NSCollectionLayoutSection? in
@@ -239,12 +282,6 @@ final class GeneralViewController: UIViewController {
         return layout
     }
 
-
-
-    private func configureHierarchy() {
-
-    }
-
 }
 
 extension GeneralViewController: UICollectionViewDelegate {
@@ -257,23 +294,20 @@ extension GeneralViewController: UICollectionViewDelegate {
             let hourNC = Hour24()
             navigationController?.pushViewController(hourNC, animated: true)
         case .three:
-            let inDetailNc = InDetailWheatherEveryDate()
+            let inDetailNc = Hour24()
             navigationController?.pushViewController(inDetailNc, animated: true)
-//            inDetailNc.selectedItem = wheatherPhoto3[indexPath.row]
-//            present(inDetailNc, animated: true, completion: nil)
         default:
             break
         }
-
     }
 }
 
 extension GeneralViewController: AddButtonLocationDelegate {
+    
     func didSelectCities(_ city: City) {
-        let snapshot = makeSnapshot(city: city)
-        dataSource.supplementaryViewProvider = makeHeaderProvider()
-        dataSource.apply(snapshot)
+        viewModel.didTapCity(city)
     }
+
 }
 
 

@@ -12,7 +12,4 @@ final class Hour24: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .orange
     }
-    
-
-    
 }

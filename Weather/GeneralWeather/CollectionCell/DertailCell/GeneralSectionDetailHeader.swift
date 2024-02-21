@@ -8,16 +8,12 @@ final class GeneralSectionDetailHeader:UICollectionReusableView {
     static var idGeneralHeader2 =  "GeneralSectionDetailHeader"
     
     
-
-    
-    private lazy var buttonFor10Day:CustomButton = {
-        let button = CustomButton(title: "Заголовок",
-                                  titleColor: .black,
-                                  translatesAutoresizingMaskIntoConstraints: false,
-                                  cornerRadius: 0,
-                                  backgroundColor: .systemBackground,
-                                  action: buttonActionFor24Hour)
-        return button
+    private lazy var buttonFor10Day:UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Кратко о погоде"
+        label.textColor = Palette.labelDinamecColor
+        return label
     }()
     
     
@@ -25,8 +21,6 @@ final class GeneralSectionDetailHeader:UICollectionReusableView {
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
-        self.layer.cornerRadius = 12
-        self.layer.masksToBounds = true
         setupHeaderCell()
     }
     

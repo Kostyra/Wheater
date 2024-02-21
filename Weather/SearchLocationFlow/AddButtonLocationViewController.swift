@@ -31,8 +31,7 @@ final class AddButtonLocationViewController:UIViewController, UISearchResultsUpd
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        UserDefaults.standard.removeObject(forKey: "idCity")
+ 
         tableView.frame = view.bounds
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "TableCell")
         tableView.dataSource = self
@@ -44,14 +43,12 @@ final class AddButtonLocationViewController:UIViewController, UISearchResultsUpd
         collectionView.delegate = self
         collectionView.reloadData()
         
-        view.backgroundColor = .white
+        view.backgroundColor = Palette.viewDinamecColor
         largeTitle()
         
         bindingModel()
+        viewModel.getCities()
     }
-    
-    
-        
 
  
 //MARK: - Method
@@ -64,7 +61,22 @@ final class AddButtonLocationViewController:UIViewController, UISearchResultsUpd
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionCellAddButton.idAddButton, for: indexPath) as! CollectionCellAddButton
             let city = self.viewModel.cities[indexPath.row]
             cell.configurationCellCollection(with: city)
+            
+            let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(self.handleSwipe(_:)))
+            swipeGesture.direction = .left
+            cell.addGestureRecognizer(swipeGesture)
             return cell
+        }
+    }
+    
+    @objc func handleSwipe(_ gesture: UISwipeGestureRecognizer) {
+        if let cell = gesture.view as? CollectionCellAddButton,
+           let indexPath = collectionView.indexPath(for: cell) {
+            let cityNameToDelete = viewModel.cities[indexPath.row].name!
+            CoreDataHandler.shared.deleteCityEntityFromCoreData(cityName: cityNameToDelete)
+            self.viewModel.cities.remove(at: indexPath.row)
+            let snapshot = self.makeSnapshot()
+            self.dataSource.apply(snapshot)
         }
     }
     
@@ -72,7 +84,17 @@ final class AddButtonLocationViewController:UIViewController, UISearchResultsUpd
         var snapshot = Snapshot()
         snapshot.appendSections([0])
         snapshot.appendItems(viewModel.cities, toSection: 0)
+        
+        
         return snapshot
+    }
+    
+    private func makeSnapeshotFoCities(cities: [City]) {
+        var snapshot = Snapshot()
+        snapshot.appendSections([0])
+        snapshot.appendItems(cities, toSection: 0)
+        dataSource.apply(snapshot)
+        
     }
     
     private func createLayout() -> UICollectionViewLayout {
@@ -92,8 +114,6 @@ final class AddButtonLocationViewController:UIViewController, UISearchResultsUpd
         let layout = UICollectionViewCompositionalLayout(section: section)
         return layout
     }
-    
-    
     
     private func configureHierarchy() {
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createLayout())
@@ -119,13 +139,7 @@ final class AddButtonLocationViewController:UIViewController, UISearchResultsUpd
          viewModel.searchCity(city: searchText)
     }
     
-//    private func addUniqueCity(_ id: City) {
-//        if !cities.contains(where: { $0.id == city?.id }) {
-//            cities.append(city!)
-//        } else {
-//            print("City already exists")
-//        }
-//    }
+
     private func bindingModel() {
         viewModel.stateChanged = { [weak self] state in
             guard let self else { return }
@@ -146,11 +160,30 @@ final class AddButtonLocationViewController:UIViewController, UISearchResultsUpd
                 self.tableView.isHidden = false
             case .error(let error):
                 print(error)
+            case .loadCity:
+                let snapshot = makeSnapshot()
+                dataSource.apply(snapshot)
+                searchController?.searchBar.text = nil
+                searchController?.isActive = false
+                tableView.isHidden = true
+                collectionView.isHidden = false
+            case .duplicationCity:
+                print("City already exists")
+                searchController?.searchBar.text = nil
+                searchController?.isActive = false
+                tableView.isHidden = true
+                collectionView.isHidden = false
+            case .loadCities( let cities ):
+                viewModel.cities = cities
+                makeSnapeshotFoCities(cities: cities)
+                searchController?.searchBar.text = nil
+                searchController?.isActive = false
+                collectionView.isHidden = false
+                tableView.isHidden = true
             }
         }
     }
 }
-
 
 
 //MARK: - extension
@@ -169,27 +202,38 @@ extension AddButtonLocationViewController:UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        self.addUniqueCity(city!)
-        let snapshot = makeSnapshot()
-        dataSource.apply(snapshot)
-//        viewModel.city = nil
-        searchController?.searchBar.text = nil
-        searchController?.isActive = false
-        tableView.isHidden = true
-        collectionView.isHidden = false
-
+        viewModel.didSelect()
     }
 }
 
 
-
-extension AddButtonLocationViewController: UICollectionViewDelegate {
+extension AddButtonLocationViewController: UICollectionViewDelegate, UISearchBarDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let selectionLocation = viewModel.cities[indexPath.row]
         delegate?.didSelectCities(selectionLocation)
-        print("\(selectionLocation) + delegate")
         dismiss(animated: true, completion: nil)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+        let configuration = UIContextMenuConfiguration(identifier: nil, previewProvider: nil) { [weak self] _ in
+            guard let self = self else { return nil }
+            let deleteAction = UIAction(title: "Delete", image: UIImage(systemName: "trash.fill"), attributes: .destructive) { _ in
+                guard indexPath.row < self.viewModel.cities.count else { return }
+                
+                self.viewModel.cities.remove(at: indexPath.row)
+                let snapshot = self.makeSnapshot()
+                self.dataSource.apply(snapshot)
+            }
+            return UIMenu(title: "", children: [deleteAction])
+        }
+        return configuration
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, canEditItemAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
 }
+
 

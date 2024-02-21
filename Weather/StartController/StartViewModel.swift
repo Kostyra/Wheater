@@ -28,6 +28,7 @@ final class StartViewModel {
     
     var stateChanged: ((State) ->())?
     var stateChangedPosition: ((StatePosition) ->())?
+    var locationManager: LocationManager
     
     
     private weak var coordinator: IStartCoordinator?
@@ -46,12 +47,25 @@ final class StartViewModel {
     
     //MARK: - Life Cycle
     
-    init( coordinator: IStartCoordinator?) {
+    init( coordinator: IStartCoordinator?, locationManager: LocationManager) {
         self.coordinator = coordinator
+        self.locationManager = locationManager
     }
     
     deinit {
         print("StartViewModel \(#function)")
+    }
+    
+    
+    //MARK: -
+    
+    private func getCity() {
+        locationManager.requestPermission { [weak self] cityName in
+                guard let self else { return }
+                self.coordinator?.switchToNextFlow(cityName: cityName)
+                self.position = .allow
+                print(position)
+        }
     }
 }
 
@@ -60,18 +74,12 @@ final class StartViewModel {
 
 extension StartViewModel:IStartViewModel {
     func didTabAllowGeo() {
-        self.coordinator?.switchToNextFlow()
-        self.position = .allow
-        print(position)
+     getCity()
+    }
         
-    }
-    
     func didTabDoNotAllowGeo() {
-        self.coordinator?.switchToNextFlow()
+        self.coordinator?.switchToNextFlow(cityName: nil)
         self.position = .notAllow
+        print(position)
     }
-    
-
-    
-    
 }

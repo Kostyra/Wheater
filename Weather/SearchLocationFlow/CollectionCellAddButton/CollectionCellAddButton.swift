@@ -12,7 +12,7 @@ final class CollectionCellAddButton:UICollectionViewCell {
     
     private lazy var cityLabel:UILabel = {
        let label = UILabel()
-        label.textColor = .black
+        label.textColor = Palette.labelDinamecColor
         label.font = UIFont.systemFont(ofSize: 30)
         label.translatesAutoresizingMaskIntoConstraints = false
         
@@ -21,7 +21,7 @@ final class CollectionCellAddButton:UICollectionViewCell {
     
     private lazy var cityTemp:UILabel = {
        let label = UILabel()
-        label.textColor = .black
+        label.textColor = Palette.labelDinamecColor
         label.font = UIFont.systemFont(ofSize: 30)
         label.translatesAutoresizingMaskIntoConstraints = false
         
@@ -30,7 +30,7 @@ final class CollectionCellAddButton:UICollectionViewCell {
     
     private lazy var cityTempMin:UILabel = {
        let label = UILabel()
-        label.textColor = .black
+        label.textColor = Palette.labelDinamecColor
         label.font = UIFont.systemFont(ofSize: 13)
         label.translatesAutoresizingMaskIntoConstraints = false
         
@@ -39,7 +39,7 @@ final class CollectionCellAddButton:UICollectionViewCell {
     
     private lazy var cityTempMax:UILabel = {
     let label = UILabel()
-     label.textColor = .black
+     label.textColor = Palette.labelDinamecColor
      label.font = UIFont.systemFont(ofSize: 13)
      label.translatesAutoresizingMaskIntoConstraints = false
      
@@ -48,7 +48,7 @@ final class CollectionCellAddButton:UICollectionViewCell {
     
     private lazy var cityDescription:UILabel = {
     let label = UILabel()
-     label.textColor = .black
+     label.textColor = Palette.labelDinamecColor
      label.font = UIFont.systemFont(ofSize: 13)
      label.translatesAutoresizingMaskIntoConstraints = false
      
@@ -59,10 +59,12 @@ final class CollectionCellAddButton:UICollectionViewCell {
     //MARK: - Lify Cycle
     override init(frame: CGRect) {
         super.init(frame: .zero)
-        self.layer.cornerRadius = 12
+        self.layer.cornerRadius = 10
         self.layer.masksToBounds = true
+        self.backgroundColor = Palette.viewDinamecColor
+        self.layer.borderWidth = 1
+        self.layer.borderColor = UIColor.lightGray.cgColor
         setupCollectionCell()
-        contentView.backgroundColor = .blue
     }
     
     required init?(coder: NSCoder) {
@@ -109,7 +111,7 @@ final class CollectionCellAddButton:UICollectionViewCell {
         self.cityTemp.text = String(Float(city.temp ?? 0))
         self.cityTempMin.text = ", Min: \(String(Float(city.tempMin ?? 0)))"
         self.cityTempMax.text = "Max: \(String(Float(city.tempMax ?? 0)))"
-        self.cityDescription.text = city.description
+        self.cityDescription.text = city.descriptionName
                               
 //        self.cityTemp.text = String((Float(selectedCity[1]) ?? 0) - 100.00)
         

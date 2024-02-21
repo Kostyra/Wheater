@@ -8,6 +8,8 @@ protocol AddButtonLocationModelProtocol {
     var stateChanged: ((AddButtonLocationModel.State) ->())? { get set }
     var city: City? { get set }
     var cities: [City] { get set }
+    func didSelect()
+    func getCities()
 }
 
 final class AddButtonLocationModel {
@@ -16,8 +18,11 @@ final class AddButtonLocationModel {
         case loading
         case done(city: City?)
         case error(error: String)
+        case loadCity
+        case duplicationCity
+        case loadCities(cities:[City])
     }
-    
+
     
     //MARK: - Properties
     var stateChanged: ((State) ->())?
@@ -37,37 +42,68 @@ final class AddButtonLocationModel {
     
     init( coordinator: IAddButtonLocationCoordinator?) {
         self.coordinator = coordinator
-        
-    }
-}
-
-extension AddButtonLocationModel: AddButtonLocationModelProtocol {
-    func switchToNextFlow() {
-        
     }
     
+    
+    //MARK: - Properties
+    
+    private func addUniqueCity(_ city: City) {
+        let coreDataHandler = CoreDataHandler.shared
+         if !cities.contains(where: { $0.id == city.id }) {
+             cities.append(city)
+             state = .loadCity
+             coreDataHandler.saveCityDataToCoreData(cityData: city)
+         } else {
+             state = .duplicationCity
+         }
+     }
+    
+}
+
+
+
+extension AddButtonLocationModel: AddButtonLocationModelProtocol {
+    
+    func getCities() {
+        NetWorkManager.shared.getWeatherForSavedCity { result in
+            switch result {
+            case .success(let cities):
+                DispatchQueue.main.async {
+                    self.state = .loadCities(cities: cities)
+                }
+            case .failure(let error):
+                DispatchQueue.main.async {
+                    self.state = .error(error: error.localizedDescription)
+                }
+            }
+        }
+    }
+    
+    func switchToNextFlow() {
+        }
+
     func searchCity(city: String) {
         if !city.isEmpty {
-//             timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false, block: { [weak self] _ in
             NetWorkManager.shared.getWeather(city: city) { [weak self] result in
                 guard let self = self else { return }
                 switch result {
                 case .success(let city):
                     self.city = city
-                    print(city)
-                    
                     DispatchQueue.main.async {
                         self.state = .done(city: city)
                     }
                 case .failure(let error):
-                    state = .error(error: error.localizedDescription)
+                    self.state = .error(error: error.localizedDescription)
                 }
-
             }
         } else {
-            state = .done(city: nil)
+            self.state = .done(city: nil)
         }
     }
     
-    
+    func didSelect() {
+        guard let city = city else { return }
+        addUniqueCity(city)
+    }
 }
+

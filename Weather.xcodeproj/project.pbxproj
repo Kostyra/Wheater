@@ -7,20 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CB1753CB2AB9DCA100063FB7 /* IndetailWheatherEveryDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1753CA2AB9DCA100063FB7 /* IndetailWheatherEveryDate.swift */; };
+		CB1318132B5971BC002EC84C /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1318122B5971BC002EC84C /* PageViewController.swift */; };
 		CB1753CE2ABB368800063FB7 /* NetWorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1753CD2ABB368800063FB7 /* NetWorkManager.swift */; };
 		CB1753D12ABB37E900063FB7 /* WModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1753D02ABB37E900063FB7 /* WModel.swift */; };
-		CB1753D32ABB397700063FB7 /* ListWModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1753D22ABB397600063FB7 /* ListWModel.swift */; };
-		CB1753D52ABB3A8600063FB7 /* MainWModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1753D42ABB3A8600063FB7 /* MainWModel.swift */; };
 		CB1753D82ABC37B600063FB7 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1753D72ABC37B600063FB7 /* LocationManager.swift */; };
 		CB1753DC2AE6DD6400063FB7 /* AddButtonLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1753DB2AE6DD6400063FB7 /* AddButtonLocationViewController.swift */; };
-		CB1753E12AEA9E3600063FB7 /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1753E02AEA9E3600063FB7 /* CityModel.swift */; };
 		CB1753E52AEFA29600063FB7 /* CityCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1753E42AEFA29500063FB7 /* CityCollectionView.swift */; };
 		CB1754452AFA192C00063FB7 /* CollectionCellAddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1754442AFA192C00063FB7 /* CollectionCellAddButton.swift */; };
-		CB1754492B00F08300063FB7 /* WheatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1754482B00F08300063FB7 /* WheatherModel.swift */; };
-		CB17544B2B04EFE700063FB7 /* oldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB17544A2B04EFE700063FB7 /* oldController.swift */; };
 		CB17544F2B19EBEA00063FB7 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB17544E2B19EBE900063FB7 /* City.swift */; };
-		CB1754512B1A06EE00063FB7 /* TitleHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1754502B1A06EE00063FB7 /* TitleHeader.swift */; };
 		CB17546F2B29D13000063FB7 /* AddButtonLocationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB17546E2B29D13000063FB7 /* AddButtonLocationCoordinator.swift */; };
 		CB1754722B29D20800063FB7 /* AddButtonLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1754712B29D20800063FB7 /* AddButtonLocationModel.swift */; };
 		CB1C4FF42A813FE50044210A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1C4FF32A813FE50044210A /* AppDelegate.swift */; };
@@ -38,34 +32,27 @@
 		CB1C50252A82ABE00044210A /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1C50242A82ABE00044210A /* CustomButton.swift */; };
 		CB1C50292A87EF660044210A /* GeneralSectionEveryDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1C50282A87EF660044210A /* GeneralSectionEveryDate.swift */; };
 		CB1C502B2A88DAD30044210A /* GeneralSectionEveryDateHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1C502A2A88DAD30044210A /* GeneralSectionEveryDateHeader.swift */; };
-		CB487D1A2A94EFB800441585 /* old.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB487D192A94EFB800441585 /* old.swift */; };
-		CB487D1C2A95F93D00441585 /* old1.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB487D1B2A95F93D00441585 /* old1.swift */; };
-		CB487D1E2A968ACF00441585 /* old2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB487D1D2A968ACF00441585 /* old2.swift */; };
-		CB487D202A97A78700441585 /* old3.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB487D1F2A97A78700441585 /* old3.swift */; };
-		CB487D222A97CDE700441585 /* old4.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB487D212A97CDE700441585 /* old4.swift */; };
 		CB487D242A97E09800441585 /* CustomCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB487D232A97E09800441585 /* CustomCollectionViewFlowLayout.swift */; };
-		CB487D282A98E11600441585 /* old5.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB487D272A98E11600441585 /* old5.swift */; };
 		CB487D2F2A9CE1C200441585 /* Hour24.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB487D2E2A9CE1C200441585 /* Hour24.swift */; };
+		CB5D2DE32B7DF8B600F0181C /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5D2DE22B7DF8B600F0181C /* CoreData.swift */; };
+		CB5D2DEC2B7E10A400F0181C /* CityEntity.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CB5D2DEA2B7E10A400F0181C /* CityEntity.xcdatamodeld */; };
+		CB5D2DEE2B8345F000F0181C /* WheatherEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5D2DED2B8345F000F0181C /* WheatherEmpty.swift */; };
 		CB784B9B2A90FDED00EA3DEC /* GeneralSectionDetailHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB784B9A2A90FDED00EA3DEC /* GeneralSectionDetailHeader.swift */; };
 		CB825EBF2A8DFDDE00F1CC20 /* GeneralSectionDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB825EBE2A8DFDDE00F1CC20 /* GeneralSectionDetailCell.swift */; };
 		CB825EC42A8E5B2F00F1CC20 /* GeneralSectionNowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB825EC32A8E5B2F00F1CC20 /* GeneralSectionNowCell.swift */; };
+		CB9E68FC2B84BB2E00BC8AC2 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9E68FB2B84BB2E00BC8AC2 /* Palette.swift */; };
+		CB9E69002B85F5F100BC8AC2 /* PageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9E68FF2B85F5F100BC8AC2 /* PageViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CB1753CA2AB9DCA100063FB7 /* IndetailWheatherEveryDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndetailWheatherEveryDate.swift; sourceTree = "<group>"; };
+		CB1318122B5971BC002EC84C /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		CB1753CD2ABB368800063FB7 /* NetWorkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkManager.swift; sourceTree = "<group>"; };
 		CB1753D02ABB37E900063FB7 /* WModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WModel.swift; sourceTree = "<group>"; };
-		CB1753D22ABB397600063FB7 /* ListWModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListWModel.swift; sourceTree = "<group>"; };
-		CB1753D42ABB3A8600063FB7 /* MainWModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWModel.swift; sourceTree = "<group>"; };
 		CB1753D72ABC37B600063FB7 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		CB1753DB2AE6DD6400063FB7 /* AddButtonLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButtonLocationViewController.swift; sourceTree = "<group>"; };
-		CB1753E02AEA9E3600063FB7 /* CityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
 		CB1753E42AEFA29500063FB7 /* CityCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCollectionView.swift; sourceTree = "<group>"; };
 		CB1754442AFA192C00063FB7 /* CollectionCellAddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCellAddButton.swift; sourceTree = "<group>"; };
-		CB1754482B00F08300063FB7 /* WheatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheatherModel.swift; sourceTree = "<group>"; };
-		CB17544A2B04EFE700063FB7 /* oldController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oldController.swift; sourceTree = "<group>"; };
 		CB17544E2B19EBE900063FB7 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
-		CB1754502B1A06EE00063FB7 /* TitleHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleHeader.swift; sourceTree = "<group>"; };
 		CB17546E2B29D13000063FB7 /* AddButtonLocationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButtonLocationCoordinator.swift; sourceTree = "<group>"; };
 		CB1754712B29D20800063FB7 /* AddButtonLocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButtonLocationModel.swift; sourceTree = "<group>"; };
 		CB1C4FF02A813FE50044210A /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,17 +72,16 @@
 		CB1C50242A82ABE00044210A /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		CB1C50282A87EF660044210A /* GeneralSectionEveryDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSectionEveryDate.swift; sourceTree = "<group>"; };
 		CB1C502A2A88DAD30044210A /* GeneralSectionEveryDateHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSectionEveryDateHeader.swift; sourceTree = "<group>"; };
-		CB487D192A94EFB800441585 /* old.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = old.swift; sourceTree = "<group>"; };
-		CB487D1B2A95F93D00441585 /* old1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = old1.swift; sourceTree = "<group>"; };
-		CB487D1D2A968ACF00441585 /* old2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = old2.swift; sourceTree = "<group>"; };
-		CB487D1F2A97A78700441585 /* old3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = old3.swift; sourceTree = "<group>"; };
-		CB487D212A97CDE700441585 /* old4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = old4.swift; sourceTree = "<group>"; };
 		CB487D232A97E09800441585 /* CustomCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
-		CB487D272A98E11600441585 /* old5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = old5.swift; sourceTree = "<group>"; };
 		CB487D2E2A9CE1C200441585 /* Hour24.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hour24.swift; sourceTree = "<group>"; };
+		CB5D2DE22B7DF8B600F0181C /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
+		CB5D2DEB2B7E10A400F0181C /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
+		CB5D2DED2B8345F000F0181C /* WheatherEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheatherEmpty.swift; sourceTree = "<group>"; };
 		CB784B9A2A90FDED00EA3DEC /* GeneralSectionDetailHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSectionDetailHeader.swift; sourceTree = "<group>"; };
 		CB825EBE2A8DFDDE00F1CC20 /* GeneralSectionDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSectionDetailCell.swift; sourceTree = "<group>"; };
 		CB825EC32A8E5B2F00F1CC20 /* GeneralSectionNowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSectionNowCell.swift; sourceTree = "<group>"; };
+		CB9E68FB2B84BB2E00BC8AC2 /* Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
+		CB9E68FF2B85F5F100BC8AC2 /* PageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,12 +95,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CB1753C92AB9DC3800063FB7 /* InDetail */ = {
+		CB1318112B597190002EC84C /* PageViewController */ = {
 			isa = PBXGroup;
 			children = (
-				CB1753CA2AB9DCA100063FB7 /* IndetailWheatherEveryDate.swift */,
+				CB1318122B5971BC002EC84C /* PageViewController.swift */,
+				CB9E68FF2B85F5F100BC8AC2 /* PageViewModel.swift */,
 			);
-			path = InDetail;
+			path = PageViewController;
 			sourceTree = "<group>";
 		};
 		CB1753CC2ABB366000063FB7 /* NetWorkManager */ = {
@@ -129,21 +116,17 @@
 			isa = PBXGroup;
 			children = (
 				CB1753D02ABB37E900063FB7 /* WModel.swift */,
-				CB1753D22ABB397600063FB7 /* ListWModel.swift */,
-				CB1753D42ABB3A8600063FB7 /* MainWModel.swift */,
-				CB1753E02AEA9E3600063FB7 /* CityModel.swift */,
-				CB1754482B00F08300063FB7 /* WheatherModel.swift */,
 				CB17544E2B19EBE900063FB7 /* City.swift */,
 			);
 			path = WheatherModel;
 			sourceTree = "<group>";
 		};
-		CB1753D62ABC376100063FB7 /* Location */ = {
+		CB1753D62ABC376100063FB7 /* LocationManager */ = {
 			isa = PBXGroup;
 			children = (
 				CB1753D72ABC37B600063FB7 /* LocationManager.swift */,
 			);
-			path = Location;
+			path = LocationManager;
 			sourceTree = "<group>";
 		};
 		CB1753D92AE6DD0700063FB7 /* SearchLocationFlow */ = {
@@ -172,14 +155,6 @@
 			path = CollectionCellAddButton;
 			sourceTree = "<group>";
 		};
-		CB1754702B29D1D400063FB7 /* WheaterModel */ = {
-			isa = PBXGroup;
-			children = (
-				CB1C501E2A8144000044210A /* GeneralViewModel.swift */,
-			);
-			path = WheaterModel;
-			sourceTree = "<group>";
-		};
 		CB1C4FE72A813FE50044210A = {
 			isa = PBXGroup;
 			children = (
@@ -199,14 +174,16 @@
 		CB1C4FF22A813FE50044210A /* Weather */ = {
 			isa = PBXGroup;
 			children = (
+				CB5D2DDE2B7DF52400F0181C /* CoreData */,
+				CB1318112B597190002EC84C /* PageViewController */,
 				CB1753D92AE6DD0700063FB7 /* SearchLocationFlow */,
-				CB1753D62ABC376100063FB7 /* Location */,
+				CB1753D62ABC376100063FB7 /* LocationManager */,
 				CB1753CF2ABB37BC00063FB7 /* WheatherModel */,
 				CB1753CC2ABB366000063FB7 /* NetWorkManager */,
 				CB487D2C2A9CE18500441585 /* Hour24 */,
 				CB1C50232A82ABB50044210A /* Custom Elements */,
 				CB1C50122A8143180044210A /* Coordinators */,
-				CB1C50112A8143060044210A /* StartModel */,
+				CB1C50112A8143060044210A /* StartController */,
 				CB1C50102A8142F00044210A /* GeneralWeather */,
 				CB1C4FF32A813FE50044210A /* AppDelegate.swift */,
 				CB1C4FF52A813FE50044210A /* SceneDelegate.swift */,
@@ -220,21 +197,21 @@
 		CB1C50102A8142F00044210A /* GeneralWeather */ = {
 			isa = PBXGroup;
 			children = (
-				CB1754702B29D1D400063FB7 /* WheaterModel */,
+				CB1C501D2A8144000044210A /* GeneralViewController.swift */,
+				CB1C501E2A8144000044210A /* GeneralViewModel.swift */,
 				CB1753E32AEFA13700063FB7 /* CityCollectionView */,
 				CB1C50272A87EF1E0044210A /* CollectionCell */,
-				CB1C501D2A8144000044210A /* GeneralViewController.swift */,
 			);
 			path = GeneralWeather;
 			sourceTree = "<group>";
 		};
-		CB1C50112A8143060044210A /* StartModel */ = {
+		CB1C50112A8143060044210A /* StartController */ = {
 			isa = PBXGroup;
 			children = (
 				CB1C50212A81441E0044210A /* StartViewController.swift */,
 				CB1C501B2A81439A0044210A /* StartViewModel.swift */,
 			);
-			path = StartModel;
+			path = StartController;
 			sourceTree = "<group>";
 		};
 		CB1C50122A8143180044210A /* Coordinators */ = {
@@ -252,6 +229,7 @@
 		CB1C50232A82ABB50044210A /* Custom Elements */ = {
 			isa = PBXGroup;
 			children = (
+				CB9E68FB2B84BB2E00BC8AC2 /* Palette.swift */,
 				CB1C50242A82ABE00044210A /* CustomButton.swift */,
 				CB487D232A97E09800441585 /* CustomCollectionViewFlowLayout.swift */,
 			);
@@ -261,50 +239,35 @@
 		CB1C50272A87EF1E0044210A /* CollectionCell */ = {
 			isa = PBXGroup;
 			children = (
-				CB487D182A94EFAC00441585 /* old */,
+				CB825EC02A8DFDF200F1CC20 /* EveryDayCell */,
 				CB825EC22A8E5AE400F1CC20 /* NowCell */,
 				CB825EC12A8DFE0700F1CC20 /* DertailCell */,
-				CB825EC02A8DFDF200F1CC20 /* EveryDayCell */,
-				CB17544A2B04EFE700063FB7 /* oldController.swift */,
 			);
 			path = CollectionCell;
-			sourceTree = "<group>";
-		};
-		CB487D182A94EFAC00441585 /* old */ = {
-			isa = PBXGroup;
-			children = (
-				CB487D192A94EFB800441585 /* old.swift */,
-				CB487D1B2A95F93D00441585 /* old1.swift */,
-				CB487D1D2A968ACF00441585 /* old2.swift */,
-				CB487D1F2A97A78700441585 /* old3.swift */,
-				CB487D212A97CDE700441585 /* old4.swift */,
-				CB487D272A98E11600441585 /* old5.swift */,
-			);
-			path = old;
 			sourceTree = "<group>";
 		};
 		CB487D2C2A9CE18500441585 /* Hour24 */ = {
 			isa = PBXGroup;
 			children = (
-				CB487D2D2A9CE1A400441585 /* CollectionView */,
 				CB487D2E2A9CE1C200441585 /* Hour24.swift */,
 			);
 			path = Hour24;
 			sourceTree = "<group>";
 		};
-		CB487D2D2A9CE1A400441585 /* CollectionView */ = {
+		CB5D2DDE2B7DF52400F0181C /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				CB5D2DE22B7DF8B600F0181C /* CoreData.swift */,
+				CB5D2DEA2B7E10A400F0181C /* CityEntity.xcdatamodeld */,
 			);
-			path = CollectionView;
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		CB825EC02A8DFDF200F1CC20 /* EveryDayCell */ = {
 			isa = PBXGroup;
 			children = (
-				CB1753C92AB9DC3800063FB7 /* InDetail */,
-				CB1C502A2A88DAD30044210A /* GeneralSectionEveryDateHeader.swift */,
 				CB1C50282A87EF660044210A /* GeneralSectionEveryDate.swift */,
+				CB1C502A2A88DAD30044210A /* GeneralSectionEveryDateHeader.swift */,
 			);
 			path = EveryDayCell;
 			sourceTree = "<group>";
@@ -322,7 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				CB825EC32A8E5B2F00F1CC20 /* GeneralSectionNowCell.swift */,
-				CB1754502B1A06EE00063FB7 /* TitleHeader.swift */,
+				CB5D2DED2B8345F000F0181C /* WheatherEmpty.swift */,
 			);
 			path = NowCell;
 			sourceTree = "<group>";
@@ -355,7 +318,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1420;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					CB1C4FEF2A813FE50044210A = {
 						CreatedOnToolsVersion = 14.2;
@@ -397,41 +360,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB487D1E2A968ACF00441585 /* old2.swift in Sources */,
 				CB1753DC2AE6DD6400063FB7 /* AddButtonLocationViewController.swift in Sources */,
+				CB5D2DE32B7DF8B600F0181C /* CoreData.swift in Sources */,
 				CB825EC42A8E5B2F00F1CC20 /* GeneralSectionNowCell.swift in Sources */,
-				CB487D1C2A95F93D00441585 /* old1.swift in Sources */,
 				CB1753E52AEFA29600063FB7 /* CityCollectionView.swift in Sources */,
-				CB17544B2B04EFE700063FB7 /* oldController.swift in Sources */,
 				CB1754722B29D20800063FB7 /* AddButtonLocationModel.swift in Sources */,
 				CB1754452AFA192C00063FB7 /* CollectionCellAddButton.swift in Sources */,
 				CB487D2F2A9CE1C200441585 /* Hour24.swift in Sources */,
-				CB1754492B00F08300063FB7 /* WheatherModel.swift in Sources */,
 				CB1C501C2A81439B0044210A /* StartViewModel.swift in Sources */,
 				CB17544F2B19EBEA00063FB7 /* City.swift in Sources */,
 				CB1753D12ABB37E900063FB7 /* WModel.swift in Sources */,
-				CB1753D52ABB3A8600063FB7 /* MainWModel.swift in Sources */,
 				CB1C501A2A81434A0044210A /* GeneralWeatherCoordinator.swift in Sources */,
 				CB1753CE2ABB368800063FB7 /* NetWorkManager.swift in Sources */,
 				CB1C50192A81434A0044210A /* StartCoordinator.swift in Sources */,
 				CB784B9B2A90FDED00EA3DEC /* GeneralSectionDetailHeader.swift in Sources */,
+				CB1318132B5971BC002EC84C /* PageViewController.swift in Sources */,
 				CB1C50172A81434A0044210A /* MainCoordinator.swift in Sources */,
-				CB1753CB2AB9DCA100063FB7 /* IndetailWheatherEveryDate.swift in Sources */,
+				CB5D2DEC2B7E10A400F0181C /* CityEntity.xcdatamodeld in Sources */,
+				CB9E68FC2B84BB2E00BC8AC2 /* Palette.swift in Sources */,
 				CB1C50222A81441E0044210A /* StartViewController.swift in Sources */,
 				CB17546F2B29D13000063FB7 /* AddButtonLocationCoordinator.swift in Sources */,
-				CB487D282A98E11600441585 /* old5.swift in Sources */,
 				CB1C50292A87EF660044210A /* GeneralSectionEveryDate.swift in Sources */,
-				CB487D222A97CDE700441585 /* old4.swift in Sources */,
 				CB1C4FF42A813FE50044210A /* AppDelegate.swift in Sources */,
-				CB487D202A97A78700441585 /* old3.swift in Sources */,
+				CB9E69002B85F5F100BC8AC2 /* PageViewModel.swift in Sources */,
 				CB1C501F2A8144000044210A /* GeneralViewController.swift in Sources */,
-				CB1753D32ABB397700063FB7 /* ListWModel.swift in Sources */,
-				CB1753E12AEA9E3600063FB7 /* CityModel.swift in Sources */,
 				CB1C50252A82ABE00044210A /* CustomButton.swift in Sources */,
-				CB1754512B1A06EE00063FB7 /* TitleHeader.swift in Sources */,
+				CB5D2DEE2B8345F000F0181C /* WheatherEmpty.swift in Sources */,
 				CB1753D82ABC37B600063FB7 /* LocationManager.swift in Sources */,
 				CB825EBF2A8DFDDE00F1CC20 /* GeneralSectionDetailCell.swift in Sources */,
-				CB487D1A2A94EFB800441585 /* old.swift in Sources */,
 				CB487D242A97E09800441585 /* CustomCollectionViewFlowLayout.swift in Sources */,
 				CB1C50202A8144000044210A /* GeneralViewModel.swift in Sources */,
 				CB1C50182A81434A0044210A /* ProtocolCoordinator.swift in Sources */,
@@ -490,6 +446,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -550,6 +507,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -650,6 +608,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CB5D2DEA2B7E10A400F0181C /* CityEntity.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CB5D2DEB2B7E10A400F0181C /* CoreData.xcdatamodel */,
+			);
+			currentVersion = CB5D2DEB2B7E10A400F0181C /* CoreData.xcdatamodel */;
+			path = CityEntity.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CB1C4FE82A813FE50044210A /* Project object */;
 }
