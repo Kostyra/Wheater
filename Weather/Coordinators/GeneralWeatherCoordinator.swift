@@ -55,10 +55,10 @@ extension GeneralWeatherCoordinator: IGeneralWeatherCoordinator {
     func switchToNextFlow(delegate: AddButtonLocationDelegate) {
         let locationCoordinator = AddButtonLocationCoordinator(parentCoordunator: self, parentController: delegate)
         let locationCoordinatorVC = locationCoordinator.start()
-//        let locationCoordinatorNC = UINavigationController(rootViewController: locationCoordinatorVC)
-//        locationCoordinatorNC.modalPresentationStyle = .pageSheet
-//        locationCoordinatorNC.modalTransitionStyle = .crossDissolve
-        self.presentChildViewController(locationCoordinatorVC)
+        let locationCoordinatorNC = UINavigationController(rootViewController: locationCoordinatorVC)
+        locationCoordinatorNC.modalPresentationStyle = .pageSheet
+        locationCoordinatorNC.modalTransitionStyle = .crossDissolve
+        self.presentChildViewController(locationCoordinatorNC)
     }
     
     func switchToNextFlowProperties() {
