@@ -1132,10 +1132,10 @@
             filePath = "Weather/Coordinators/GeneralWeatherCoordinator.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "start()"
-            landmarkType = "7">
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "GeneralWeatherCoordinator"
+            landmarkType = "21">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1227,6 +1227,36 @@
                   startingLineNumber = "77"
                   endingLineNumber = "77"
                   offsetFromSymbolStart = "8508">
+               </Location>
+               <Location
+                  uuid = "7EA32A96-3516-4222-84D7-8B5985E82752 - 64ea3d7fcd498944"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Weather.NetWorkManager.getWeather(city: Swift.String, completion: (Swift.Result&lt;Weather.City, Weather.NetworkError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/NetWorkManager/NetWorkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "10484">
+               </Location>
+               <Location
+                  uuid = "7EA32A96-3516-4222-84D7-8B5985E82752 - 64ea3d7fcd498944"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Weather.NetWorkManager.getWeather(city: Swift.String, completion: (Swift.Result&lt;Weather.City, Weather.NetworkError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/NetWorkManager/NetWorkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "10324">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1596,7 +1626,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "C2E2D9E4-5B24-44F2-8922-F70715CAF9C7"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Weather/LocationManager/LocationManager.swift"
@@ -1644,7 +1674,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "1E2278D7-9E15-4158-AAB3-EBAB259FF5A6"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Weather/LocationManager/LocationManager.swift"
@@ -1676,7 +1706,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "D5E8DB23-E694-4286-B0E8-6E98166A2223"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Weather/NetWorkManager/NetWorkManager.swift"
@@ -1692,7 +1722,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "8552780F-A540-4A91-86BC-A6304F732374"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Weather/NetWorkManager/NetWorkManager.swift"
@@ -1750,6 +1780,2018 @@
                   offsetFromSymbolStart = "32">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CD19FAD6-24D1-4C72-B9C9-0927D89AA92C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Weather/Screen/GeneralWeather/GeneralViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "nextFlowProperties()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "398E46F6-4769-4D63-8972-3B44E4EA0727"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Weather/Coordinators/GeneralWeatherCoordinator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "switchToNextFlowProperties()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "398E46F6-4769-4D63-8972-3B44E4EA0727 - ff2e821d15bbf33a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralWeatherCoordinator.switchToNextFlowProperties() -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Coordinators/GeneralWeatherCoordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "398E46F6-4769-4D63-8972-3B44E4EA0727 - ff2e821d15bbf33a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralWeatherCoordinator.switchToNextFlowProperties() -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Coordinators/GeneralWeatherCoordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "60">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C2C92792-ACBB-4BFB-A152-81AC2C7D3D7A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Weather/Screen/GeneralWeather/GeneralViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "nextFlow(delegate:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B5CF0AFF-35CF-4048-BCC9-75C361DA42AD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Weather/Coordinators/GeneralWeatherCoordinator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "switchToNextFlow(delegate:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B5CF0AFF-35CF-4048-BCC9-75C361DA42AD - 1568580eea0015c8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralWeatherCoordinator.switchToNextFlow(delegate: Weather.AddButtonLocationDelegate) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Coordinators/GeneralWeatherCoordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "84">
+               </Location>
+               <Location
+                  uuid = "B5CF0AFF-35CF-4048-BCC9-75C361DA42AD - 1568580eea0015c8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralWeatherCoordinator.switchToNextFlow(delegate: Weather.AddButtonLocationDelegate) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Coordinators/GeneralWeatherCoordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "76">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "11B6552B-9F8C-4F2E-ABA9-BE12BE917869"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Weather/Coordinators/GeneralWeatherCoordinator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "switchToNextFlow(delegate:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "11B6552B-9F8C-4F2E-ABA9-BE12BE917869 - 1568580eea0015c8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralWeatherCoordinator.switchToNextFlow(delegate: Weather.AddButtonLocationDelegate) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Coordinators/GeneralWeatherCoordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "84">
+               </Location>
+               <Location
+                  uuid = "11B6552B-9F8C-4F2E-ABA9-BE12BE917869 - 1568580eea0015c8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralWeatherCoordinator.switchToNextFlow(delegate: Weather.AddButtonLocationDelegate) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Coordinators/GeneralWeatherCoordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "76">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AE01D9B9-4C96-48AE-97D2-08C4C30B221F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Weather/Coordinators/StartCoordinator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "switchToNextFlow(delegate:parentViewController:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "AE01D9B9-4C96-48AE-97D2-08C4C30B221F - 83f2cdafcc000cac"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.StartCoordinator.switchToNextFlowProperties() -&gt; __C.UIViewController"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Coordinators/StartCoordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  uuid = "AE01D9B9-4C96-48AE-97D2-08C4C30B221F - 7225cc1e01238296"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.StartCoordinator.switchToNextFlow(delegate: Weather.AddButtonLocationDelegate) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Coordinators/StartCoordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "84">
+               </Location>
+               <Location
+                  uuid = "AE01D9B9-4C96-48AE-97D2-08C4C30B221F - 7225cc1e012382b7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.StartCoordinator.switchToNextFlow(delegate: Weather.AddButtonLocationDelegate) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Coordinators/StartCoordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "84">
+               </Location>
+               <Location
+                  uuid = "AE01D9B9-4C96-48AE-97D2-08C4C30B221F - 7225cc1e0123bd4b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.StartCoordinator.switchToNextFlow(delegate: Weather.AddButtonLocationDelegate) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Coordinators/StartCoordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "84">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4817DDEE-5384-4241-B334-BE8AC1FFC213"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Weather/Coordinators/StartCoordinator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "9"
+            endingLineNumber = "9"
+            landmarkName = "switchToNextFlowProperties()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4817DDEE-5384-4241-B334-BE8AC1FFC213 - 83f2cdafcc000c6e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.StartCoordinator.switchToNextFlowProperties() -&gt; __C.UIViewController"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Coordinators/StartCoordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "10"
+                  endingLineNumber = "10"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "4817DDEE-5384-4241-B334-BE8AC1FFC213 - 83f2cdafcc000d01"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.StartCoordinator.switchToNextFlowProperties() -&gt; __C.UIViewController"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Coordinators/StartCoordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "4817DDEE-5384-4241-B334-BE8AC1FFC213 - 98f818dc0f1f64dd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.StartCoordinator.switchToNextFlowProperties() -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Coordinators/StartCoordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "10"
+                  endingLineNumber = "10"
+                  offsetFromSymbolStart = "60">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CA7A32D6-FD13-4EE2-9CD8-9298878143B5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Weather/Custom Elements/Palette.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "viewDinamecColor1"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "CA7A32D6-FD13-4EE2-9CD8-9298878143B5 - 5c9c62ee4bc4e5a6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.UITraitCollection) -&gt; __C.UIColor in closure #1 () -&gt; __C.UIColor in variable initialization expression of static Weather.Palette.viewDinamecColorFalse : __C.UIColor"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Custom%20Elements/Palette.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "396">
+               </Location>
+               <Location
+                  uuid = "CA7A32D6-FD13-4EE2-9CD8-9298878143B5 - 5c9c62ee4bc4e5a6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.UITraitCollection) -&gt; __C.UIColor in closure #1 () -&gt; __C.UIColor in variable initialization expression of static Weather.Palette.viewDinamecColorFalse : __C.UIColor"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Custom%20Elements/Palette.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "168">
+               </Location>
+               <Location
+                  uuid = "CA7A32D6-FD13-4EE2-9CD8-9298878143B5 - de56620c7357708f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.UITraitCollection) -&gt; __C.UIColor in closure #1 () -&gt; __C.UIColor in variable initialization expression of static Weather.Palette.viewDinamecColor1 : __C.UIColor"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Custom%20Elements/Palette.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "168">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CE4B1211-E439-4450-9B46-1DA8948FE27D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Weather/Custom Elements/Palette.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "viewDinamecColor1"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "CE4B1211-E439-4450-9B46-1DA8948FE27D - 5c9c62ee4bc4e5e0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.UITraitCollection) -&gt; __C.UIColor in closure #1 () -&gt; __C.UIColor in variable initialization expression of static Weather.Palette.viewDinamecColorFalse : __C.UIColor"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Custom%20Elements/Palette.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "436">
+               </Location>
+               <Location
+                  uuid = "CE4B1211-E439-4450-9B46-1DA8948FE27D - 5c9c62ee4bc4e5e0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.UITraitCollection) -&gt; __C.UIColor in closure #1 () -&gt; __C.UIColor in variable initialization expression of static Weather.Palette.viewDinamecColorFalse : __C.UIColor"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Custom%20Elements/Palette.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "208">
+               </Location>
+               <Location
+                  uuid = "CE4B1211-E439-4450-9B46-1DA8948FE27D - de56620c73577049"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.UITraitCollection) -&gt; __C.UIColor in closure #1 () -&gt; __C.UIColor in variable initialization expression of static Weather.Palette.viewDinamecColor1 : __C.UIColor"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Custom%20Elements/Palette.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "208">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8A8A16A9-B31C-4261-AA91-AD175F72C59D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Weather/Coordinators/StartCoordinator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "8"
+            endingLineNumber = "8"
+            landmarkName = "StartCoordinator"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "8A8A16A9-B31C-4261-AA91-AD175F72C59D - 3f22e334c6b8a326"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.StartCoordinator.deinit"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Coordinators/StartCoordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "8A8A16A9-B31C-4261-AA91-AD175F72C59D - 13f486832eb3611"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.StartCoordinator.__deallocating_deinit"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Coordinators/StartCoordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0CAA4191-E046-4457-A2BB-CB595A7B8E84"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Weather/Coordinators/StartCoordinator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "7"
+            endingLineNumber = "7"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "0CAA4191-E046-4457-A2BB-CB595A7B8E84 - 3f22e334c6b8a326"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.StartCoordinator.deinit"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Coordinators/StartCoordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "0CAA4191-E046-4457-A2BB-CB595A7B8E84 - 13f486832eb3611"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.StartCoordinator.__deallocating_deinit"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Coordinators/StartCoordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E37DCA6B-374F-48C5-ADA9-541A7EB4AD51"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Weather/Custom Elements/Palette.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "labelDinamecColor"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "99FDBE19-8367-4A4A-8EFE-8B6615C1E214"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Weather/Coordinators/GeneralWeatherCoordinator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "GeneralWeatherCoordinator"
+            landmarkType = "21">
+            <Locations>
+               <Location
+                  uuid = "99FDBE19-8367-4A4A-8EFE-8B6615C1E214 - 3df081e9997fd00c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralWeatherCoordinator.switchToNextFlowProperties() -&gt; __C.UIViewController"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Coordinators/GeneralWeatherCoordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "99FDBE19-8367-4A4A-8EFE-8B6615C1E214 - 3df081e9997fd3b1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralWeatherCoordinator.switchToNextFlowProperties() -&gt; __C.UIViewController"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Coordinators/GeneralWeatherCoordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3B1BFB79-9DDB-42F0-BC16-14BB00E81B2C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Weather/Coordinators/GeneralWeatherCoordinator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "GeneralWeatherCoordinator"
+            landmarkType = "21">
+            <Locations>
+               <Location
+                  uuid = "3B1BFB79-9DDB-42F0-BC16-14BB00E81B2C - 3df081e9997fd073"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralWeatherCoordinator.switchToNextFlowProperties() -&gt; __C.UIViewController"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Coordinators/GeneralWeatherCoordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "184">
+               </Location>
+               <Location
+                  uuid = "3B1BFB79-9DDB-42F0-BC16-14BB00E81B2C - 3df081e9997fd390"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralWeatherCoordinator.switchToNextFlowProperties() -&gt; __C.UIViewController"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Coordinators/GeneralWeatherCoordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "328">
+               </Location>
+               <Location
+                  uuid = "3B1BFB79-9DDB-42F0-BC16-14BB00E81B2C - 3df081e9997fd3b1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralWeatherCoordinator.switchToNextFlowProperties() -&gt; __C.UIViewController"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Coordinators/GeneralWeatherCoordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0F416EA5-B0B5-46CE-9C38-421D6AF856FD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Weather/Coordinators/ChangePropertiesCoordinator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "ChangePropertiesCoordinator"
+            landmarkType = "21">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "109C9C74-7B36-4761-8B82-E73579D729C0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Weather/Screen/GeneralWeather/CollectionCell/EveryDayCell/GeneralSectionEveryDate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "configurationCellCollection(with:with:with:with:with:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "109C9C74-7B36-4761-8B82-E73579D729C0 - 7a801f9d5688c8c1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionEveryDate.configurationCellCollection(with: Swift.String, with: Swift.String, with: Swift.String, with: Swift.Float, with: Swift.Float) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/EveryDayCell/GeneralSectionEveryDate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "128"
+                  endingLineNumber = "128"
+                  offsetFromSymbolStart = "2200">
+               </Location>
+               <Location
+                  uuid = "109C9C74-7B36-4761-8B82-E73579D729C0 - 7a801f9d5688c8c1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionEveryDate.configurationCellCollection(with: Swift.String, with: Swift.String, with: Swift.String, with: Swift.Float, with: Swift.Float) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/EveryDayCell/GeneralSectionEveryDate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "128"
+                  endingLineNumber = "128"
+                  offsetFromSymbolStart = "2304">
+               </Location>
+               <Location
+                  uuid = "109C9C74-7B36-4761-8B82-E73579D729C0 - 7a801f9d5688c8c1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionEveryDate.configurationCellCollection(with: Swift.String, with: Swift.String, with: Swift.String, with: Swift.Float, with: Swift.Float) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/EveryDayCell/GeneralSectionEveryDate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "128"
+                  endingLineNumber = "128"
+                  offsetFromSymbolStart = "2220">
+               </Location>
+               <Location
+                  uuid = "109C9C74-7B36-4761-8B82-E73579D729C0 - 7a801f9d5688c8c1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionEveryDate.configurationCellCollection(with: Swift.String, with: Swift.String, with: Swift.String, with: Swift.Float, with: Swift.Float) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/EveryDayCell/GeneralSectionEveryDate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "128"
+                  endingLineNumber = "128"
+                  offsetFromSymbolStart = "2288">
+               </Location>
+               <Location
+                  uuid = "109C9C74-7B36-4761-8B82-E73579D729C0 - 7a801f9d5688c920"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionEveryDate.configurationCellCollection(with: Swift.String, with: Swift.String, with: Swift.String, with: Swift.Float, with: Swift.Float) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/EveryDayCell/GeneralSectionEveryDate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "129"
+                  endingLineNumber = "129"
+                  offsetFromSymbolStart = "2220">
+               </Location>
+               <Location
+                  uuid = "109C9C74-7B36-4761-8B82-E73579D729C0 - 7a801f9d5688c89e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionEveryDate.configurationCellCollection(with: Swift.String, with: Swift.String, with: Swift.String, with: Swift.Float, with: Swift.Float) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/EveryDayCell/GeneralSectionEveryDate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "127"
+                  endingLineNumber = "127"
+                  offsetFromSymbolStart = "2220">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "77C063ED-B988-4EC7-B73F-A8FEB84B1326"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Weather/Screen/GeneralWeather/CollectionCell/EveryDayCell/GeneralSectionEveryDate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "configurationCellCollection(with:with:with:with:with:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "77C063ED-B988-4EC7-B73F-A8FEB84B1326 - 7a801f9d5688c903"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionEveryDate.configurationCellCollection(with: Swift.String, with: Swift.String, with: Swift.String, with: Swift.Float, with: Swift.Float) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/EveryDayCell/GeneralSectionEveryDate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
+                  offsetFromSymbolStart = "3048">
+               </Location>
+               <Location
+                  uuid = "77C063ED-B988-4EC7-B73F-A8FEB84B1326 - 7a801f9d5688c903"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionEveryDate.configurationCellCollection(with: Swift.String, with: Swift.String, with: Swift.String, with: Swift.Float, with: Swift.Float) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/EveryDayCell/GeneralSectionEveryDate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
+                  offsetFromSymbolStart = "3152">
+               </Location>
+               <Location
+                  uuid = "77C063ED-B988-4EC7-B73F-A8FEB84B1326 - 7a801f9d5688c903"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionEveryDate.configurationCellCollection(with: Swift.String, with: Swift.String, with: Swift.String, with: Swift.Float, with: Swift.Float) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/EveryDayCell/GeneralSectionEveryDate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
+                  offsetFromSymbolStart = "3068">
+               </Location>
+               <Location
+                  uuid = "77C063ED-B988-4EC7-B73F-A8FEB84B1326 - 7a801f9d5688c903"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionEveryDate.configurationCellCollection(with: Swift.String, with: Swift.String, with: Swift.String, with: Swift.Float, with: Swift.Float) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/EveryDayCell/GeneralSectionEveryDate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
+                  offsetFromSymbolStart = "3136">
+               </Location>
+               <Location
+                  uuid = "77C063ED-B988-4EC7-B73F-A8FEB84B1326 - 7a801f9d5688c903"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionEveryDate.configurationCellCollection(with: Swift.String, with: Swift.String, with: Swift.String, with: Swift.Float, with: Swift.Float) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/EveryDayCell/GeneralSectionEveryDate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
+                  offsetFromSymbolStart = "3044">
+               </Location>
+               <Location
+                  uuid = "77C063ED-B988-4EC7-B73F-A8FEB84B1326 - 7a801f9d5688c962"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionEveryDate.configurationCellCollection(with: Swift.String, with: Swift.String, with: Swift.String, with: Swift.Float, with: Swift.Float) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/EveryDayCell/GeneralSectionEveryDate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "131"
+                  endingLineNumber = "131"
+                  offsetFromSymbolStart = "3044">
+               </Location>
+               <Location
+                  uuid = "77C063ED-B988-4EC7-B73F-A8FEB84B1326 - 7a801f9d5688c920"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionEveryDate.configurationCellCollection(with: Swift.String, with: Swift.String, with: Swift.String, with: Swift.Float, with: Swift.Float) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/EveryDayCell/GeneralSectionEveryDate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "129"
+                  endingLineNumber = "129"
+                  offsetFromSymbolStart = "3044">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3DF4DBDC-B2A9-4D93-94A7-6078B08FDD36"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Weather/Screen/GeneralWeather/CollectionCell/EveryDayCell/GeneralSectionEveryDate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
+            landmarkName = "updateTemperatureForTheme(isTemp:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3DF4DBDC-B2A9-4D93-94A7-6078B08FDD36 - 9cf2bb960986c93"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionEveryDate.updateTemperatureForTheme(isDarkThemeEnabled: Swift.Bool) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/EveryDayCell/GeneralSectionEveryDate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "152"
+                  endingLineNumber = "152"
+                  offsetFromSymbolStart = "428">
+               </Location>
+               <Location
+                  uuid = "3DF4DBDC-B2A9-4D93-94A7-6078B08FDD36 - 9cf2bb960986f72"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionEveryDate.updateTemperatureForTheme(isDarkThemeEnabled: Swift.Bool) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/EveryDayCell/GeneralSectionEveryDate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "153"
+                  endingLineNumber = "153"
+                  offsetFromSymbolStart = "432">
+               </Location>
+               <Location
+                  uuid = "3DF4DBDC-B2A9-4D93-94A7-6078B08FDD36 - 9cf2bb960986c59"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionEveryDate.updateTemperatureForTheme(isDarkThemeEnabled: Swift.Bool) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/EveryDayCell/GeneralSectionEveryDate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "146"
+                  endingLineNumber = "146"
+                  offsetFromSymbolStart = "560">
+               </Location>
+               <Location
+                  uuid = "3DF4DBDC-B2A9-4D93-94A7-6078B08FDD36 - 95d9586fdceb4947"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionEveryDate.updateTemperatureForTheme(isTemp: Swift.Bool) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/EveryDayCell/GeneralSectionEveryDate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "150"
+                  endingLineNumber = "150"
+                  offsetFromSymbolStart = "1252">
+               </Location>
+               <Location
+                  uuid = "3DF4DBDC-B2A9-4D93-94A7-6078B08FDD36 - 95d9586fdceb48f8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionEveryDate.updateTemperatureForTheme(isTemp: Swift.Bool) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/EveryDayCell/GeneralSectionEveryDate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "137"
+                  endingLineNumber = "137"
+                  offsetFromSymbolStart = "1252">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5D7581C5-5C52-4D23-AAED-4EF8C09B33B8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Weather/Screen/GeneralWeather/CollectionCell/EveryDayCell/GeneralSectionEveryDate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
+            landmarkName = "updateTemperatureForTheme(isTemp:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5D7581C5-5C52-4D23-AAED-4EF8C09B33B8 - 9cf2bb960986f51"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionEveryDate.updateTemperatureForTheme(isDarkThemeEnabled: Swift.Bool) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/EveryDayCell/GeneralSectionEveryDate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "154"
+                  endingLineNumber = "154"
+                  offsetFromSymbolStart = "444">
+               </Location>
+               <Location
+                  uuid = "5D7581C5-5C52-4D23-AAED-4EF8C09B33B8 - 9cf2bb960986f30"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionEveryDate.updateTemperatureForTheme(isDarkThemeEnabled: Swift.Bool) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/EveryDayCell/GeneralSectionEveryDate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "155"
+                  endingLineNumber = "155"
+                  offsetFromSymbolStart = "452">
+               </Location>
+               <Location
+                  uuid = "5D7581C5-5C52-4D23-AAED-4EF8C09B33B8 - 9cf2bb960986c1f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionEveryDate.updateTemperatureForTheme(isDarkThemeEnabled: Swift.Bool) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/EveryDayCell/GeneralSectionEveryDate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "148"
+                  endingLineNumber = "148"
+                  offsetFromSymbolStart = "592">
+               </Location>
+               <Location
+                  uuid = "5D7581C5-5C52-4D23-AAED-4EF8C09B33B8 - 95d9586fdceb4ae8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionEveryDate.updateTemperatureForTheme(isTemp: Swift.Bool) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/EveryDayCell/GeneralSectionEveryDate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "153"
+                  endingLineNumber = "153"
+                  offsetFromSymbolStart = "1320">
+               </Location>
+               <Location
+                  uuid = "5D7581C5-5C52-4D23-AAED-4EF8C09B33B8 - 95d9586fdceb489d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionEveryDate.updateTemperatureForTheme(isTemp: Swift.Bool) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/EveryDayCell/GeneralSectionEveryDate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "140"
+                  endingLineNumber = "140"
+                  offsetFromSymbolStart = "1320">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "90A9860C-2284-4974-8567-1A1927933204"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Weather/Screen/GeneralWeather/CollectionCell/EveryDayCell/GeneralSectionEveryDate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
+            landmarkName = "updateTemperatureForTheme(isTemp:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AF7AB0D4-E67C-4384-9658-1E4BEA840E7F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Weather/Screen/GeneralWeather/CollectionCell/NowCell/GeneralSectionNowCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "159"
+            endingLineNumber = "159"
+            landmarkName = "updateTemperatureForTheme(isTemp:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "AF7AB0D4-E67C-4384-9658-1E4BEA840E7F - ee9c0468cfcd550"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionNowCell.updateTemperatureForTheme(isTemp: Swift.Bool) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/NowCell/GeneralSectionNowCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "156"
+                  endingLineNumber = "156"
+                  offsetFromSymbolStart = "2292">
+               </Location>
+               <Location
+                  uuid = "AF7AB0D4-E67C-4384-9658-1E4BEA840E7F - ee9c0468cfcd492"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionNowCell.updateTemperatureForTheme(isTemp: Swift.Bool) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/NowCell/GeneralSectionNowCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "158"
+                  endingLineNumber = "158"
+                  offsetFromSymbolStart = "2084">
+               </Location>
+               <Location
+                  uuid = "AF7AB0D4-E67C-4384-9658-1E4BEA840E7F - ee9c0468cfcd4d4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionNowCell.updateTemperatureForTheme(isTemp: Swift.Bool) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/NowCell/GeneralSectionNowCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "160"
+                  endingLineNumber = "160"
+                  offsetFromSymbolStart = "2084">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E9FBA43D-3D49-4F93-94B9-5BE3D1F2B17A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Weather/Screen/GeneralWeather/CollectionCell/NowCell/GeneralSectionNowCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
+            landmarkName = "updateTemperatureForTheme(isTemp:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E9FBA43D-3D49-4F93-94B9-5BE3D1F2B17A - ee9c0468cfcd2a4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionNowCell.updateTemperatureForTheme(isTemp: Swift.Bool) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/NowCell/GeneralSectionNowCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "144"
+                  endingLineNumber = "144"
+                  offsetFromSymbolStart = "240">
+               </Location>
+               <Location
+                  uuid = "E9FBA43D-3D49-4F93-94B9-5BE3D1F2B17A - ee9c0468cfcd2a4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionNowCell.updateTemperatureForTheme(isTemp: Swift.Bool) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/NowCell/GeneralSectionNowCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "144"
+                  endingLineNumber = "144"
+                  offsetFromSymbolStart = "172">
+               </Location>
+               <Location
+                  uuid = "E9FBA43D-3D49-4F93-94B9-5BE3D1F2B17A - ee9c0468cfcd3ac"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionNowCell.updateTemperatureForTheme(isTemp: Swift.Bool) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/NowCell/GeneralSectionNowCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "136"
+                  endingLineNumber = "136"
+                  offsetFromSymbolStart = "240">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7A405C31-62CF-45AD-994D-B2682C5EF3F6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Weather/Screen/GeneralWeather/CollectionCell/NowCell/GeneralSectionNowCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "152"
+            endingLineNumber = "152"
+            landmarkName = "updateTemperatureForTheme(isTemp:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7A405C31-62CF-45AD-994D-B2682C5EF3F6 - ee9c0468cfcd279"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionNowCell.updateTemperatureForTheme(isTemp: Swift.Bool) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/NowCell/GeneralSectionNowCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "149"
+                  endingLineNumber = "149"
+                  offsetFromSymbolStart = "2136">
+               </Location>
+               <Location
+                  uuid = "7A405C31-62CF-45AD-994D-B2682C5EF3F6 - ee9c0468cfcd5bb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionNowCell.updateTemperatureForTheme(isTemp: Swift.Bool) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/NowCell/GeneralSectionNowCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "151"
+                  endingLineNumber = "151"
+                  offsetFromSymbolStart = "496">
+               </Location>
+               <Location
+                  uuid = "7A405C31-62CF-45AD-994D-B2682C5EF3F6 - ee9c0468cfcd5bb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionNowCell.updateTemperatureForTheme(isTemp: Swift.Bool) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/NowCell/GeneralSectionNowCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "151"
+                  endingLineNumber = "151"
+                  offsetFromSymbolStart = "836">
+               </Location>
+               <Location
+                  uuid = "7A405C31-62CF-45AD-994D-B2682C5EF3F6 - ee9c0468cfcd5fd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionNowCell.updateTemperatureForTheme(isTemp: Swift.Bool) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/NowCell/GeneralSectionNowCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "153"
+                  endingLineNumber = "153"
+                  offsetFromSymbolStart = "496">
+               </Location>
+               <Location
+                  uuid = "7A405C31-62CF-45AD-994D-B2682C5EF3F6 - ee9c0468cfcd5fd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionNowCell.updateTemperatureForTheme(isTemp: Swift.Bool) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/NowCell/GeneralSectionNowCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "153"
+                  endingLineNumber = "153"
+                  offsetFromSymbolStart = "836">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3BB30003-B46C-4BA7-94AB-C59E613EB901"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Weather/Screen/GeneralWeather/CollectionCell/NowCell/GeneralSectionNowCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
+            landmarkName = "updateTemperatureForTheme(isTemp:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3BB30003-B46C-4BA7-94AB-C59E613EB901 - ee9c0468cfcd59a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionNowCell.updateTemperatureForTheme(isTemp: Swift.Bool) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/NowCell/GeneralSectionNowCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "150"
+                  endingLineNumber = "150"
+                  offsetFromSymbolStart = "2164">
+               </Location>
+               <Location
+                  uuid = "3BB30003-B46C-4BA7-94AB-C59E613EB901 - ee9c0468cfcd5dc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionNowCell.updateTemperatureForTheme(isTemp: Swift.Bool) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/NowCell/GeneralSectionNowCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "152"
+                  endingLineNumber = "152"
+                  offsetFromSymbolStart = "1020">
+               </Location>
+               <Location
+                  uuid = "3BB30003-B46C-4BA7-94AB-C59E613EB901 - ee9c0468cfcd5dc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionNowCell.updateTemperatureForTheme(isTemp: Swift.Bool) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/NowCell/GeneralSectionNowCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "152"
+                  endingLineNumber = "152"
+                  offsetFromSymbolStart = "1384">
+               </Location>
+               <Location
+                  uuid = "3BB30003-B46C-4BA7-94AB-C59E613EB901 - ee9c0468cfcd51e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionNowCell.updateTemperatureForTheme(isTemp: Swift.Bool) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/NowCell/GeneralSectionNowCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "154"
+                  endingLineNumber = "154"
+                  offsetFromSymbolStart = "1020">
+               </Location>
+               <Location
+                  uuid = "3BB30003-B46C-4BA7-94AB-C59E613EB901 - ee9c0468cfcd51e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionNowCell.updateTemperatureForTheme(isTemp: Swift.Bool) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/NowCell/GeneralSectionNowCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "154"
+                  endingLineNumber = "154"
+                  offsetFromSymbolStart = "1384">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3107D00A-A6AE-4BEC-AE2F-5E09C6740BD7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Weather/Screen/GeneralWeather/CollectionCell/NowCell/GeneralSectionNowCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "configurationCellCollection(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A21A5B5A-0624-4D14-9BEC-9527F3CB4BDC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Weather/Screen/GeneralWeather/CollectionCell/NowCell/GeneralSectionNowCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "configurationCellCollection(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BD288418-BD59-4B7C-ADA8-A5D025745CC0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Weather/Screen/GeneralWeather/CollectionCell/NowCell/GeneralSectionNowCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
+            landmarkName = "configurationCellCollection(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6BA38FE7-C2FA-4954-98D2-54B1915DBAD4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Weather/Screen/GeneralWeather/CollectionCell/NowCell/GeneralSectionNowCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
+            landmarkName = "updateTemperatureForTheme(isTemp:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6BA38FE7-C2FA-4954-98D2-54B1915DBAD4 - ee9c0468cfcd571"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionNowCell.updateTemperatureForTheme(isTemp: Swift.Bool) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/NowCell/GeneralSectionNowCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "157"
+                  endingLineNumber = "157"
+                  offsetFromSymbolStart = "3080">
+               </Location>
+               <Location
+                  uuid = "6BA38FE7-C2FA-4954-98D2-54B1915DBAD4 - ee9c0468cfcd4b3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionNowCell.updateTemperatureForTheme(isTemp: Swift.Bool) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/NowCell/GeneralSectionNowCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "159"
+                  endingLineNumber = "159"
+                  offsetFromSymbolStart = "2108">
+               </Location>
+               <Location
+                  uuid = "6BA38FE7-C2FA-4954-98D2-54B1915DBAD4 - ee9c0468cfcd4f5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionNowCell.updateTemperatureForTheme(isTemp: Swift.Bool) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/NowCell/GeneralSectionNowCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "161"
+                  endingLineNumber = "161"
+                  offsetFromSymbolStart = "2108">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F3CBE78C-6CD6-4B62-A97F-4DD91BC1C131"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Weather/Screen/GeneralWeather/CollectionCell/NowCell/GeneralSectionNowCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
+            landmarkName = "updateTemperatureForTheme(isTemp:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F3CBE78C-6CD6-4B62-A97F-4DD91BC1C131 - 39f9ae6b3d2eb039"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionNowCell.convertToFarhenheit(Swift.Float) -&gt; Swift.Float"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/NowCell/GeneralSectionNowCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "162"
+                  endingLineNumber = "162"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  uuid = "F3CBE78C-6CD6-4B62-A97F-4DD91BC1C131 - ee9c0468cfcd437"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionNowCell.updateTemperatureForTheme(isTemp: Swift.Bool) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/NowCell/GeneralSectionNowCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "163"
+                  endingLineNumber = "163"
+                  offsetFromSymbolStart = "2216">
+               </Location>
+               <Location
+                  uuid = "F3CBE78C-6CD6-4B62-A97F-4DD91BC1C131 - ee9c0468cfcd469"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionNowCell.updateTemperatureForTheme(isTemp: Swift.Bool) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/NowCell/GeneralSectionNowCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "165"
+                  endingLineNumber = "165"
+                  offsetFromSymbolStart = "2216">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EE0D77A3-B9D2-4216-B130-5EA5A76AB5A9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Weather/Screen/GeneralWeather/CollectionCell/NowCell/GeneralSectionNowCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
+            landmarkName = "updateTemperatureForTheme(isTemp:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4B7FAEA7-02E3-4FF3-9386-F7566F7DFE4E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Weather/Screen/GeneralWeather/CollectionCell/NowCell/GeneralSectionNowCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
+            landmarkName = "updateTemperatureForTheme(isTemp:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4B7FAEA7-02E3-4FF3-9386-F7566F7DFE4E - 39f9ae6b3d2eb039"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionNowCell.convertToFarhenheit(Swift.Float) -&gt; Swift.Float"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/NowCell/GeneralSectionNowCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "162"
+                  endingLineNumber = "162"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  uuid = "4B7FAEA7-02E3-4FF3-9386-F7566F7DFE4E - ee9c0468cfcd416"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionNowCell.updateTemperatureForTheme(isTemp: Swift.Bool) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/NowCell/GeneralSectionNowCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "162"
+                  endingLineNumber = "162"
+                  offsetFromSymbolStart = "2176">
+               </Location>
+               <Location
+                  uuid = "4B7FAEA7-02E3-4FF3-9386-F7566F7DFE4E - ee9c0468cfcd448"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionNowCell.updateTemperatureForTheme(isTemp: Swift.Bool) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/NowCell/GeneralSectionNowCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "164"
+                  endingLineNumber = "164"
+                  offsetFromSymbolStart = "2176">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BA225CAD-E6BB-42A7-9A3F-B1B4E456C128"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Weather/Screen/GeneralWeather/CollectionCell/EveryDayCell/GeneralSectionEveryDate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
+            landmarkName = "updateTemperatureForTheme(isTemp:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BE899304-DA9E-4D98-AA4F-8B9C0462FAFB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Weather/Screen/GeneralWeather/CollectionCell/EveryDayCell/GeneralSectionEveryDate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "updateTemperatureForTheme(isTemp:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BE899304-DA9E-4D98-AA4F-8B9C0462FAFB - 95d9586fdceb4f95"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionEveryDate.updateTemperatureForTheme(isTemp: Swift.Bool) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/EveryDayCell/GeneralSectionEveryDate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "132"
+                  endingLineNumber = "132"
+                  offsetFromSymbolStart = "716">
+               </Location>
+               <Location
+                  uuid = "BE899304-DA9E-4D98-AA4F-8B9C0462FAFB - 95d9586fdceb4f95"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionEveryDate.updateTemperatureForTheme(isTemp: Swift.Bool) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/EveryDayCell/GeneralSectionEveryDate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "132"
+                  endingLineNumber = "132"
+                  offsetFromSymbolStart = "1080">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "68D892F7-A8DA-4F2C-9272-0D8505C14756"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Weather/Screen/GeneralWeather/CollectionCell/EveryDayCell/GeneralSectionEveryDate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "updateTemperatureForTheme(isTemp:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "68D892F7-A8DA-4F2C-9272-0D8505C14756 - 95d9586fdceb4fb2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionEveryDate.updateTemperatureForTheme(isTemp: Swift.Bool) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/EveryDayCell/GeneralSectionEveryDate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "131"
+                  endingLineNumber = "131"
+                  offsetFromSymbolStart = "240">
+               </Location>
+               <Location
+                  uuid = "68D892F7-A8DA-4F2C-9272-0D8505C14756 - 95d9586fdceb4fb2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionEveryDate.updateTemperatureForTheme(isTemp: Swift.Bool) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/EveryDayCell/GeneralSectionEveryDate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "131"
+                  endingLineNumber = "131"
+                  offsetFromSymbolStart = "552">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "27C094B0-A27D-460A-BC33-4EE42AC246BD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Weather/Screen/GeneralWeather/CollectionCell/NowCell/GeneralSectionNowCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "154"
+            endingLineNumber = "154"
+            landmarkName = "updateTemperatureForTheme(isTemp:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "27C094B0-A27D-460A-BC33-4EE42AC246BD - ee9c0468cfcd5bb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionNowCell.updateTemperatureForTheme(isTemp: Swift.Bool) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/NowCell/GeneralSectionNowCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "151"
+                  endingLineNumber = "151"
+                  offsetFromSymbolStart = "2176">
+               </Location>
+               <Location
+                  uuid = "27C094B0-A27D-460A-BC33-4EE42AC246BD - ee9c0468cfcd5fd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionNowCell.updateTemperatureForTheme(isTemp: Swift.Bool) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/NowCell/GeneralSectionNowCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "153"
+                  endingLineNumber = "153"
+                  offsetFromSymbolStart = "1540">
+               </Location>
+               <Location
+                  uuid = "27C094B0-A27D-460A-BC33-4EE42AC246BD - ee9c0468cfcd5fd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionNowCell.updateTemperatureForTheme(isTemp: Swift.Bool) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/NowCell/GeneralSectionNowCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "153"
+                  endingLineNumber = "153"
+                  offsetFromSymbolStart = "1916">
+               </Location>
+               <Location
+                  uuid = "27C094B0-A27D-460A-BC33-4EE42AC246BD - ee9c0468cfcd53f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionNowCell.updateTemperatureForTheme(isTemp: Swift.Bool) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/NowCell/GeneralSectionNowCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "155"
+                  endingLineNumber = "155"
+                  offsetFromSymbolStart = "1540">
+               </Location>
+               <Location
+                  uuid = "27C094B0-A27D-460A-BC33-4EE42AC246BD - ee9c0468cfcd53f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionNowCell.updateTemperatureForTheme(isTemp: Swift.Bool) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/NowCell/GeneralSectionNowCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "155"
+                  endingLineNumber = "155"
+                  offsetFromSymbolStart = "1916">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A1087064-326D-43BD-BBD2-2B61CC2D360B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Weather/Screen/GeneralWeather/CollectionCell/EveryDayCell/GeneralSectionEveryDateHeader.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "updateTextColor()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A1087064-326D-43BD-BBD2-2B61CC2D360B - 642bb0a49bbf5292"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionEveryDateHeader.updateTextColor() -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/EveryDayCell/GeneralSectionEveryDateHeader.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "A1087064-326D-43BD-BBD2-2B61CC2D360B - 642bb0a49bbf5273"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionEveryDateHeader.updateTextColor() -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/EveryDayCell/GeneralSectionEveryDateHeader.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  uuid = "A1087064-326D-43BD-BBD2-2B61CC2D360B - 642bb0a49bbf5250"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionEveryDateHeader.updateTextColor() -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/EveryDayCell/GeneralSectionEveryDateHeader.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B1D61A05-B21E-40D1-B7BB-B752E8D11411"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Weather/Screen/GeneralWeather/CollectionCell/EveryDayCell/GeneralSectionEveryDate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
+            landmarkName = "updateTextColor()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B1D61A05-B21E-40D1-B7BB-B752E8D11411 - ac64d6f6d8132641"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionEveryDate.updateTextColor(isTheme: Swift.Bool) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/EveryDayCell/GeneralSectionEveryDate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "128"
+                  endingLineNumber = "128"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "B1D61A05-B21E-40D1-B7BB-B752E8D11411 - ac64d6f6d81327a0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.GeneralSectionEveryDate.updateTextColor(isTheme: Swift.Bool) -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Screen/GeneralWeather/CollectionCell/EveryDayCell/GeneralSectionEveryDate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "129"
+                  endingLineNumber = "129"
+                  offsetFromSymbolStart = "232">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CA5474B8-3B98-4E74-BBCD-211557AC0E27"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Weather/Screen/SearchLocationFlow/AddButtonLocationViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -5,6 +5,7 @@ import Foundation
 protocol IGeneralViewModel {
     var stateChanged: ((GeneralViewModel.State) -> ())? {get set}
     func nextFlow(delegate: AddButtonLocationDelegate)
+    func nextFlowProperties()
     func getWeather()
     func didTapCity(_ city: City)
 }
@@ -51,6 +52,10 @@ final class GeneralViewModel {
 extension GeneralViewModel:IGeneralViewModel {
     func nextFlow(delegate: AddButtonLocationDelegate) {
         coordinator?.switchToNextFlow(delegate: delegate)
+    }
+    
+    func nextFlowProperties() {
+        coordinator?.switchToNextFlowProperties()
     }
     
     func getWeather() {

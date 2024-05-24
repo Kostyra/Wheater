@@ -40,6 +40,12 @@
 		CB825EBF2A8DFDDE00F1CC20 /* GeneralSectionDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB825EBE2A8DFDDE00F1CC20 /* GeneralSectionDetailCell.swift */; };
 		CB825EC42A8E5B2F00F1CC20 /* GeneralSectionNowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB825EC32A8E5B2F00F1CC20 /* GeneralSectionNowCell.swift */; };
 		CB9E68FC2B84BB2E00BC8AC2 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9E68FB2B84BB2E00BC8AC2 /* Palette.swift */; };
+		CBB997122BCFC46A00D9360D /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB997112BCFC46A00D9360D /* LineChart.swift */; };
+		CBB997152BD0033400D9360D /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = CBB997142BD0033400D9360D /* SwiftUICharts */; };
+		CBB997172BD1580900D9360D /* LineChartDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB997162BD1580900D9360D /* LineChartDetail.swift */; };
+		CBC262F42BBAADCC00E35B52 /* ChangePropertiesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC262F32BBAADCC00E35B52 /* ChangePropertiesController.swift */; };
+		CBC262F62BBAAE9200E35B52 /* ChangePropertiesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC262F52BBAAE9200E35B52 /* ChangePropertiesCoordinator.swift */; };
+		CBC262F82BBAB9E800E35B52 /* ChangePropertiesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC262F72BBAB9E800E35B52 /* ChangePropertiesModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +84,11 @@
 		CB825EBE2A8DFDDE00F1CC20 /* GeneralSectionDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSectionDetailCell.swift; sourceTree = "<group>"; };
 		CB825EC32A8E5B2F00F1CC20 /* GeneralSectionNowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSectionNowCell.swift; sourceTree = "<group>"; };
 		CB9E68FB2B84BB2E00BC8AC2 /* Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
+		CBB997112BCFC46A00D9360D /* LineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
+		CBB997162BD1580900D9360D /* LineChartDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartDetail.swift; sourceTree = "<group>"; };
+		CBC262F32BBAADCC00E35B52 /* ChangePropertiesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePropertiesController.swift; sourceTree = "<group>"; };
+		CBC262F52BBAAE9200E35B52 /* ChangePropertiesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePropertiesCoordinator.swift; sourceTree = "<group>"; };
+		CBC262F72BBAB9E800E35B52 /* ChangePropertiesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePropertiesModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBB997152BD0033400D9360D /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +192,7 @@
 		CB1C50102A8142F00044210A /* GeneralWeather */ = {
 			isa = PBXGroup;
 			children = (
+				CBC262F22BBAADAE00E35B52 /* ChangeProperties */,
 				CB1C501D2A8144000044210A /* GeneralViewController.swift */,
 				CB1C501E2A8144000044210A /* GeneralViewModel.swift */,
 				CB1753E32AEFA13700063FB7 /* CityCollectionView */,
@@ -205,6 +218,7 @@
 				CB1C50132A81434A0044210A /* MainCoordinator.swift */,
 				CB1C50142A81434A0044210A /* ProtocolCoordinator.swift */,
 				CB17546E2B29D13000063FB7 /* AddButtonLocationCoordinator.swift */,
+				CBC262F52BBAAE9200E35B52 /* ChangePropertiesCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -229,12 +243,14 @@
 			path = CollectionCell;
 			sourceTree = "<group>";
 		};
-		CB487D2C2A9CE18500441585 /* Hour24 */ = {
+		CB487D2C2A9CE18500441585 /* LineChart */ = {
 			isa = PBXGroup;
 			children = (
 				CB487D2E2A9CE1C200441585 /* Hour24.swift */,
+				CBB997112BCFC46A00D9360D /* LineChart.swift */,
+				CBB997162BD1580900D9360D /* LineChartDetail.swift */,
 			);
-			path = Hour24;
+			path = LineChart;
 			sourceTree = "<group>";
 		};
 		CB5D2DDE2B7DF52400F0181C /* CoreData */ = {
@@ -278,10 +294,19 @@
 			children = (
 				CB1C50102A8142F00044210A /* GeneralWeather */,
 				CB1C50112A8143060044210A /* StartController */,
-				CB487D2C2A9CE18500441585 /* Hour24 */,
+				CB487D2C2A9CE18500441585 /* LineChart */,
 				CB1753D92AE6DD0700063FB7 /* SearchLocationFlow */,
 			);
 			path = Screen;
+			sourceTree = "<group>";
+		};
+		CBC262F22BBAADAE00E35B52 /* ChangeProperties */ = {
+			isa = PBXGroup;
+			children = (
+				CBC262F32BBAADCC00E35B52 /* ChangePropertiesController.swift */,
+				CBC262F72BBAB9E800E35B52 /* ChangePropertiesModel.swift */,
+			);
+			path = ChangeProperties;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,6 +325,9 @@
 			dependencies = (
 			);
 			name = Weather;
+			packageProductDependencies = (
+				CBB997142BD0033400D9360D /* SwiftUICharts */,
+			);
 			productName = Weather;
 			productReference = CB1C4FF02A813FE50044210A /* Weather.app */;
 			productType = "com.apple.product-type.application";
@@ -328,6 +356,9 @@
 				Base,
 			);
 			mainGroup = CB1C4FE72A813FE50044210A;
+			packageReferences = (
+				CBB997132BD0033400D9360D /* XCRemoteSwiftPackageReference "ChartView" */,
+			);
 			productRefGroup = CB1C4FF12A813FE50044210A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -358,6 +389,7 @@
 				CB5D2DE32B7DF8B600F0181C /* CoreData.swift in Sources */,
 				CB825EC42A8E5B2F00F1CC20 /* GeneralSectionNowCell.swift in Sources */,
 				CB1753E52AEFA29600063FB7 /* CityCollectionView.swift in Sources */,
+				CBC262F42BBAADCC00E35B52 /* ChangePropertiesController.swift in Sources */,
 				CB1754722B29D20800063FB7 /* AddButtonLocationModel.swift in Sources */,
 				CB1754452AFA192C00063FB7 /* CollectionCellAddButton.swift in Sources */,
 				CB487D2F2A9CE1C200441585 /* Hour24.swift in Sources */,
@@ -367,11 +399,14 @@
 				CB1C501A2A81434A0044210A /* GeneralWeatherCoordinator.swift in Sources */,
 				CB1753CE2ABB368800063FB7 /* NetWorkManager.swift in Sources */,
 				CB1C50192A81434A0044210A /* StartCoordinator.swift in Sources */,
+				CBC262F82BBAB9E800E35B52 /* ChangePropertiesModel.swift in Sources */,
+				CBB997122BCFC46A00D9360D /* LineChart.swift in Sources */,
 				CB784B9B2A90FDED00EA3DEC /* GeneralSectionDetailHeader.swift in Sources */,
 				CB1C50172A81434A0044210A /* MainCoordinator.swift in Sources */,
 				CB5D2DEC2B7E10A400F0181C /* CityEntity.xcdatamodeld in Sources */,
 				CB9E68FC2B84BB2E00BC8AC2 /* Palette.swift in Sources */,
 				CB1C50222A81441E0044210A /* StartViewController.swift in Sources */,
+				CBB997172BD1580900D9360D /* LineChartDetail.swift in Sources */,
 				CB17546F2B29D13000063FB7 /* AddButtonLocationCoordinator.swift in Sources */,
 				CB1C50292A87EF660044210A /* GeneralSectionEveryDate.swift in Sources */,
 				CB1C4FF42A813FE50044210A /* AppDelegate.swift in Sources */,
@@ -382,6 +417,7 @@
 				CB825EBF2A8DFDDE00F1CC20 /* GeneralSectionDetailCell.swift in Sources */,
 				CB487D242A97E09800441585 /* CustomCollectionViewFlowLayout.swift in Sources */,
 				CB1C50202A8144000044210A /* GeneralViewModel.swift in Sources */,
+				CBC262F62BBAAE9200E35B52 /* ChangePropertiesCoordinator.swift in Sources */,
 				CB1C50182A81434A0044210A /* ProtocolCoordinator.swift in Sources */,
 				CB1C4FF62A813FE50044210A /* SceneDelegate.swift in Sources */,
 				CB1C502B2A88DAD30044210A /* GeneralSectionEveryDateHeader.swift in Sources */,
@@ -600,6 +636,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CBB997132BD0033400D9360D /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CBB997142BD0033400D9360D /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CBB997132BD0033400D9360D /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		CB5D2DEA2B7E10A400F0181C /* CityEntity.xcdatamodeld */ = {

@@ -31,7 +31,7 @@ extension AddButtonLocationCoordinator: ICoordinator {
         let viewModel = AddButtonLocationModel(coordinator: self)
         let addButtonLocationVC = AddButtonLocationViewController(viewModel: viewModel)
         addButtonLocationVC.delegate = parentController
-        addButtonLocationVC.modalPresentationStyle = .fullScreen
+        addButtonLocationVC.modalPresentationStyle = .pageSheet
         addButtonLocationVC.modalTransitionStyle = .crossDissolve
         return addButtonLocationVC
     }

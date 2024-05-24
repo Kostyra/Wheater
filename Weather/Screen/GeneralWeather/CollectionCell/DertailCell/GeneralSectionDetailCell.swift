@@ -10,7 +10,7 @@ final class GeneralSectionDetailCell: UICollectionViewCell {
     private lazy var wheatherImage: UIImageView = {
        let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.contentMode = .scaleAspectFit
+        image.contentMode = .scaleAspectFill
         return image
     }()
     
@@ -19,7 +19,6 @@ final class GeneralSectionDetailCell: UICollectionViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 14)
         label.textAlignment = .center
-        label.textColor = Palette.labelDinamecColor
         return label
     }()
 
@@ -28,7 +27,6 @@ final class GeneralSectionDetailCell: UICollectionViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 14)
         label.textAlignment = .center
-        label.textColor = Palette.labelDinamecColor
         return label
     }()
     
@@ -40,12 +38,13 @@ final class GeneralSectionDetailCell: UICollectionViewCell {
         super.init(frame: .zero)
         self.layer.cornerRadius = 12
         self.layer.masksToBounds = true
-        self.backgroundColor = Palette.viewDinamecColor
         self.layer.borderWidth = 1
         self.layer.borderColor = UIColor.lightGray.cgColor
         self.clipsToBounds = true
         setupCollectionCell()
-        
+        updateTextColor()
+        let isTemp = UserDefaults.standard.bool(forKey: "isTemp")
+        updateTemperatureForTheme(isTemp: isTemp)
     }
     
     required init?(coder: NSCoder) {
@@ -61,15 +60,15 @@ final class GeneralSectionDetailCell: UICollectionViewCell {
         contentView.addSubview(wheatherTemp)
         
         NSLayoutConstraint.activate([
-            wheatherTime.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
+            wheatherTime.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 2),
             wheatherTime.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             wheatherTime.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            wheatherTime.heightAnchor.constraint(equalToConstant: 10),
+//            wheatherTime.heightAnchor.constraint(equalToConstant: 10),
             
             wheatherImage.topAnchor.constraint(equalTo: wheatherTime.bottomAnchor),
             wheatherImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             wheatherImage.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-//            wheatherTime.heightAnchor.constraint(equalToConstant: 15),
+            wheatherImage.heightAnchor.constraint(equalToConstant: 40),
             
             wheatherTemp.topAnchor.constraint(equalTo: wheatherImage.bottomAnchor),
             wheatherTemp.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
@@ -79,23 +78,36 @@ final class GeneralSectionDetailCell: UICollectionViewCell {
     }
     
     func configurationCellCollection(with dt_txt: String, with image: String, with tempList:Float) {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        
-        if let date = dateFormatter.date(from: dt_txt) {
-            dateFormatter.dateFormat = "HH"
-            let formattedDate = dateFormatter.string(from: date)
-            wheatherTime.text = formattedDate
-        } else {
-            print("Ошибка при разборе даты")
-        }
-        
-        
+        self.wheatherTime.text = dt_txt
         self.wheatherImage.image = UIImage(named: image)
-        self.wheatherTemp.text = String(Float(tempList ))
-        
+        if UserDefaults.standard.bool(forKey: "isTemp") == false  {
+            self.wheatherTemp.text = String(Float(tempList))
+        } else {
+            self.wheatherTemp.text = String(Float(convertToFarhenheit(tempList)))
+        }
+        updateTextColor()
     }
     
+    func updateTextColor() {
+        wheatherTime.textColor = Palette.labelDinamecColor
+        wheatherTemp.textColor = Palette.labelDinamecColor
+    }
     
+    func updateTemperatureForTheme(isTemp: Bool) {
+        guard let temperatureText = wheatherTemp.text, let temperature = Float(temperatureText)
+        else { return }
+        let convertedTemperature: Float
+        let convertedTemperatureMin: Float
+        if isTemp {
+            convertedTemperature = convertToFarhenheit(temperature)
+        } else {
+            convertedTemperature = (temperature - 32) * 5/9
+        }
+        wheatherTemp.text = String(round(convertedTemperature))
+    }
+    
+    func convertToFarhenheit(_ celsiusValue: Float) -> Float {
+        return (celsiusValue * 9/5) + 32
+    }
 }
 

@@ -8,7 +8,7 @@ final class AddButtonLocationViewController:UIViewController, UISearchResultsUpd
     weak var delegate: AddButtonLocationDelegate?
     private var searchController: UISearchController?
     private let tableView = UITableView()
-    private var viewModel:AddButtonLocationModelProtocol
+    private var viewModel: AddButtonLocationModelProtocol
     private lazy var dataSource = makeDataSource()
     private var collectionView:UICollectionView! = nil
 
@@ -38,14 +38,40 @@ final class AddButtonLocationViewController:UIViewController, UISearchResultsUpd
         configureHierarchy()
         collectionView.delegate = self
         collectionView.reloadData()
-        view.backgroundColor = Palette.viewDinamecColor
+        view.backgroundColor = Palette.viewDinamecColor1
+        collectionView.backgroundColor = Palette.viewDinamecColor1
+        tableView.backgroundColor = Palette.viewDinamecColor1
         largeTitle()
         bindingModel()
         viewModel.getCities()
     }
+    
+    private var previousThemeStateTemp: Bool = UserDefaults.standard.bool(forKey: "isTemp")
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.backgroundColor = Palette.viewDinamecColor1
+        let currentThemeStateTemp = UserDefaults.standard.bool(forKey: "isTemp")
+        if currentThemeStateTemp != previousThemeStateTemp {
+            updateCellsForTempChange()
+            previousThemeStateTemp = currentThemeStateTemp
+        }
+    }
 
  
 //MARK: - Method
+    
+    func updateCellsForTempChange() {
+        let isTemp = UserDefaults.standard.bool(forKey: "isTemp")
+        for section in 0..<collectionView.numberOfSections {
+            for item in 0..<collectionView.numberOfItems(inSection: section) {
+                if let cell = collectionView.cellForItem(at: IndexPath(item: item, section: section)) as? CollectionCellAddButton {
+                    cell.updateTemperatureForTheme(isTemp: isTemp)
+                }
+
+            }
+        }
+    }
     
     private func makeDataSource() -> DataSource {
         return DataSource(collectionView: collectionView) { [weak self] collectionView, indexPath, itemIdentifier in
@@ -109,7 +135,7 @@ final class AddButtonLocationViewController:UIViewController, UISearchResultsUpd
     private func configureHierarchy() {
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createLayout())
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        collectionView.backgroundColor = .systemBackground
+//        collectionView.backgroundColor = Palette.viewDinamecColor
         collectionView.register(CollectionCellAddButton.self, forCellWithReuseIdentifier: CollectionCellAddButton.idAddButton)
         view.addSubview(collectionView)
     }
@@ -187,6 +213,10 @@ extension AddButtonLocationViewController:UITableViewDelegate, UITableViewDataSo
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableCell", for: indexPath)
         cell.textLabel?.text = viewModel.city?.name
+        let selectedView = UIView()
+        selectedView.backgroundColor = Palette.viewDinamecColor1
+        cell.selectedBackgroundView = selectedView
+        cell.backgroundColor = Palette.viewDinamecColor1
         return cell
     }
     

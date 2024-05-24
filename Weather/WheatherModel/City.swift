@@ -8,8 +8,8 @@ struct City: Hashable {
     let descriptionName: String?
     let wheather: String?
     let temp: Float?
-    let tempMax: Float?
-    let tempMin: Float?
+    let tempMax: Float
+    let tempMin: Float
     let lat: Float?
     let lon: Float?
     
@@ -21,6 +21,8 @@ struct City: Hashable {
     let tempMaxList: [Float]?
     let tempMinlist: [Float]?
     let descriptionList:[String]?
+    
+
 }
 
 struct CityOnly: Hashable {

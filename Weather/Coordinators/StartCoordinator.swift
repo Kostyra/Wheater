@@ -6,13 +6,24 @@ protocol IStartCoordinator:AnyObject {
 }
 
 final class StartCoordinator: IGeneralWeatherCoordinator {
+    func switchToNextFlowProperties() {
+        let locationCoordinator = ChangePropertiesCoordinator(navigationController: navigationController, parentCoordunator: self)
+        let locationCoordinatorVC = locationCoordinator.start()
+        let locationCoordinatorNC = UINavigationController(rootViewController: locationCoordinatorVC)
+        self.presentChildViewController(locationCoordinatorNC)
+        
+//        let viewModel = ChangePropertiesModel(coordinator: self)
+//        let locationCoordinatorVC = ChangePropertiesController(viewModel: viewModel)
+//        let locationCoordinatorNC = UINavigationController(rootViewController: locationCoordinatorVC)
+//        self.navigationController = locationCoordinatorNC
+//        return self.navigationController
+    }
+    
     
     func switchToNextFlow(delegate: AddButtonLocationDelegate) {
         let locationCoordinator = AddButtonLocationCoordinator(parentCoordunator: self, parentController: delegate)
         let locationCoordinatorVC = locationCoordinator.start()
         let locationCoordinatorNC = UINavigationController(rootViewController: locationCoordinatorVC)
-        locationCoordinatorNC.modalPresentationStyle = .pageSheet
-        locationCoordinatorNC.modalTransitionStyle = .crossDissolve
         self.presentChildViewController(locationCoordinatorNC)
     }
     
