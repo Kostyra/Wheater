@@ -32,7 +32,6 @@ final class ChangePropertiesController: UIViewController {
         return label
     }()
     
-    
 //    init(viewModel: ChangePropertiesModelProtocol) {
 //        self.viewModel = viewModel
 //        super.init(nibName: nil, bundle: nil)

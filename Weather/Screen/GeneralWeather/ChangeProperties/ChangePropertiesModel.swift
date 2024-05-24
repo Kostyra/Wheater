@@ -33,9 +33,5 @@ final class ChangePropertiesModel {
 }
 
 extension ChangePropertiesModel: ChangePropertiesModelProtocol {
-    
-//    func switchToNextFlow() {
-//    }
-    
 
 }

@@ -31,8 +31,6 @@ final class GeneralWeatherCoordinator {
      func presentChildViewController(_ viewController: UIViewController) {
         navigationController.present(viewController, animated: true, completion: nil)
     }
-    
-
 }
 
 
@@ -65,21 +63,9 @@ extension GeneralWeatherCoordinator: IGeneralWeatherCoordinator {
         let locationCoordinator = ChangePropertiesCoordinator(navigationController: navigationController, parentCoordunator: self)
         let locationCoordinatorVC = locationCoordinator.start()
 //        let locationCoordinatorNC = UINavigationController(rootViewController: locationCoordinatorVC)
-  
 //        locationCoordinatorNC.modalPresentationStyle = .overFullScreen
 //        locationCoordinatorNC.modalTransitionStyle = .crossDissolve
         self.presentChildViewController(locationCoordinatorVC)
     }
-    
-//    func switchToNextFlowProperties() -> UIViewController  {
-//        let viewModel = ChangePropertiesModel(coordinator: self)
-//        let locationCoordinatorVC = ChangePropertiesController(viewModel: viewModel)
-//        let locationCoordinatorNC = UINavigationController(rootViewController: locationCoordinatorVC)
-//        self.navigationController = locationCoordinatorNC
-//        return self.navigationController
-//        return UIViewController()
-//    }
-    
-
 }
 

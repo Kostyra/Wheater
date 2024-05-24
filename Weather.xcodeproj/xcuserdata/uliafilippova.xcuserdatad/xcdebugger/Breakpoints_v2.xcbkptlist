@@ -1132,8 +1132,8 @@
             filePath = "Weather/Coordinators/GeneralWeatherCoordinator.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "GeneralWeatherCoordinator"
             landmarkType = "21">
          </BreakpointContent>
@@ -1808,8 +1808,8 @@
             filePath = "Weather/Coordinators/GeneralWeatherCoordinator.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "switchToNextFlowProperties()"
             landmarkType = "7">
             <Locations>
@@ -1872,8 +1872,8 @@
             filePath = "Weather/Coordinators/GeneralWeatherCoordinator.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "switchToNextFlow(delegate:)"
             landmarkType = "7">
             <Locations>
@@ -1920,8 +1920,8 @@
             filePath = "Weather/Coordinators/GeneralWeatherCoordinator.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "switchToNextFlow(delegate:)"
             landmarkType = "7">
             <Locations>
@@ -2335,117 +2335,6 @@
             endingLineNumber = "36"
             landmarkName = "labelDinamecColor"
             landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "99FDBE19-8367-4A4A-8EFE-8B6615C1E214"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Weather/Coordinators/GeneralWeatherCoordinator.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "GeneralWeatherCoordinator"
-            landmarkType = "21">
-            <Locations>
-               <Location
-                  uuid = "99FDBE19-8367-4A4A-8EFE-8B6615C1E214 - 3df081e9997fd00c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Weather.GeneralWeatherCoordinator.switchToNextFlowProperties() -&gt; __C.UIViewController"
-                  moduleName = "Weather"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Coordinators/GeneralWeatherCoordinator.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "74"
-                  endingLineNumber = "74"
-                  offsetFromSymbolStart = "60">
-               </Location>
-               <Location
-                  uuid = "99FDBE19-8367-4A4A-8EFE-8B6615C1E214 - 3df081e9997fd3b1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Weather.GeneralWeatherCoordinator.switchToNextFlowProperties() -&gt; __C.UIViewController"
-                  moduleName = "Weather"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Coordinators/GeneralWeatherCoordinator.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "79"
-                  endingLineNumber = "79"
-                  offsetFromSymbolStart = "28">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "3B1BFB79-9DDB-42F0-BC16-14BB00E81B2C"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Weather/Coordinators/GeneralWeatherCoordinator.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
-            landmarkName = "GeneralWeatherCoordinator"
-            landmarkType = "21">
-            <Locations>
-               <Location
-                  uuid = "3B1BFB79-9DDB-42F0-BC16-14BB00E81B2C - 3df081e9997fd073"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Weather.GeneralWeatherCoordinator.switchToNextFlowProperties() -&gt; __C.UIViewController"
-                  moduleName = "Weather"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Coordinators/GeneralWeatherCoordinator.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "77"
-                  endingLineNumber = "77"
-                  offsetFromSymbolStart = "184">
-               </Location>
-               <Location
-                  uuid = "3B1BFB79-9DDB-42F0-BC16-14BB00E81B2C - 3df081e9997fd390"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Weather.GeneralWeatherCoordinator.switchToNextFlowProperties() -&gt; __C.UIViewController"
-                  moduleName = "Weather"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Coordinators/GeneralWeatherCoordinator.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "78"
-                  endingLineNumber = "78"
-                  offsetFromSymbolStart = "328">
-               </Location>
-               <Location
-                  uuid = "3B1BFB79-9DDB-42F0-BC16-14BB00E81B2C - 3df081e9997fd3b1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Weather.GeneralWeatherCoordinator.switchToNextFlowProperties() -&gt; __C.UIViewController"
-                  moduleName = "Weather"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/uliafilippova/Desktop/Neotodologia/weather/Weatheres/Weather/Weather/Coordinators/GeneralWeatherCoordinator.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "79"
-                  endingLineNumber = "79"
-                  offsetFromSymbolStart = "28">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
