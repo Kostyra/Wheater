@@ -37,6 +37,13 @@ final class GeneralViewController: UIViewController {
         return view
     }()
     
+    private lazy var notInternet: NotInternet = {
+        let view = NotInternet()
+        view.isHidden = true
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     private var dt_txtsUI: [String] = []
     private var tempListUI: [Float] = []
     private var cityUI: String?
@@ -131,11 +138,17 @@ final class GeneralViewController: UIViewController {
     
     func setupWheatherEmptyView() {
         view.addSubview(wheatherEmptyView)
+        view.addSubview(notInternet)
         NSLayoutConstraint.activate([
             wheatherEmptyView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
             wheatherEmptyView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             wheatherEmptyView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             wheatherEmptyView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100),
+            
+            notInternet.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
+            notInternet.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            notInternet.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            notInternet.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100),
         ])
     }
     
@@ -151,8 +164,11 @@ final class GeneralViewController: UIViewController {
             case .notAllow:
                 wheatherEmptyView.isHidden = false
             case .loading:
-                
                 ()
+            case .notInternet:
+                DispatchQueue.main.async {
+                    self.notInternet.isHidden = false
+                }
             }
         }
     }

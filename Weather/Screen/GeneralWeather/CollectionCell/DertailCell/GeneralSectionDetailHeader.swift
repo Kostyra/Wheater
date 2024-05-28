@@ -45,12 +45,12 @@ final class GeneralSectionDetailHeader:UICollectionReusableView {
         ])
     }
     
-    @objc private func buttonActionFor24Hour() {
-        let hour24VC = Hour24()
-        let hour24NC = UINavigationController(rootViewController: hour24VC)
-        hour24NC.modalPresentationStyle = .fullScreen
-        hour24NC.modalTransitionStyle = .crossDissolve
-    }
+//    @objc private func buttonActionFor24Hour() {
+//        let hour24VC = Hour24()
+//        let hour24NC = UINavigationController(rootViewController: hour24VC)
+//        hour24NC.modalPresentationStyle = .fullScreen
+//        hour24NC.modalTransitionStyle = .crossDissolve
+//    }
     
     func updateTextColor() {
         buttonFor10Day.textColor = Palette.labelDinamecColor

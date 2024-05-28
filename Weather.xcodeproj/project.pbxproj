@@ -32,10 +32,10 @@
 		CB1C50292A87EF660044210A /* GeneralSectionEveryDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1C50282A87EF660044210A /* GeneralSectionEveryDate.swift */; };
 		CB1C502B2A88DAD30044210A /* GeneralSectionEveryDateHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1C502A2A88DAD30044210A /* GeneralSectionEveryDateHeader.swift */; };
 		CB487D242A97E09800441585 /* CustomCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB487D232A97E09800441585 /* CustomCollectionViewFlowLayout.swift */; };
-		CB487D2F2A9CE1C200441585 /* Hour24.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB487D2E2A9CE1C200441585 /* Hour24.swift */; };
 		CB5D2DE32B7DF8B600F0181C /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5D2DE22B7DF8B600F0181C /* CoreData.swift */; };
 		CB5D2DEC2B7E10A400F0181C /* CityEntity.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CB5D2DEA2B7E10A400F0181C /* CityEntity.xcdatamodeld */; };
 		CB5D2DEE2B8345F000F0181C /* WheatherEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5D2DED2B8345F000F0181C /* WheatherEmpty.swift */; };
+		CB60AA0A2C05D39B0005AB6E /* NotInternet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB60AA092C05D39B0005AB6E /* NotInternet.swift */; };
 		CB784B9B2A90FDED00EA3DEC /* GeneralSectionDetailHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB784B9A2A90FDED00EA3DEC /* GeneralSectionDetailHeader.swift */; };
 		CB825EBF2A8DFDDE00F1CC20 /* GeneralSectionDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB825EBE2A8DFDDE00F1CC20 /* GeneralSectionDetailCell.swift */; };
 		CB825EC42A8E5B2F00F1CC20 /* GeneralSectionNowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB825EC32A8E5B2F00F1CC20 /* GeneralSectionNowCell.swift */; };
@@ -76,10 +76,10 @@
 		CB1C50282A87EF660044210A /* GeneralSectionEveryDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSectionEveryDate.swift; sourceTree = "<group>"; };
 		CB1C502A2A88DAD30044210A /* GeneralSectionEveryDateHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSectionEveryDateHeader.swift; sourceTree = "<group>"; };
 		CB487D232A97E09800441585 /* CustomCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
-		CB487D2E2A9CE1C200441585 /* Hour24.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hour24.swift; sourceTree = "<group>"; };
 		CB5D2DE22B7DF8B600F0181C /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
 		CB5D2DEB2B7E10A400F0181C /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
 		CB5D2DED2B8345F000F0181C /* WheatherEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheatherEmpty.swift; sourceTree = "<group>"; };
+		CB60AA092C05D39B0005AB6E /* NotInternet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotInternet.swift; sourceTree = "<group>"; };
 		CB784B9A2A90FDED00EA3DEC /* GeneralSectionDetailHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSectionDetailHeader.swift; sourceTree = "<group>"; };
 		CB825EBE2A8DFDDE00F1CC20 /* GeneralSectionDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSectionDetailCell.swift; sourceTree = "<group>"; };
 		CB825EC32A8E5B2F00F1CC20 /* GeneralSectionNowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSectionNowCell.swift; sourceTree = "<group>"; };
@@ -192,9 +192,9 @@
 		CB1C50102A8142F00044210A /* GeneralWeather */ = {
 			isa = PBXGroup;
 			children = (
-				CBC262F22BBAADAE00E35B52 /* ChangeProperties */,
 				CB1C501D2A8144000044210A /* GeneralViewController.swift */,
 				CB1C501E2A8144000044210A /* GeneralViewModel.swift */,
+				CBC262F22BBAADAE00E35B52 /* ChangeProperties */,
 				CB1753E32AEFA13700063FB7 /* CityCollectionView */,
 				CB1C50272A87EF1E0044210A /* CollectionCell */,
 			);
@@ -246,7 +246,6 @@
 		CB487D2C2A9CE18500441585 /* LineChart */ = {
 			isa = PBXGroup;
 			children = (
-				CB487D2E2A9CE1C200441585 /* Hour24.swift */,
 				CBB997112BCFC46A00D9360D /* LineChart.swift */,
 				CBB997162BD1580900D9360D /* LineChartDetail.swift */,
 			);
@@ -285,6 +284,7 @@
 			children = (
 				CB825EC32A8E5B2F00F1CC20 /* GeneralSectionNowCell.swift */,
 				CB5D2DED2B8345F000F0181C /* WheatherEmpty.swift */,
+				CB60AA092C05D39B0005AB6E /* NotInternet.swift */,
 			);
 			path = NowCell;
 			sourceTree = "<group>";
@@ -392,10 +392,10 @@
 				CBC262F42BBAADCC00E35B52 /* ChangePropertiesController.swift in Sources */,
 				CB1754722B29D20800063FB7 /* AddButtonLocationModel.swift in Sources */,
 				CB1754452AFA192C00063FB7 /* CollectionCellAddButton.swift in Sources */,
-				CB487D2F2A9CE1C200441585 /* Hour24.swift in Sources */,
 				CB1C501C2A81439B0044210A /* StartViewModel.swift in Sources */,
 				CB17544F2B19EBEA00063FB7 /* City.swift in Sources */,
 				CB1753D12ABB37E900063FB7 /* WModel.swift in Sources */,
+				CB60AA0A2C05D39B0005AB6E /* NotInternet.swift in Sources */,
 				CB1C501A2A81434A0044210A /* GeneralWeatherCoordinator.swift in Sources */,
 				CB1753CE2ABB368800063FB7 /* NetWorkManager.swift in Sources */,
 				CB1C50192A81434A0044210A /* StartCoordinator.swift in Sources */,

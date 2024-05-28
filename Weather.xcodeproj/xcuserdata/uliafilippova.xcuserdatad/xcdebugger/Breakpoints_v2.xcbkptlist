@@ -1792,8 +1792,8 @@
             filePath = "Weather/Screen/GeneralWeather/GeneralViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "nextFlowProperties()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1856,8 +1856,8 @@
             filePath = "Weather/Screen/GeneralWeather/GeneralViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "nextFlow(delegate:)"
             landmarkType = "7">
          </BreakpointContent>

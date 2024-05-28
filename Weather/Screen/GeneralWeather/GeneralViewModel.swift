@@ -1,5 +1,5 @@
 
-
+import Network
 import Foundation
 
 protocol IGeneralViewModel {
@@ -19,6 +19,7 @@ final class GeneralViewModel {
         case allow(city: City)
         case notAllow
         case loading
+        case notInternet
     }
     
     
@@ -59,21 +60,37 @@ extension GeneralViewModel:IGeneralViewModel {
     }
     
     func getWeather() {
-        guard let cityName else {
+        guard let cityName = cityName else {
             state = .notAllow
             return
         }
-        NetWorkManager.shared.getWeather(city: cityName) { [weak self] result in
-            guard let self =  self else { return }
-            switch result {
-            case .success(let cityData):
-                CoreDataHandler.shared.saveCityDataToCoreData(cityData: cityData)
-                self.state = .allow(city: cityData)
-               
-            case .failure(let error):
-                print("Error: \(error)")
+        
+        // Проверка подключения к Интернету
+        let monitor = NWPathMonitor()
+        monitor.pathUpdateHandler = { path in
+            if path.status == .satisfied {
+                // Есть подключение к Интернету
+                
+                // Загрузка данных о погоде
+                NetWorkManager.shared.getWeather(city: cityName) { [weak self] result in
+                    guard let self = self else { return }
+                    switch result {
+                    case .success(let cityData):
+                        CoreDataHandler.shared.saveCityDataToCoreData(cityData: cityData)
+                        self.state = .allow(city: cityData)
+
+                    case .failure(let error):
+                        print("Error: \(error)")
+                    }
+                }
+            } else {
+                self.state = .notInternet
+                print("not internet")
+                
             }
         }
+        
+        monitor.start(queue: DispatchQueue.global())
     }
     
     func didTapCity(_ city: City) {
