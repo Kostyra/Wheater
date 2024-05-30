@@ -8,13 +8,12 @@ final class GeneralSectionEveryDateHeader:UICollectionReusableView {
     //MARK: - Properties
     
     static var idGeneralHeader3 =  "GeneralSectionEveryDateHeader"
-    
+    weak var viewController: UIViewController?
     
     private lazy var labelEveryDay:UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Eжегодный прогноз на 5 дней"
-        label.textColor = Palette.labelDinamecColor
+        label.text = "Подробый прогноз на 5 дней"
         return label
     }()
     
@@ -24,6 +23,7 @@ final class GeneralSectionEveryDateHeader:UICollectionReusableView {
     override init(frame: CGRect) {
         super.init(frame: .zero)
         setupHeaderCell()
+        updateTextColor()
     }
     
     required init?(coder: NSCoder) {
@@ -40,7 +40,6 @@ final class GeneralSectionEveryDateHeader:UICollectionReusableView {
             labelEveryDay.topAnchor.constraint(equalTo: topAnchor),
             labelEveryDay.bottomAnchor.constraint(equalTo: bottomAnchor),
             labelEveryDay.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-            
         ])
     }
     
@@ -48,4 +47,7 @@ final class GeneralSectionEveryDateHeader:UICollectionReusableView {
         
     }
     
+    func updateTextColor() {
+        labelEveryDay.textColor = Palette.labelDinamecColor
+    }
 }

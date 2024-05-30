@@ -6,13 +6,24 @@ protocol IStartCoordinator:AnyObject {
 }
 
 final class StartCoordinator: IGeneralWeatherCoordinator {
+    func switchToNextFlowProperties() {
+        let locationCoordinator = ChangePropertiesCoordinator(navigationController: navigationController, parentCoordunator: self)
+        let locationCoordinatorVC = locationCoordinator.start()
+        let locationCoordinatorNC = UINavigationController(rootViewController: locationCoordinatorVC)
+        self.presentChildViewController(locationCoordinatorNC)
+        
+//        let viewModel = ChangePropertiesModel(coordinator: self)
+//        let locationCoordinatorVC = ChangePropertiesController(viewModel: viewModel)
+//        let locationCoordinatorNC = UINavigationController(rootViewController: locationCoordinatorVC)
+//        self.navigationController = locationCoordinatorNC
+//        return self.navigationController
+    }
+    
     
     func switchToNextFlow(delegate: AddButtonLocationDelegate) {
         let locationCoordinator = AddButtonLocationCoordinator(parentCoordunator: self, parentController: delegate)
         let locationCoordinatorVC = locationCoordinator.start()
         let locationCoordinatorNC = UINavigationController(rootViewController: locationCoordinatorVC)
-        locationCoordinatorNC.modalPresentationStyle = .pageSheet
-        locationCoordinatorNC.modalTransitionStyle = .crossDissolve
         self.presentChildViewController(locationCoordinatorNC)
     }
     
@@ -30,6 +41,7 @@ final class StartCoordinator: IGeneralWeatherCoordinator {
     
     
     //MARK: - Life Cycle
+    
     init(navigationController: UINavigationController, parentCoordunator: IMainCoordinator?) {
         self.navigationController = navigationController
         self.parentCoordunator = parentCoordunator
@@ -38,6 +50,7 @@ final class StartCoordinator: IGeneralWeatherCoordinator {
 
 
     //MARK: - IStartCoordinator
+
 extension StartCoordinator: IStartCoordinator {
     func switchToNextFlow(cityName: String?) {
         self.parentCoordunator?.switchToNextFlow(from: self, cityName: cityName)
@@ -46,27 +59,16 @@ extension StartCoordinator: IStartCoordinator {
 
 
     //MARK: - ICoordinator
+
 extension StartCoordinator: ICoordinator {
     func start() -> UIViewController {
-//        let coreDataHandler = CoreDataHandler()
-//        if let cityEntities = coreDataHandler.fetchCityEntitiesForCityName(), !cityEntities.isEmpty {
-//            let viewModel = GeneralViewModel(coordinator: self, cityName: cityEntities.first?.name ?? "")
-//            let generalVC = GeneralViewController(viewModel: viewModel)
-//            let generalNC = UINavigationController(rootViewController: generalVC)
-//            self.navigationController = generalNC
-//            return self.navigationController
         let coreDataHandler = CoreDataHandler()
         if let cityEntities = coreDataHandler.fetchCityEntitiesForCityName(), !cityEntities.isEmpty {
             let viewModel = GeneralViewModel(coordinator: self, cityName: cityEntities.first?.name ?? "")
             let generalVC = GeneralViewController(viewModel: viewModel)
-              
-            let pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
-            pageViewController.setViewControllers([generalVC], direction: .forward, animated: true, completion: nil)
-            
-            navigationController.navigationController?.setViewControllers([pageViewController], animated: true)
-              
-            return pageViewController
-        
+            let generalNC = UINavigationController(rootViewController: generalVC)
+            self.navigationController = generalNC
+            return self.navigationController        
         } else {
             let locationManager = LocationManager()
             let viewModel = StartViewModel(coordinator: self, locationManager: locationManager)

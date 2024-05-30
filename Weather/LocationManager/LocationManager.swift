@@ -68,7 +68,6 @@ final class LocationManager:NSObject, CLLocationManagerDelegate {
                 }
             }
         }
-//        print(location.coordinate.latitude)
         manager.stopUpdatingLocation()
     }
 }

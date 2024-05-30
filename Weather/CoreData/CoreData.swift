@@ -6,7 +6,6 @@ import Foundation
 
 class CoreDataHandler {
     static let shared = CoreDataHandler()
-    // Создание CoreData stack
     let persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "CityEntity")
         container.loadPersistentStores { _, error in

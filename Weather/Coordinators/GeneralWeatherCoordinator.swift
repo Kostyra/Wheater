@@ -3,6 +3,7 @@ import UIKit
 
 protocol IGeneralWeatherCoordinator:AnyObject {
     func switchToNextFlow(delegate: AddButtonLocationDelegate)
+    func switchToNextFlowProperties()
     func presentChildViewController(_ viewController: UIViewController)
 }
 
@@ -12,13 +13,16 @@ final class GeneralWeatherCoordinator {
     //MARK: - Properties
     
     private weak var parentCoordunator: IMainCoordinator?
-    private var navigationController:UINavigationController
+    private var navigationController:UIViewController
     private var childCoordinator: [ICoordinator] = []
     private let cityName: String?
     private var city: City?
     private var cities: [City] = []
+    
+    
     //MARK: - Life Cycle
-    init(navigationController: UINavigationController, parentCoordunator: IMainCoordinator?, cityName: String?) {
+    
+    init(navigationController: UIViewController, parentCoordunator: IMainCoordinator?, cityName: String?) {
         self.navigationController = navigationController
         self.parentCoordunator = parentCoordunator
         self.cityName = cityName
@@ -34,25 +38,17 @@ final class GeneralWeatherCoordinator {
 
 extension GeneralWeatherCoordinator: ICoordinator {
     func start() -> UIViewController {
-        //        let viewModel = GeneralViewModel(coordinator: self, cityName: cityName)
-        //        let generalVC = GeneralViewController(viewModel: viewModel)
-        //        let generalNC = UINavigationController(rootViewController: generalVC)
-        //        self.navigationController = generalNC
-        //        return self.navigationController
-        //    }        let viewModel = GeneralViewModel(coordinator: self, cityName: cityName)
-        let viewModel = GeneralViewModel(coordinator: self, cityName: cityName)
-        let generalVC = GeneralViewController(viewModel: viewModel)
-        let pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
-        pageViewController.setViewControllers([generalVC], direction: .forward, animated: true, completion: nil)
-        
-        self.navigationController = UINavigationController(rootViewController: pageViewController)
-        
-        return self.navigationController
-    }
+                let viewModel = GeneralViewModel(coordinator: self, cityName: cityName)
+                let generalVC = GeneralViewController(viewModel: viewModel)
+                let generalNC = UINavigationController(rootViewController: generalVC)
+                self.navigationController = generalNC
+                return self.navigationController
+            } 
 }
 
 
-    //MARK: - IGeneralWeatherCoordinator
+    //MARK: - extension
+
 extension GeneralWeatherCoordinator: IGeneralWeatherCoordinator {
     func switchToNextFlow(delegate: AddButtonLocationDelegate) {
         let locationCoordinator = AddButtonLocationCoordinator(parentCoordunator: self, parentController: delegate)
@@ -61,6 +57,15 @@ extension GeneralWeatherCoordinator: IGeneralWeatherCoordinator {
         locationCoordinatorNC.modalPresentationStyle = .pageSheet
         locationCoordinatorNC.modalTransitionStyle = .crossDissolve
         self.presentChildViewController(locationCoordinatorNC)
+    }
+    
+    func switchToNextFlowProperties() {
+        let locationCoordinator = ChangePropertiesCoordinator(navigationController: navigationController, parentCoordunator: self)
+        let locationCoordinatorVC = locationCoordinator.start()
+//        let locationCoordinatorNC = UINavigationController(rootViewController: locationCoordinatorVC)
+//        locationCoordinatorNC.modalPresentationStyle = .overFullScreen
+//        locationCoordinatorNC.modalTransitionStyle = .crossDissolve
+        self.presentChildViewController(locationCoordinatorVC)
     }
 }
 

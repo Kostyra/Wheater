@@ -1,10 +1,3 @@
-//
-//  GeneralSectionNowCell.swift
-//  Weather
-//
-//  Created by Юлия Филиппова on 17.08.2023.
-//
-
 import UIKit
 
 final class GeneralSectionNowCell: UICollectionViewCell {
@@ -13,49 +6,54 @@ final class GeneralSectionNowCell: UICollectionViewCell {
     static let idGeneral1 = "GeneralSectionNowCell"
     
     private var locationManager = LocationManager()
-    private var isDarkMode = false
-    
     
     private lazy var cityLabel:UILabel = {
         let label = UILabel()
-        label.textColor = Palette.labelDinamecColor
         label.font = UIFont.systemFont(ofSize: 40)
         label.translatesAutoresizingMaskIntoConstraints = false
-        
+        return label
+    }()
+    
+    private lazy var minLabel:UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 20)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Min:"
+        return label
+    }()
+    
+    private lazy var maxLabel:UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 20)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Max:"
         return label
     }()
     
     
     private lazy var cityTemp:UILabel = {
         let label = UILabel()
-        label.textColor = Palette.labelDinamecColor
         label.font = UIFont.systemFont(ofSize: 60)
         label.translatesAutoresizingMaskIntoConstraints = false
-        
         return label
     }()
     
     private lazy var cityTempMin:UILabel = {
         let label = UILabel()
-        label.textColor = Palette.labelDinamecColor
         label.font = UIFont.systemFont(ofSize: 20)
         label.translatesAutoresizingMaskIntoConstraints = false
-        
         return label
     }()
     
     private lazy var cityTempMax:UILabel = {
         let label = UILabel()
-        label.textColor = Palette.labelDinamecColor
         label.font = UIFont.systemFont(ofSize: 20)
         label.translatesAutoresizingMaskIntoConstraints = false
-        
         return label
     }()
     
     private lazy var cityDescription: UILabel = {
         let label = UILabel()
-        label.textColor = Palette.labelDinamecColor
         label.font = UIFont.systemFont(ofSize: 25)
         label.translatesAutoresizingMaskIntoConstraints = false
         
@@ -63,7 +61,7 @@ final class GeneralSectionNowCell: UICollectionViewCell {
     }()
     
     private lazy var stackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [cityTempMin,cityTempMax])
+        let stackView = UIStackView(arrangedSubviews: [minLabel,cityTempMin,maxLabel,cityTempMax])
         stackView.alignment = .center
         stackView.axis = .horizontal
         stackView.distribution = .fill
@@ -79,11 +77,13 @@ final class GeneralSectionNowCell: UICollectionViewCell {
         super.init(frame: .zero)
         self.layer.cornerRadius = 10
         self.layer.masksToBounds = true
-        self.backgroundColor = Palette.viewDinamecColor
         self.layer.borderWidth = 1
         self.layer.borderColor = UIColor.lightGray.cgColor
         self.clipsToBounds = true
         setupCollectionCell()
+        updateTextColor()
+        let isTemp = UserDefaults.standard.bool(forKey: "isTemp")
+        updateTemperatureForTheme(isTemp: isTemp)
     }
     
     required init?(coder: NSCoder) {
@@ -119,18 +119,59 @@ final class GeneralSectionNowCell: UICollectionViewCell {
         ])
     }
     
+    
+    private var originalCityTempMax: Float = 0
     func configurationCellCollection(with city: City) {
-        
         self.cityLabel.text = city.name
-        self.cityTemp.text = String(Float(city.temp ?? 0))
-        self.cityTempMin.text = "Min: \(String(Float(city.tempMin ?? 0)))"
-        self.cityTempMax.text = ", Max: \(String(Float(city.tempMax ?? 0)))"
+        if UserDefaults.standard.bool(forKey: "isTemp") == false  {
+            self.cityTemp.text = String(Float(city.temp ?? 0))
+            self.cityTempMax.text = (String(Float(city.tempMax)))
+            self.cityTempMin.text = (String(Float(city.tempMin)))
+        } else {
+            self.cityTemp.text = String(Float(convertToFarhenheit(city.temp ?? 0)))
+            self.cityTempMax.text = (String(Float(convertToFarhenheit(city.tempMax))))
+            self.cityTempMin.text = (String(Float(convertToFarhenheit(city.tempMin))))
+        }
         self.cityDescription.text = city.descriptionName
-        
-
-        
+        updateTextColor()
+    }
+    
+//    func configurationCellCollection
+    
+    func updateTextColor() {
+        cityLabel.textColor = Palette.labelDinamecColor
+        cityTemp.textColor = Palette.labelDinamecColor
+        cityTempMax.textColor = Palette.labelDinamecColor
+        cityTempMin.textColor = Palette.labelDinamecColor
+        cityDescription.textColor = Palette.labelDinamecColor
+        minLabel.textColor = Palette.labelDinamecColor
+        maxLabel.textColor = Palette.labelDinamecColor
     }
 
-
+    func updateTemperatureForTheme(isTemp: Bool) {
+        guard let temperatureTextMax = cityTempMax.text, let temperatureMax = Float(temperatureTextMax),
+              let temperatureTextMin = cityTempMin.text, let temperatureMin = Float(temperatureTextMin),
+              let temperatureText = cityTemp.text, let temperature = Float(temperatureText)
+        else { return }
+        let convertedTemperature: Float
+        let convertedTemperatureMin: Float
+        let convertedTemperatureMax: Float
+        if isTemp {
+            convertedTemperature = convertToFarhenheit(temperature)
+            convertedTemperatureMin = convertToFarhenheit(temperatureMin)
+            convertedTemperatureMax = convertToFarhenheit(temperatureMax)
+        } else {
+            convertedTemperature = (temperature - 32) * 5/9
+            convertedTemperatureMin = (temperatureMin - 32) * 5/9
+            convertedTemperatureMax = (temperatureMax - 32) * 5/9
+        }
+        cityTempMax.text = (String(round(convertedTemperatureMax)))
+        cityTempMin.text = String(round(convertedTemperatureMin))
+        cityTemp.text = String(round(convertedTemperature))
+    }
+    
+    func convertToFarhenheit(_ celsiusValue: Float) -> Float {
+        return (celsiusValue * 9/5) + 32
+    }
 }
 

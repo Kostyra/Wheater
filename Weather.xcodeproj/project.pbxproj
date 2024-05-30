@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CB1318132B5971BC002EC84C /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1318122B5971BC002EC84C /* PageViewController.swift */; };
 		CB1753CE2ABB368800063FB7 /* NetWorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1753CD2ABB368800063FB7 /* NetWorkManager.swift */; };
 		CB1753D12ABB37E900063FB7 /* WModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1753D02ABB37E900063FB7 /* WModel.swift */; };
 		CB1753D82ABC37B600063FB7 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1753D72ABC37B600063FB7 /* LocationManager.swift */; };
@@ -33,19 +32,23 @@
 		CB1C50292A87EF660044210A /* GeneralSectionEveryDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1C50282A87EF660044210A /* GeneralSectionEveryDate.swift */; };
 		CB1C502B2A88DAD30044210A /* GeneralSectionEveryDateHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1C502A2A88DAD30044210A /* GeneralSectionEveryDateHeader.swift */; };
 		CB487D242A97E09800441585 /* CustomCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB487D232A97E09800441585 /* CustomCollectionViewFlowLayout.swift */; };
-		CB487D2F2A9CE1C200441585 /* Hour24.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB487D2E2A9CE1C200441585 /* Hour24.swift */; };
 		CB5D2DE32B7DF8B600F0181C /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5D2DE22B7DF8B600F0181C /* CoreData.swift */; };
 		CB5D2DEC2B7E10A400F0181C /* CityEntity.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CB5D2DEA2B7E10A400F0181C /* CityEntity.xcdatamodeld */; };
 		CB5D2DEE2B8345F000F0181C /* WheatherEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5D2DED2B8345F000F0181C /* WheatherEmpty.swift */; };
+		CB60AA0A2C05D39B0005AB6E /* NotInternet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB60AA092C05D39B0005AB6E /* NotInternet.swift */; };
 		CB784B9B2A90FDED00EA3DEC /* GeneralSectionDetailHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB784B9A2A90FDED00EA3DEC /* GeneralSectionDetailHeader.swift */; };
 		CB825EBF2A8DFDDE00F1CC20 /* GeneralSectionDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB825EBE2A8DFDDE00F1CC20 /* GeneralSectionDetailCell.swift */; };
 		CB825EC42A8E5B2F00F1CC20 /* GeneralSectionNowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB825EC32A8E5B2F00F1CC20 /* GeneralSectionNowCell.swift */; };
 		CB9E68FC2B84BB2E00BC8AC2 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9E68FB2B84BB2E00BC8AC2 /* Palette.swift */; };
-		CB9E69002B85F5F100BC8AC2 /* PageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9E68FF2B85F5F100BC8AC2 /* PageViewModel.swift */; };
+		CBB997122BCFC46A00D9360D /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB997112BCFC46A00D9360D /* LineChart.swift */; };
+		CBB997152BD0033400D9360D /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = CBB997142BD0033400D9360D /* SwiftUICharts */; };
+		CBB997172BD1580900D9360D /* LineChartDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB997162BD1580900D9360D /* LineChartDetail.swift */; };
+		CBC262F42BBAADCC00E35B52 /* ChangePropertiesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC262F32BBAADCC00E35B52 /* ChangePropertiesController.swift */; };
+		CBC262F62BBAAE9200E35B52 /* ChangePropertiesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC262F52BBAAE9200E35B52 /* ChangePropertiesCoordinator.swift */; };
+		CBC262F82BBAB9E800E35B52 /* ChangePropertiesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC262F72BBAB9E800E35B52 /* ChangePropertiesModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CB1318122B5971BC002EC84C /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		CB1753CD2ABB368800063FB7 /* NetWorkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkManager.swift; sourceTree = "<group>"; };
 		CB1753D02ABB37E900063FB7 /* WModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WModel.swift; sourceTree = "<group>"; };
 		CB1753D72ABC37B600063FB7 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -73,15 +76,19 @@
 		CB1C50282A87EF660044210A /* GeneralSectionEveryDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSectionEveryDate.swift; sourceTree = "<group>"; };
 		CB1C502A2A88DAD30044210A /* GeneralSectionEveryDateHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSectionEveryDateHeader.swift; sourceTree = "<group>"; };
 		CB487D232A97E09800441585 /* CustomCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
-		CB487D2E2A9CE1C200441585 /* Hour24.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hour24.swift; sourceTree = "<group>"; };
 		CB5D2DE22B7DF8B600F0181C /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
 		CB5D2DEB2B7E10A400F0181C /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
 		CB5D2DED2B8345F000F0181C /* WheatherEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheatherEmpty.swift; sourceTree = "<group>"; };
+		CB60AA092C05D39B0005AB6E /* NotInternet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotInternet.swift; sourceTree = "<group>"; };
 		CB784B9A2A90FDED00EA3DEC /* GeneralSectionDetailHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSectionDetailHeader.swift; sourceTree = "<group>"; };
 		CB825EBE2A8DFDDE00F1CC20 /* GeneralSectionDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSectionDetailCell.swift; sourceTree = "<group>"; };
 		CB825EC32A8E5B2F00F1CC20 /* GeneralSectionNowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSectionNowCell.swift; sourceTree = "<group>"; };
 		CB9E68FB2B84BB2E00BC8AC2 /* Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
-		CB9E68FF2B85F5F100BC8AC2 /* PageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewModel.swift; sourceTree = "<group>"; };
+		CBB997112BCFC46A00D9360D /* LineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
+		CBB997162BD1580900D9360D /* LineChartDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartDetail.swift; sourceTree = "<group>"; };
+		CBC262F32BBAADCC00E35B52 /* ChangePropertiesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePropertiesController.swift; sourceTree = "<group>"; };
+		CBC262F52BBAAE9200E35B52 /* ChangePropertiesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePropertiesCoordinator.swift; sourceTree = "<group>"; };
+		CBC262F72BBAB9E800E35B52 /* ChangePropertiesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePropertiesModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,21 +96,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBB997152BD0033400D9360D /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CB1318112B597190002EC84C /* PageViewController */ = {
-			isa = PBXGroup;
-			children = (
-				CB1318122B5971BC002EC84C /* PageViewController.swift */,
-				CB9E68FF2B85F5F100BC8AC2 /* PageViewModel.swift */,
-			);
-			path = PageViewController;
-			sourceTree = "<group>";
-		};
 		CB1753CC2ABB366000063FB7 /* NetWorkManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,17 +173,13 @@
 		CB1C4FF22A813FE50044210A /* Weather */ = {
 			isa = PBXGroup;
 			children = (
+				CB9E69012B85FCFA00BC8AC2 /* Screen */,
 				CB5D2DDE2B7DF52400F0181C /* CoreData */,
-				CB1318112B597190002EC84C /* PageViewController */,
-				CB1753D92AE6DD0700063FB7 /* SearchLocationFlow */,
 				CB1753D62ABC376100063FB7 /* LocationManager */,
 				CB1753CF2ABB37BC00063FB7 /* WheatherModel */,
 				CB1753CC2ABB366000063FB7 /* NetWorkManager */,
-				CB487D2C2A9CE18500441585 /* Hour24 */,
 				CB1C50232A82ABB50044210A /* Custom Elements */,
 				CB1C50122A8143180044210A /* Coordinators */,
-				CB1C50112A8143060044210A /* StartController */,
-				CB1C50102A8142F00044210A /* GeneralWeather */,
 				CB1C4FF32A813FE50044210A /* AppDelegate.swift */,
 				CB1C4FF52A813FE50044210A /* SceneDelegate.swift */,
 				CB1C4FFF2A813FE80044210A /* Assets.xcassets */,
@@ -199,6 +194,7 @@
 			children = (
 				CB1C501D2A8144000044210A /* GeneralViewController.swift */,
 				CB1C501E2A8144000044210A /* GeneralViewModel.swift */,
+				CBC262F22BBAADAE00E35B52 /* ChangeProperties */,
 				CB1753E32AEFA13700063FB7 /* CityCollectionView */,
 				CB1C50272A87EF1E0044210A /* CollectionCell */,
 			);
@@ -222,6 +218,7 @@
 				CB1C50132A81434A0044210A /* MainCoordinator.swift */,
 				CB1C50142A81434A0044210A /* ProtocolCoordinator.swift */,
 				CB17546E2B29D13000063FB7 /* AddButtonLocationCoordinator.swift */,
+				CBC262F52BBAAE9200E35B52 /* ChangePropertiesCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -246,12 +243,13 @@
 			path = CollectionCell;
 			sourceTree = "<group>";
 		};
-		CB487D2C2A9CE18500441585 /* Hour24 */ = {
+		CB487D2C2A9CE18500441585 /* LineChart */ = {
 			isa = PBXGroup;
 			children = (
-				CB487D2E2A9CE1C200441585 /* Hour24.swift */,
+				CBB997112BCFC46A00D9360D /* LineChart.swift */,
+				CBB997162BD1580900D9360D /* LineChartDetail.swift */,
 			);
-			path = Hour24;
+			path = LineChart;
 			sourceTree = "<group>";
 		};
 		CB5D2DDE2B7DF52400F0181C /* CoreData */ = {
@@ -286,8 +284,29 @@
 			children = (
 				CB825EC32A8E5B2F00F1CC20 /* GeneralSectionNowCell.swift */,
 				CB5D2DED2B8345F000F0181C /* WheatherEmpty.swift */,
+				CB60AA092C05D39B0005AB6E /* NotInternet.swift */,
 			);
 			path = NowCell;
+			sourceTree = "<group>";
+		};
+		CB9E69012B85FCFA00BC8AC2 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CB1C50102A8142F00044210A /* GeneralWeather */,
+				CB1C50112A8143060044210A /* StartController */,
+				CB487D2C2A9CE18500441585 /* LineChart */,
+				CB1753D92AE6DD0700063FB7 /* SearchLocationFlow */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		CBC262F22BBAADAE00E35B52 /* ChangeProperties */ = {
+			isa = PBXGroup;
+			children = (
+				CBC262F32BBAADCC00E35B52 /* ChangePropertiesController.swift */,
+				CBC262F72BBAB9E800E35B52 /* ChangePropertiesModel.swift */,
+			);
+			path = ChangeProperties;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,6 +325,9 @@
 			dependencies = (
 			);
 			name = Weather;
+			packageProductDependencies = (
+				CBB997142BD0033400D9360D /* SwiftUICharts */,
+			);
 			productName = Weather;
 			productReference = CB1C4FF02A813FE50044210A /* Weather.app */;
 			productType = "com.apple.product-type.application";
@@ -334,6 +356,9 @@
 				Base,
 			);
 			mainGroup = CB1C4FE72A813FE50044210A;
+			packageReferences = (
+				CBB997132BD0033400D9360D /* XCRemoteSwiftPackageReference "ChartView" */,
+			);
 			productRefGroup = CB1C4FF12A813FE50044210A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -364,25 +389,27 @@
 				CB5D2DE32B7DF8B600F0181C /* CoreData.swift in Sources */,
 				CB825EC42A8E5B2F00F1CC20 /* GeneralSectionNowCell.swift in Sources */,
 				CB1753E52AEFA29600063FB7 /* CityCollectionView.swift in Sources */,
+				CBC262F42BBAADCC00E35B52 /* ChangePropertiesController.swift in Sources */,
 				CB1754722B29D20800063FB7 /* AddButtonLocationModel.swift in Sources */,
 				CB1754452AFA192C00063FB7 /* CollectionCellAddButton.swift in Sources */,
-				CB487D2F2A9CE1C200441585 /* Hour24.swift in Sources */,
 				CB1C501C2A81439B0044210A /* StartViewModel.swift in Sources */,
 				CB17544F2B19EBEA00063FB7 /* City.swift in Sources */,
 				CB1753D12ABB37E900063FB7 /* WModel.swift in Sources */,
+				CB60AA0A2C05D39B0005AB6E /* NotInternet.swift in Sources */,
 				CB1C501A2A81434A0044210A /* GeneralWeatherCoordinator.swift in Sources */,
 				CB1753CE2ABB368800063FB7 /* NetWorkManager.swift in Sources */,
 				CB1C50192A81434A0044210A /* StartCoordinator.swift in Sources */,
+				CBC262F82BBAB9E800E35B52 /* ChangePropertiesModel.swift in Sources */,
+				CBB997122BCFC46A00D9360D /* LineChart.swift in Sources */,
 				CB784B9B2A90FDED00EA3DEC /* GeneralSectionDetailHeader.swift in Sources */,
-				CB1318132B5971BC002EC84C /* PageViewController.swift in Sources */,
 				CB1C50172A81434A0044210A /* MainCoordinator.swift in Sources */,
 				CB5D2DEC2B7E10A400F0181C /* CityEntity.xcdatamodeld in Sources */,
 				CB9E68FC2B84BB2E00BC8AC2 /* Palette.swift in Sources */,
 				CB1C50222A81441E0044210A /* StartViewController.swift in Sources */,
+				CBB997172BD1580900D9360D /* LineChartDetail.swift in Sources */,
 				CB17546F2B29D13000063FB7 /* AddButtonLocationCoordinator.swift in Sources */,
 				CB1C50292A87EF660044210A /* GeneralSectionEveryDate.swift in Sources */,
 				CB1C4FF42A813FE50044210A /* AppDelegate.swift in Sources */,
-				CB9E69002B85F5F100BC8AC2 /* PageViewModel.swift in Sources */,
 				CB1C501F2A8144000044210A /* GeneralViewController.swift in Sources */,
 				CB1C50252A82ABE00044210A /* CustomButton.swift in Sources */,
 				CB5D2DEE2B8345F000F0181C /* WheatherEmpty.swift in Sources */,
@@ -390,6 +417,7 @@
 				CB825EBF2A8DFDDE00F1CC20 /* GeneralSectionDetailCell.swift in Sources */,
 				CB487D242A97E09800441585 /* CustomCollectionViewFlowLayout.swift in Sources */,
 				CB1C50202A8144000044210A /* GeneralViewModel.swift in Sources */,
+				CBC262F62BBAAE9200E35B52 /* ChangePropertiesCoordinator.swift in Sources */,
 				CB1C50182A81434A0044210A /* ProtocolCoordinator.swift in Sources */,
 				CB1C4FF62A813FE50044210A /* SceneDelegate.swift in Sources */,
 				CB1C502B2A88DAD30044210A /* GeneralSectionEveryDateHeader.swift in Sources */,
@@ -608,6 +636,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CBB997132BD0033400D9360D /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CBB997142BD0033400D9360D /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CBB997132BD0033400D9360D /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		CB5D2DEA2B7E10A400F0181C /* CityEntity.xcdatamodeld */ = {
