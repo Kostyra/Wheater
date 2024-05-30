@@ -157,10 +157,13 @@ final class GeneralViewController: UIViewController {
             guard let self else { return }
             switch state {
             case .allow(let city):
-                let snapshot = self.makeSnapshot(city: city)
-                self.dataSource.supplementaryViewProvider = self.makeHeaderProvider()
-                self.dataSource.apply(snapshot)
-                wheatherEmptyView.isHidden = true
+                DispatchQueue.main.async {
+                    let snapshot = self.makeSnapshot(city: city)
+                    self.dataSource.supplementaryViewProvider = self.makeHeaderProvider()
+                    self.dataSource.apply(snapshot)
+                    self.wheatherEmptyView.isHidden = true
+                }
+
             case .notAllow:
                 wheatherEmptyView.isHidden = false
             case .loading:

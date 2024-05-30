@@ -65,13 +65,10 @@ extension GeneralViewModel:IGeneralViewModel {
             return
         }
         
-        // Проверка подключения к Интернету
+
         let monitor = NWPathMonitor()
         monitor.pathUpdateHandler = { path in
             if path.status == .satisfied {
-                // Есть подключение к Интернету
-                
-                // Загрузка данных о погоде
                 NetWorkManager.shared.getWeather(city: cityName) { [weak self] result in
                     guard let self = self else { return }
                     switch result {
