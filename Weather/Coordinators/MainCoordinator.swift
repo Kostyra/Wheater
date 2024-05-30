@@ -2,7 +2,7 @@
 import UIKit
 
 protocol IMainCoordinator:AnyObject {
-    func switchToNextFlow(from currentCoordinator: ICoordinator)
+    func switchToNextFlow(from currentCoordinator: ICoordinator, cityName: String?)
 }
 //MainCoordinatorProtocol
 
@@ -33,12 +33,11 @@ final class MainCoordinator {
         return startCoordinator
     }
     
-    private func makeGeneralCoordinator() -> ICoordinator {
-        let GeneralWeatherCoordinator = GeneralWeatherCoordinator(
+    private func makeGeneralCoordinator(cityName: String?) -> ICoordinator {
+        let generalWeatherCoordinator = GeneralWeatherCoordinator(
             navigationController: UINavigationController(),
-            parentCoordunator: self
-        )
-        return GeneralWeatherCoordinator
+            parentCoordunator: self, cityName: cityName)
+        return generalWeatherCoordinator
     }
     
     private func addChildCoordinator(_ coordinator:ICoordinator) {
@@ -51,7 +50,6 @@ final class MainCoordinator {
         self.childCoordinator.removeAll { $0 === coordinator}
     }
     
-    // Методы установки/переключения Flow
     func setFlow(to newViewController: UIViewController) {
         self.rootViewController.addChild(newViewController)
         newViewController.view.frame = self.rootViewController.view.bounds
@@ -102,10 +100,10 @@ func start() -> UIViewController {
 // MARK: - CoordinatbleMain
 
 extension MainCoordinator: IMainCoordinator {
-    func switchToNextFlow(from currentCoordinator: ICoordinator) {
+    func switchToNextFlow(from currentCoordinator: ICoordinator, cityName: String?) {
             switch currentCoordinator {
             case let oldCoordinator as StartCoordinator:
-                let newCoordinator = self.makeGeneralCoordinator()
+                let newCoordinator = self.makeGeneralCoordinator(cityName: cityName)
                 self.switchCoordinators(from: oldCoordinator, to: newCoordinator)
 // если делать кнопку обратно
             case let oldCoordinator as GeneralWeatherCoordinator:
